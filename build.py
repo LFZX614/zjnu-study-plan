@@ -1,19 +1,17 @@
 from pathlib import Path
-import hashlib, zipfile
-root = Path(__file__).resolve().parent
-archive = root / "site.zip"
-expected = "86a7312aff2ce6df7e339b73951789446db4bf387da4b107025e50765fb52b38"
-if hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
-    raise RuntimeError("Site archive checksum mismatch")
-output = root / "dist"
-output.mkdir(exist_ok=True)
-with zipfile.ZipFile(archive) as bundle:
-    for entry in bundle.infolist():
-        target = (output / entry.filename).resolve()
-        if not target.is_relative_to(output.resolve()):
-            raise RuntimeError("Invalid archive path")
-    bundle.extractall(output)
-for required in ["index.html", "app.js", "engine.js", "data.json", "points.json", "styles.css"]:
-    if not (output / required).is_file():
-        raise RuntimeError("Missing required file: " + required)
-print("Study planner six-am-v6 ready: 52 days, static assets verified")
+import hashlib,zipfile,json
+ROOT=Path(__file__).resolve().parent
+archive=ROOT/'site.zip'
+EXPECTED="209871b29f6f9199263edfb9c2820be8194f026595663263f54263f6be0266dc"
+if hashlib.sha256(archive.read_bytes()).hexdigest()!=EXPECTED:
+ raise SystemExit('Site archive checksum mismatch')
+out=ROOT/'dist'
+out.mkdir(exist_ok=True)
+with zipfile.ZipFile(archive) as z:
+ for name in z.namelist():
+  if not (out/name).resolve().is_relative_to(out.resolve()):
+   raise SystemExit('Invalid archive path')
+ z.extractall(out)
+data=json.loads((out/'data.json').read_text(encoding='utf-8-sig'))
+assert data['revision']=='checkin-v7-doc51' and len(data['days'])==51 and len(data['tasks'])==981
+print('Built 51-day check-in site:',len(data['tasks']),'tasks')

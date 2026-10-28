@@ -1,1 +1,7 @@
-{"revision":"six-am-v6","sourceArchiveSha256":"86a7312aff2ce6df7e339b73951789446db4bf387da4b107025e50765fb52b38","buildCommand":"python3 build.py","publishPath":"dist","start":"2026-10-28","end":"2026-12-18"}
+{
+  "revision": "checkin-v7-doc51",
+  "sha256": "209871b29f6f9199263edfb9c2820be8194f026595663263f54263f6be0266dc",
+  "days": 51,
+  "tasks": 981,
+  "url": "https://zjnu-study-plan.onrender.com/"
+}
