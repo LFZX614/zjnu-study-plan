@@ -14,4 +14,7 @@ with zipfile.ZipFile(archive) as z:
  z.extractall(out)
 data=json.loads((out/'data.json').read_text(encoding='utf-8-sig'))
 assert data['revision']=='checkin-v7-doc51' and len(data['days'])==51 and len(data['tasks'])==981
+# Apply the maintained interaction updates after extracting the unchanged content archive.
+for name in ('engine.js', 'app.js', 'index.html'):
+ (out/name).write_bytes((ROOT/'updates'/name).read_bytes())
 print('Built 51-day check-in site:',len(data['tasks']),'tasks')
