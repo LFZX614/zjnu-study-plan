@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='light-v1';
+const CARRY_POLICY='light-v2';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -12,7 +12,7 @@ const rec=(s,t)=>s.records[t.id]||{};
 const due=(s,t)=>rec(s,t).dueDate||t.originalDate;
 const done=(s,t)=>rec(s,t).done===true;
 const cost=t=>t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1;
-function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id);return ts.length<4&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=6&&ts.filter(x=>x.course===t.course).length<2;}
+function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id);return ts.length<(ts.concat(t).some(x=>cost(x)===3)?5:6)&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&ts.filter(x=>x.course===t.course).length<3;}
 function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>a.order-b.order);}
 function stat(data,s,date){const ts=tasksFor(data,s,date),complete=ts.filter(t=>done(s,t)).length;return{total:ts.length,complete,percent:ts.length?Math.round(100*complete/ts.length):0};}
 function slots(data,s,t,minDate){const d=data.days.find(d=>d.date>=minDate&&allowed(data,t,d.date,s));return d?d.date:'queue';}
@@ -33,14 +33,28 @@ function auto(data,s,today,at=new Date().toISOString()){
  const used=new Set();
  for(const d of data.days.filter(d=>d.date>=start&&d.weekday!==6)){
   const existing=data.tasks.filter(t=>t.category==='professional'&&done(s,t)&&due(s,t)===d.date);
-  let budget=Math.max(0,6-existing.reduce((n,t)=>n+cost(t),0)),count=existing.length;const courses=data.rotation[d.weekday]||d.subjects;
+  let budget=Math.max(0,8-existing.reduce((n,t)=>n+cost(t),0)),count=existing.length;const courses=data.rotation[d.weekday]||d.subjects;
+  const pools=new Map();
   for(const course of courses){
    const candidates=pending.filter(t=>t.course===course&&!used.has(t.id)&&!learned.has(key(t))&&t.phase===1&&!t.reviewDay).sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
    const review=pending.filter(t=>t.course===course&&!used.has(t.id)&&learned.has(key(t))&&t.phase>1&&d.date>=nextDay(nextDay(nextDay(learned.get(key(t)))))).sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
    const pool=d.date>='2026-12-07'?review.concat(candidates):candidates.concat(review);
    // One concept and one substantive question per course where available.
+   pools.set(course,pool);
    let chosen=[];for(const short of [true,false]){const t=pool.find(t=>!chosen.includes(t)&&(cost(t)===1)===short&&cost(t)<=budget&&count<4&&chosen.length+existing.filter(x=>x.course===course).length<2);if(t){chosen.push(t);budget-=cost(t);count++;}}
    for(const t of chosen){s.records[t.id]={...rec(s,t),dueDate:d.date};used.add(t.id);learned.set(key(t),d.date);out.push({id:t.id,target:d.date});}
+  }
+  for(const course of courses){
+   if(budget<=0||count>=6)break;
+   const choices=pools.get(course).filter(t=>!used.has(t.id)&&cost(t)<=budget&&allowed(data,t,d.date,s));
+   const t=choices.find(t=>cost(t)===2)||choices.find(t=>cost(t)===1);
+   if(!t)continue;
+   s.records[t.id]={...rec(s,t),dueDate:d.date};
+   used.add(t.id);
+   learned.set(key(t),d.date);
+   out.push({id:t.id,target:d.date});
+   budget-=cost(t);
+   count++;
   }
  }
  s.undo=[];s.carryPolicy=CARRY_POLICY;s.lastAutoDate=today;return out;

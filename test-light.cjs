@@ -3,11 +3,11 @@ const E=require('./updates/engine.js'),D=JSON.parse(fs.readFileSync('./dist/data
 const input=JSON.parse(fs.readFileSync(process.argv[2],'utf8')),s=E.normalize(input,D);
 const before=JSON.parse(JSON.stringify(s.records));E.auto(D,s,'2026-11-03');
 for(const [id,r] of Object.entries(before)){assert.equal(s.records[id].done,r.done);assert.equal(s.records[id].note,r.note);assert.equal(s.records[id].completedAt,r.completedAt);}
-for(const d of D.days.filter(d=>d.date>='2026-11-03')){const ts=E.tasksFor(D,s,d.date).filter(t=>t.category==='professional'&&!E.done(s,t));assert(ts.length<=4);assert(ts.reduce((n,t)=>n+E.cost(t),0)<=6);if(d.weekday===6)assert.equal(ts.length,0);for(const c of new Set(ts.map(t=>t.course)))assert(ts.filter(t=>t.course===c).length<=2);}
+for(const d of D.days.filter(d=>d.date>='2026-11-03')){const ts=E.tasksFor(D,s,d.date).filter(t=>t.category==='professional'&&!E.done(s,t));assert(ts.length<=6);assert(ts.reduce((n,t)=>n+E.cost(t),0)<=8);if(d.weekday===6)assert.equal(ts.length,0);for(const c of new Set(ts.map(t=>t.course)))assert(ts.filter(t=>t.course===c).length<=3);}
 const same=JSON.stringify(s);E.auto(D,s,'2026-11-03');assert.equal(JSON.stringify(s),same);
-const next=E.normalize(s,D);E.auto(D,next,'2026-11-04');for(const d of D.days.filter(d=>d.date>='2026-11-04')){const ts=E.tasksFor(D,next,d.date).filter(t=>t.category==='professional'&&!E.done(next,t));assert(ts.length<=4);if(d.weekday===6)assert.equal(ts.length,0);}
-const fresh=E.fresh();fresh.settings.autoCarry=false;E.auto(D,fresh,'2026-11-03');assert.equal(fresh.carryPolicy,'light-v1');assert.equal(E.tasksFor(D,fresh,'2026-11-08').filter(t=>t.category==='professional').length,0);
-const rows=['# 岸上减量安排（11月3日起）','','每天两科合计最多4题；长论述相应少排，复习占用同一额度。周日无新背、无补欠，可自愿回忆2道已背题，至少留半天休息。','','以下依11月3日备份生成；网站会依最新打卡重新分配。原Word日期不再适用。未选题留题库，不要求清空或全部完成三轮。',''];
+const next=E.normalize(s,D);E.auto(D,next,'2026-11-04');for(const d of D.days.filter(d=>d.date>='2026-11-04')){const ts=E.tasksFor(D,next,d.date).filter(t=>t.category==='professional'&&!E.done(next,t));assert(ts.length<=6);if(d.weekday===6)assert.equal(ts.length,0);}
+const fresh=E.fresh();fresh.settings.autoCarry=false;E.auto(D,fresh,'2026-11-03');assert.equal(fresh.carryPolicy,'light-v2');assert.equal(E.tasksFor(D,fresh,'2026-11-08').filter(t=>t.category==='professional').length,0);
+const rows=['# 岸上减量安排（11月3日起）','','每天两科通常合计5题，短题多时6题；长论述相应少排，复习占用同一额度。周日无新背、无补欠，可自愿回忆2道已背题，至少留半天休息。','','以下依11月3日备份生成；网站会依最新打卡重新分配。原Word日期不再适用。未选题留题库，不要求清空或全部完成三轮。',''];
 for(const d of D.days.filter(d=>d.date>='2026-11-03')){rows.push('## '+d.date+' 周'+'一二三四五六日'[d.weekday],'');const ts=E.tasksFor(D,s,d.date).filter(t=>t.category==='professional'&&!E.done(s,t));rows.push(...(d.weekday===6?['休息日。不安排新背或补欠；自愿回忆也可跳过。']:ts.map(t=>'- '+t.course+'｜'+t.kind+'：'+t.title)), '');}
 fs.writeFileSync(process.argv[3],rows.join('\n'));
 console.log('Migration, import compatibility, completion preservation, daily capacities, Sunday rest, rollover and idempotence passed.');
