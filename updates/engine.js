@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='light-v4';
+const CARRY_POLICY='spaced-v1';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -11,8 +11,8 @@ function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t
 const rec=(s,t)=>s.records[t.id]||{};
 const due=(s,t)=>rec(s,t).dueDate||t.originalDate;
 const done=(s,t)=>rec(s,t).done===true;
-const cost=t=>t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1;
-function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id);return ts.length<(ts.concat(t).some(x=>cost(x)===3)?5:6)&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&ts.filter(x=>x.course===t.course).length<3;}
+const cost=t=>t.units??(t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1);
+function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(t.module&&date<'2026-11-04')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id&&(t.module?x.module:true));if(t.module)return ts.length<6&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&(t.reviewOf||ts.filter(x=>!x.reviewOf).length<3);return ts.length<(ts.concat(t).some(x=>cost(x)===3)?5:6)&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&ts.filter(x=>x.course===t.course).length<3;}
 function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>a.order-b.order);}
 function stat(data,s,date){const ts=tasksFor(data,s,date),complete=ts.filter(t=>done(s,t)).length;return{total:ts.length,complete,percent:ts.length?Math.round(100*complete/ts.length):0};}
 function slots(data,s,t,minDate){const d=data.days.find(d=>d.date>=minDate&&allowed(data,t,d.date,s));return d?d.date:'queue';}
@@ -21,6 +21,76 @@ function move(data,s,t,target,reason,at){if(target!=='queue'&&!allowed(data,t,ta
 function defer(data,s,ids,minDate,reason='手动顺延',at=new Date().toISOString()){
  const patches=[],results=[];for(const id of ids){const t=data.tasks.find(x=>x.id===id);if(!t||done(s,t))continue;const target=slots(data,s,t,minDate);const patch=move(data,s,t,target,reason,at);if(patch)patches.push(patch);results.push({id,target});}remember(s,'顺延任务',patches);return results;}
 function auto(data,s,today,at=new Date().toISOString()){
+ if(!data.spaced)return legacyAuto(data,s,today,at);
+ if(today<'2026-11-03'||(s.carryPolicy===CARRY_POLICY&&s.lastAutoDate===today))return[];
+ if(s.carryPolicy!==CARRY_POLICY&&today==='2026-11-03'){
+  legacyAuto({...data,tasks:data.tasks.filter(t=>!t.module)},s,today,at);
+ }
+ for(const t of data.tasks.filter(t=>t.category==='professional'&&!t.module&&!done(s,t)&&due(s,t)>='2026-11-04')){
+  s.records[t.id]={...rec(s,t),dueDate:'queue'};
+ }
+ const result=scheduleSpaced(data,s,today);
+ s.carryPolicy=CARRY_POLICY;
+ s.lastAutoDate=today;
+ return result;
+}
+function scheduleSpaced(data,s,today){
+ const modules=data.tasks.filter(t=>t.module);
+ const pending=modules.filter(t=>!done(s,t));
+ const firstPass=pending.filter(t=>!t.reviewOf);
+ const original=new Map(pending.map(t=>[t.id,due(s,t)]));
+ const days=data.days.filter(d=>d.date>=today&&d.date>='2026-11-04'&&d.weekday!==6);
+ const assignment=new Map(days.map(d=>[d.date,[]]));
+ for(const t of modules.filter(t=>done(s,t))){
+  assignment.get(due(s,t))?.push(t);
+ }
+ function place(t,minDate){
+  const d=days.find(d=>{
+   if(d.date<minDate)return false;
+   const items=assignment.get(d.date);
+   return items.length<6&&items.reduce((sum,x)=>sum+cost(x),0)+cost(t)<=8&&
+    (t.reviewOf?!items.some(x=>x.reviewOf===t.reviewOf):items.filter(x=>!x.reviewOf).length<3);
+  });
+  if(d)assignment.get(d.date).push(t);
+  s.records[t.id]={...rec(s,t),dueDate:d?.date||'queue'};
+ }
+ // Leave each day's planned first passes in place before filling gaps with overdue work.
+ firstPass.sort((a,b)=>Number(original.get(a.id)<today)-Number(original.get(b.id)<today)||a.originalDate.localeCompare(b.originalDate));
+ for(const t of firstPass){
+  const manual=rec(s,t).moves?.at(-1)?.to;
+  const originalDate=original.get(t.id);
+  if(manual==='queue'&&originalDate==='queue')continue;
+  place(t,manual&&originalDate===manual?manual:t.originalDate);
+ }
+ const byId=new Map(modules.map(t=>[t.id,t]));
+ const lastReview=new Map();
+ for(const t of modules.filter(t=>t.reviewOf&&done(s,t))){
+  const date=localDate(rec(s,t).completedAt)||due(s,t);
+  if(date>(lastReview.get(t.reviewOf)||''))lastReview.set(t.reviewOf,date);
+ }
+ const scheduled=pending.filter(t=>t.reviewOf).map(t=>{
+  const source=byId.get(t.reviewOf);
+  const base=done(s,source)?localDate(rec(s,source).completedAt)||due(s,source):due(s,source);
+  if(base==='queue')return {t,min:null};
+  let min=base;
+  for(let i=0;i<t.interval;i++)min=nextDay(min);
+  if(base===source.originalDate&&t.originalDate>min)min=t.originalDate;
+  return {t,min};
+ }).sort((a,b)=>Number(a.t.interval!==1)-Number(b.t.interval!==1)||(a.min||'9999').localeCompare(b.min||'9999')||a.t.interval-b.t.interval);
+ for(const {t,min} of scheduled){
+  if(!min){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
+  const previous=lastReview.get(t.reviewOf);
+  const earliest=previous&&previous>=min?nextDay(previous):min;
+  place(t,earliest);
+  if(due(s,t)!=='queue')lastReview.set(t.reviewOf,due(s,t));
+ }
+ return pending.filter(t=>original.get(t.id)!==due(s,t)).map(t=>({id:t.id,target:due(s,t)}));
+}
+function localDate(at){
+ if(!at||!Number.isFinite(Date.parse(at)))return null;
+ return new Date(Date.parse(at)+8*3600000).toISOString().slice(0,10);
+}
+function legacyAuto(data,s,today,at=new Date().toISOString()){
  if(today<'2026-11-03')return[];
  const migrate=s.carryPolicy!==CARRY_POLICY;
  if(!migrate&&(!s.settings.autoCarry||s.lastAutoDate===today))return[];
