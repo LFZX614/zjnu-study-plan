@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='sunday-v1';
+const CARRY_POLICY='light-v1';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -12,24 +12,38 @@ const rec=(s,t)=>s.records[t.id]||{};
 const due=(s,t)=>rec(s,t).dueDate||t.originalDate;
 const done=(s,t)=>rec(s,t).done===true;
 const cost=t=>t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1;
-function allowed(data,t,date){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;return date===t.originalDate||d.weekday===6;}
-function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>{const ac=a.originalDate!==date,bc=b.originalDate!==date;return Number(bc)-Number(ac)||a.originalDate.localeCompare(b.originalDate)||a.order-b.order;});}
+function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id);return ts.length<4&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=6&&ts.filter(x=>x.course===t.course).length<2;}
+function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>a.order-b.order);}
 function stat(data,s,date){const ts=tasksFor(data,s,date),complete=ts.filter(t=>done(s,t)).length;return{total:ts.length,complete,percent:ts.length?Math.round(100*complete/ts.length):0};}
-function slots(data,s,t,minDate){const d=data.days.find(d=>d.date>=minDate&&(t.category!=='professional'||d.weekday===6));return d?d.date:'queue';}
+function slots(data,s,t,minDate){const d=data.days.find(d=>d.date>=minDate&&allowed(data,t,d.date,s));return d?d.date:'queue';}
 function remember(s,label,patches){if(!patches.length)return;s.undo=(s.undo||[]).concat({label,patches}).slice(-15);}
-function move(data,s,t,target,reason,at){if(target!=='queue'&&!allowed(data,t,target))throw Error('专业课补做请选择周日；也可以恢复原日期。');const old=rec(s,t),from=due(s,t);if(from===target)return null;const patch={id:t.id,dueDate:old.dueDate??null,moves:old.moves||[]};s.records[t.id]={...old,dueDate:target,moves:[...(old.moves||[]),{from,to:target,reason,at}].slice(-30)};return patch;}
+function move(data,s,t,target,reason,at){if(target!=='queue'&&!allowed(data,t,target,s))throw Error('该日期容量已满或属于休息日，请选择其他工作日或待安排。');const old=rec(s,t),from=due(s,t);if(from===target)return null;const patch={id:t.id,dueDate:old.dueDate??null,moves:old.moves||[]};s.records[t.id]={...old,dueDate:target,moves:[...(old.moves||[]),{from,to:target,reason,at}].slice(-30)};return patch;}
 function defer(data,s,ids,minDate,reason='手动顺延',at=new Date().toISOString()){
  const patches=[],results=[];for(const id of ids){const t=data.tasks.find(x=>x.id===id);if(!t||done(s,t))continue;const target=slots(data,s,t,minDate);const patch=move(data,s,t,target,reason,at);if(patch)patches.push(patch);results.push({id,target});}remember(s,'顺延任务',patches);return results;}
 function auto(data,s,today,at=new Date().toISOString()){
- if(!s.settings.autoCarry||today<data.start)return[];
+ if(today<'2026-11-03')return[];
  const migrate=s.carryPolicy!==CARRY_POLICY;
- if(!migrate&&s.lastAutoDate===today)return[];
- // Old weekday assignments are consolidated once. A Sunday remains active until it ends.
- const ids=data.tasks.filter(t=>t.category==='professional'&&!done(s,t)&&(
-  due(s,t)==='queue'||due(s,t)<today||(migrate&&t.originalDate<today)
- )).sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order).map(t=>t.id);
- const result=defer(data,s,ids,today,migrate?'按周日补做规则归拢':'未完成自动顺延至周日',at);
- s.carryPolicy=CARRY_POLICY;s.lastAutoDate=today;return result;
+ if(!migrate&&(!s.settings.autoCarry||s.lastAutoDate===today))return[];
+ const start=today>'2026-11-03'?today:'2026-11-03',out=[];
+ const key=t=>t.course+'|'+t.title;
+ const learned=new Map();for(const t of data.tasks)if(t.category==='professional'&&done(s,t))learned.set(key(t),String(rec(s,t).completedAt||t.originalDate).slice(0,10));
+ const pending=data.tasks.filter(t=>t.category==='professional'&&!done(s,t));
+ // No task or completion is deleted: unselected cards remain in the library queue.
+ for(const t of pending){const old=rec(s,t);s.records[t.id]={...old,dueDate:'queue'};}
+ const used=new Set();
+ for(const d of data.days.filter(d=>d.date>=start&&d.weekday!==6)){
+  const existing=data.tasks.filter(t=>t.category==='professional'&&done(s,t)&&due(s,t)===d.date);
+  let budget=Math.max(0,6-existing.reduce((n,t)=>n+cost(t),0)),count=existing.length;const courses=data.rotation[d.weekday]||d.subjects;
+  for(const course of courses){
+   const candidates=pending.filter(t=>t.course===course&&!used.has(t.id)&&!learned.has(key(t))&&t.phase===1&&!t.reviewDay).sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
+   const review=pending.filter(t=>t.course===course&&!used.has(t.id)&&learned.has(key(t))&&t.phase>1&&d.date>=nextDay(nextDay(nextDay(learned.get(key(t)))))).sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
+   const pool=d.date>='2026-12-07'?review.concat(candidates):candidates.concat(review);
+   // One concept and one substantive question per course where available.
+   let chosen=[];for(const short of [true,false]){const t=pool.find(t=>!chosen.includes(t)&&(cost(t)===1)===short&&cost(t)<=budget&&count<4&&chosen.length+existing.filter(x=>x.course===course).length<2);if(t){chosen.push(t);budget-=cost(t);count++;}}
+   for(const t of chosen){s.records[t.id]={...rec(s,t),dueDate:d.date};used.add(t.id);learned.set(key(t),d.date);out.push({id:t.id,target:d.date});}
+  }
+ }
+ s.undo=[];s.carryPolicy=CARRY_POLICY;s.lastAutoDate=today;return out;
 }
 function setDone(s,t,value,at=new Date().toISOString()){const r=rec(s,t);remember(s,value?'标记完成':'撤销完成',[{id:t.id,done:r.done||false,completedAt:r.completedAt||null}]);s.records[t.id]={...r,done:value,completedAt:value?at:null};}
 function undo(s){const action=s.undo?.pop();if(!action)return null;for(const p of action.patches){const r={...(s.records[p.id]||{})};if('done'in p){r.done=p.done;r.completedAt=p.completedAt;}if('dueDate'in p){if(p.dueDate===null)delete r.dueDate;else r.dueDate=p.dueDate;r.moves=p.moves;}s.records[p.id]=r;}return action.label;}
