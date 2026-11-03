@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='light-v2';
+const CARRY_POLICY='light-v3';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -32,6 +32,20 @@ function auto(data,s,today,at=new Date().toISOString()){
  for(const t of pending){const old=rec(s,t);s.records[t.id]={...old,dueDate:'queue'};}
  const used=new Set();
  for(const d of data.days.filter(d=>d.date>=start&&d.weekday!==6)){
+  if(d.date==='2026-11-03'){
+   // The requested poetry session replaces the ordinary allocation for this date.
+   const sessionTitles=[
+    '文学四要素','世界、作家、作品、读者四要素的相互关系',
+    '新月诗派','创造社','九叶诗人','《女神》的思想艺术成就','徐志摩诗歌的意境与音韵特色'
+   ];
+   for(const t of pending.filter(t=>t.phase===1&&sessionTitles.includes(t.title))){
+    s.records[t.id]={...rec(s,t),dueDate:d.date};
+    used.add(t.id);
+    learned.set(key(t),d.date);
+    out.push({id:t.id,target:d.date});
+   }
+   continue;
+  }
   const existing=data.tasks.filter(t=>t.category==='professional'&&done(s,t)&&due(s,t)===d.date);
   let budget=Math.max(0,8-existing.reduce((n,t)=>n+cost(t),0)),count=existing.length;const courses=data.rotation[d.weekday]||d.subjects;
   const pools=new Map();
