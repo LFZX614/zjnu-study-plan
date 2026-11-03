@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='spaced-v1';
+const CARRY_POLICY='textbook-v1';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -11,6 +11,39 @@ function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t
 const rec=(s,t)=>s.records[t.id]||{};
 const due=(s,t)=>rec(s,t).dueDate||t.originalDate;
 const done=(s,t)=>rec(s,t).done===true;
+const titleKey=t=>t.replace(/[\s《》“”‘’，、。？：；（）·]/g,'');
+const equivalents={
+ '楚辞的主要特色':'楚辞的主要艺术特色',
+ '先秦诸子散文庄子的艺术特色':'庄子散文的艺术特色',
+ '庄子散文的特色':'庄子散文的艺术特色',
+ '阿Q精神胜利法的主要表现及典型意义':'阿Q精神胜利法的主要表现与典型意义',
+ '汉赋的发展阶段特点和代表作品':'汉赋的发展阶段特点与代表作品'
+};
+function studyKey(course,title){const key=titleKey(title);return course+'|'+(equivalents[key]||key);}
+function prepare(data){
+ const groups=new Map();
+ for(const t of data.tasks.filter(t=>t.category==='professional'&&!t.module)){
+  const key=studyKey(t.course,t.title);
+  if(!groups.has(key))groups.set(key,[]);
+  groups.get(key).push(t);
+ }
+ data.legacyGroups=groups;
+ for(const group of groups.values()){
+  const first=group[0];
+  for(const interval of [1,3,7,14])data.tasks.push({
+   id:first.id+'-old-r'+interval,course:first.course,title:first.title,
+   category:'professional',kind:'闭卷回忆',originalDate:'queue',order:20000+interval,
+   module:true,units:1,reviewOf:first.id,legacy:true,interval,group
+  });
+ }
+}
+function completion(s,group){
+ const dates=group.filter(t=>done(s,t)).map(t=>localDate(rec(s,t).completedAt)||t.originalDate);
+ return dates.sort()[0]||null;
+}
+function questionDone(data,s,course,title){return Boolean(completion(s,data.legacyGroups?.get(studyKey(course,title))||[]));}
+function reviewReady(data,s,t){return t.legacy?Boolean(completion(s,t.group)):data.tasks.some(x=>x.id===t.reviewOf&&done(s,x));}
+function offset(date,n){for(let i=0;i<n;i++)date=nextDay(date);return date;}
 const cost=t=>t.units??(t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1);
 function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(t.module&&date<'2026-11-04')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id&&(t.module?x.module:true));if(t.module)return ts.length<6&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&(t.reviewOf||ts.filter(x=>!x.reviewOf).length<3);return ts.length<(ts.concat(t).some(x=>cost(x)===3)?5:6)&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&ts.filter(x=>x.course===t.course).length<3;}
 function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>a.order-b.order);}
@@ -36,7 +69,7 @@ function auto(data,s,today,at=new Date().toISOString()){
 }
 function scheduleSpaced(data,s,today){
  const modules=data.tasks.filter(t=>t.module);
- const pending=modules.filter(t=>!done(s,t));
+ const pending=modules.filter(t=>!done(s,t)&&(!t.legacy||activeLegacy(s,t)));
  const firstPass=pending.filter(t=>!t.reviewOf);
  const original=new Map(pending.map(t=>[t.id,due(s,t)]));
  const days=data.days.filter(d=>d.date>=today&&d.date>='2026-11-04'&&d.weekday!==6);
@@ -55,12 +88,16 @@ function scheduleSpaced(data,s,today){
   s.records[t.id]={...rec(s,t),dueDate:d?.date||'queue'};
  }
  // Leave each day's planned first passes in place before filling gaps with overdue work.
- firstPass.sort((a,b)=>Number(original.get(a.id)<today)-Number(original.get(b.id)<today)||a.originalDate.localeCompare(b.originalDate));
+ firstPass.sort((a,b)=>a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
+ const courseFloor=new Map();
  for(const t of firstPass){
   const manual=rec(s,t).moves?.at(-1)?.to;
   const originalDate=original.get(t.id);
   if(manual==='queue'&&originalDate==='queue')continue;
-  place(t,manual&&originalDate===manual?manual:t.originalDate);
+  const target=manual&&originalDate===manual?manual:t.originalDate;
+  const floor=courseFloor.get(t.course)||target;
+  place(t,floor==='queue'?'9999':floor>target?floor:target);
+  courseFloor.set(t.course,due(s,t));
  }
  const byId=new Map(modules.map(t=>[t.id,t]));
  const lastReview=new Map();
@@ -69,14 +106,19 @@ function scheduleSpaced(data,s,today){
   if(date>(lastReview.get(t.reviewOf)||''))lastReview.set(t.reviewOf,date);
  }
  const scheduled=pending.filter(t=>t.reviewOf).map(t=>{
+  if(t.legacy){
+   const base=completion(s,t.group);
+   const first=legacyFirst(base);
+   return {t,min:offset(base,t.interval),first:t.interval===first};
+  }
   const source=byId.get(t.reviewOf);
   const base=done(s,source)?localDate(rec(s,source).completedAt)||due(s,source):due(s,source);
-  if(base==='queue')return {t,min:null};
+  if(base==='queue')return {t,min:null,first:t.interval===1};
   let min=base;
   for(let i=0;i<t.interval;i++)min=nextDay(min);
   if(base===source.originalDate&&t.originalDate>min)min=t.originalDate;
-  return {t,min};
- }).sort((a,b)=>Number(a.t.interval!==1)-Number(b.t.interval!==1)||(a.min||'9999').localeCompare(b.min||'9999')||a.t.interval-b.t.interval);
+  return {t,min,first:t.interval===1};
+ }).sort((a,b)=>Number(b.first)-Number(a.first)||(a.min||'9999').localeCompare(b.min||'9999')||a.t.interval-b.t.interval);
  for(const {t,min} of scheduled){
   if(!min){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
   const previous=lastReview.get(t.reviewOf);
@@ -86,6 +128,11 @@ function scheduleSpaced(data,s,today){
  }
  return pending.filter(t=>original.get(t.id)!==due(s,t)).map(t=>({id:t.id,target:due(s,t)}));
 }
+function activeLegacy(s,t){
+ const date=completion(s,t.group);
+ return Boolean(date)&&t.interval>=legacyFirst(date);
+}
+function legacyFirst(date){return [1,3,7,14].filter(n=>offset(date,n)<'2026-11-04').at(-1)||1;}
 function localDate(at){
  if(!at||!Number.isFinite(Date.parse(at)))return null;
  return new Date(Date.parse(at)+8*3600000).toISOString().slice(0,10);
@@ -149,6 +196,6 @@ function setDone(s,t,value,at=new Date().toISOString()){const r=rec(s,t);remembe
 function undo(s){const action=s.undo?.pop();if(!action)return null;for(const p of action.patches){const r={...(s.records[p.id]||{})};if('done'in p){r.done=p.done;r.completedAt=p.completedAt;}if('dueDate'in p){if(p.dueDate===null)delete r.dueDate;else r.dueDate=p.dueDate;r.moves=p.moves;}s.records[p.id]=r;}return action.label;}
 function nextDay(date){const d=new Date(date+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10);}
 function assess(data,s,date){const ts=tasksFor(data,s,date).filter(t=>t.category==='professional'&&!done(s,t));const essays=ts.filter(t=>t.kind==='论述题').length;const extra=data.days.find(d=>d.date===date)?.heavyEnglish;return{essays,heavy:essays>=2||extra,carried:ts.filter(t=>t.originalDate!==date).length};}
-return{REV,fresh,normalize,rec,due,done,cost,allowed,tasksFor,stat,slots,move,defer,auto,setDone,undo,nextDay,assess};
+return{REV,fresh,normalize,rec,due,done,cost,allowed,tasksFor,stat,slots,move,defer,auto,setDone,undo,nextDay,assess,prepare,questionDone,reviewReady,activeLegacy};
 });
 

@@ -18,8 +18,8 @@ assert data['revision']=='checkin-v7-doc51' and len(data['days'])==51 and len(da
 for name in ('engine.js', 'app.js', 'index.html'):
  (out/name).write_bytes((ROOT/'updates'/name).read_bytes())
 for name in ('engine', 'app'):
- for version in (1, 2):
+ for version in (1, 2, 3):
   (out/(name+f'-spaced-v{version}.js')).write_bytes((ROOT/'updates'/(name+'.js')).read_bytes())
-for version in (1, 2):
+for version in (1, 2, 3):
  (out/f'spaced-plan-v{version}.json').write_bytes((ROOT/'updates'/'spaced-plan.json').read_bytes())
 print('Built 51-day check-in site:',len(data['tasks']),'tasks')
