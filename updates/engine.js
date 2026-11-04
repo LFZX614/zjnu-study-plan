@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='textbook-v2';
+const CARRY_POLICY='textbook-v3';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(r.inProgress===true)s.records[id].inProgress=true;if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -28,6 +28,15 @@ function prepare(data){
   groups.get(key).push(t);
  }
  data.legacyGroups=groups;
+ const existing=new Set(data.tasks.filter(t=>t.reviewOf).map(t=>t.reviewOf+'|'+t.interval));
+ for(const source of data.tasks.filter(t=>t.module&&!t.reviewOf)){
+  for(const interval of [1,3,7,14]){
+   if(existing.has(source.id+'|'+interval))continue;
+   data.tasks.push({id:source.id+'-r'+interval,course:source.course,title:source.title,
+    category:'professional',kind:'闭卷回忆',originalDate:'queue',order:20000+interval,
+    module:true,units:1,reviewOf:source.id,interval,questions:source.questions});
+  }
+ }
  for(const group of groups.values()){
   const first=group[0];
   for(const interval of [1,3,7,14])data.tasks.push({

@@ -4,6 +4,10 @@ const D=require('./dist/data.json');
 const cards=require('./updates/spaced-plan.json');
 D.tasks.push(...cards);
 D.spaced=true; E.prepare(D);
+for(const t of cards.filter(t=>!t.reviewOf)){
+ assert.deepEqual(D.tasks.filter(x=>x.reviewOf===t.id).map(x=>x.interval).sort((a,b)=>a-b),[1,3,7,14]);
+}
+assert.equal(new Set(D.tasks.map(t=>t.id)).size,D.tasks.length);
 assert.equal(cards.filter(t=>!t.reviewOf).length,94);
 assert.equal(cards.filter(t=>t.interval===1).length,68);
 assert.equal(cards.filter(t=>t.interval>1).length,31);
