@@ -1,0 +1,392 @@
+[
+  {
+    "id": "read-11-04",
+    "originalDate": "2026-11-04",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "《史记·项羽本纪》",
+    "guide": "读垓下之围到乌江自刎，记一处动作或对话怎样写出项羽的性格。",
+    "order": 30000
+  },
+  {
+    "id": "read-11-05",
+    "originalDate": "2026-11-05",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "《俄狄浦斯王》",
+    "guide": "读身份揭晓前后的一段，找出情节的突转。",
+    "order": 30001
+  },
+  {
+    "id": "read-11-06",
+    "originalDate": "2026-11-06",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "《文学改良刍议》",
+    "guide": "读“八事”及其解释，挑两条用自己的话复述。",
+    "order": 30002
+  },
+  {
+    "id": "read-11-07",
+    "originalDate": "2026-11-07",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "《庄子·逍遥游》",
+    "guide": "读开头鲲鹏至小大之辩，找一处寓言与说理的结合。",
+    "order": 30003
+  },
+  {
+    "id": "read-11-09",
+    "originalDate": "2026-11-09",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "鲁迅《阿Q正传》",
+    "guide": "读第二章《优胜记略》，记一处精神胜利法的具体表现。",
+    "order": 30004
+  },
+  {
+    "id": "read-11-10",
+    "originalDate": "2026-11-10",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "鲁迅《野草·秋夜》",
+    "guide": "通读全篇，选一个反复出现的意象，想想它怎样营造气氛。",
+    "order": 30005
+  },
+  {
+    "id": "read-11-11",
+    "originalDate": "2026-11-11",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "郁达夫《沉沦》",
+    "guide": "读开篇一段，圈出景物怎样随着主人公的情绪变化。",
+    "order": 30006
+  },
+  {
+    "id": "read-11-12",
+    "originalDate": "2026-11-12",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "《哈姆莱特》",
+    "guide": "读第三幕第一场的独白，找出哈姆莱特犹豫的一个理由。",
+    "order": 30007
+  },
+  {
+    "id": "read-11-13",
+    "originalDate": "2026-11-13",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "郭沫若《女神·凤凰涅槃》",
+    "guide": "读凤凰更生前后，记一处语气或节奏的变化。",
+    "order": 30008
+  },
+  {
+    "id": "read-11-14",
+    "originalDate": "2026-11-14",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "汉乐府《陌上桑》",
+    "guide": "通读全诗，选一处侧面描写，说明它怎样写罗敷。",
+    "order": 30009
+  },
+  {
+    "id": "read-11-16",
+    "originalDate": "2026-11-16",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "曹植《白马篇》",
+    "guide": "通读全诗，从动作或场面里找一处建安诗歌的例证。",
+    "order": 30010
+  },
+  {
+    "id": "read-11-17",
+    "originalDate": "2026-11-17",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "戴望舒《雨巷》",
+    "guide": "通读全诗，标出反复出现的意象和句式，各选一处。",
+    "order": 30011
+  },
+  {
+    "id": "read-11-18",
+    "originalDate": "2026-11-18",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "陶渊明《归园田居·其一》",
+    "guide": "通读全诗，找出写田园生活的两处细节。",
+    "order": 30012
+  },
+  {
+    "id": "read-11-19",
+    "originalDate": "2026-11-19",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "华兹华斯《丁登寺》",
+    "guide": "读开头及随后由景入思的部分，记一处景物与记忆的联系。",
+    "order": 30013
+  },
+  {
+    "id": "read-11-20",
+    "originalDate": "2026-11-20",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "朱自清《背影》",
+    "guide": "读父亲过铁道买橘子的段落，找一个比直接抒情更有力的动作细节。",
+    "order": 30014
+  },
+  {
+    "id": "read-11-21",
+    "originalDate": "2026-11-21",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "杜甫《登高》",
+    "guide": "通读全诗，选一联说明景物和身世之感怎样相接。",
+    "order": 30015
+  },
+  {
+    "id": "read-11-23",
+    "originalDate": "2026-11-23",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "茅盾《子夜》",
+    "guide": "读开篇吴老太爷初到上海的一段，记一处都市描写与人物感受的对照。",
+    "order": 30016
+  },
+  {
+    "id": "read-11-24",
+    "originalDate": "2026-11-24",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "沈从文《边城》",
+    "guide": "读开头渡船与茶峒的描写，记一个风俗细节如何进入人物生活。",
+    "order": 30017
+  },
+  {
+    "id": "read-11-25",
+    "originalDate": "2026-11-25",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "苏轼《定风波·莫听穿林打叶声》",
+    "guide": "连同小序通读，找出从眼前风雨转向人生态度的句子。",
+    "order": 30018
+  },
+  {
+    "id": "read-11-26",
+    "originalDate": "2026-11-26",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "肖洛霍夫《静静的顿河》",
+    "guide": "读开篇一段，选一处自然环境和哥萨克生活相连的细节。",
+    "order": 30019
+  },
+  {
+    "id": "read-11-27",
+    "originalDate": "2026-11-27",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "老舍《骆驼祥子》",
+    "guide": "读第一章祥子攒钱买车的一段，圈一处语言或动作怎样写出人物愿望。",
+    "order": 30020
+  },
+  {
+    "id": "read-11-28",
+    "originalDate": "2026-11-28",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "李清照《声声慢·寻寻觅觅》",
+    "guide": "通读全词，找一处叠字和一处物象，分别说说作用。",
+    "order": 30021
+  },
+  {
+    "id": "read-11-30",
+    "originalDate": "2026-11-30",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "曹禺《雷雨》",
+    "guide": "读第二幕周朴园认出鲁侍萍的一段，圈出一个称呼或语气的变化。",
+    "order": 30022
+  },
+  {
+    "id": "read-12-01",
+    "originalDate": "2026-12-01",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "萧红《呼兰河传》",
+    "guide": "读第三章后花园的一段，想想儿童视角怎样改变叙述语气。",
+    "order": 30023
+  },
+  {
+    "id": "read-12-02",
+    "originalDate": "2026-12-02",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "唐传奇《莺莺传》",
+    "guide": "读张生与莺莺离别前后的一段，比较叙述者和人物各自的态度。",
+    "order": 30024
+  },
+  {
+    "id": "read-12-03",
+    "originalDate": "2026-12-03",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "马尔克斯《百年孤独》",
+    "guide": "读开篇，找出叙述如何在未来的回忆和童年之间切换。",
+    "order": 30025
+  },
+  {
+    "id": "read-12-04",
+    "originalDate": "2026-12-04",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "张爱玲《金锁记》",
+    "guide": "读开头写月亮的一段，想想这个意象怎样给故事定调。",
+    "order": 30026
+  },
+  {
+    "id": "read-12-05",
+    "originalDate": "2026-12-05",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "王国维《人间词话》",
+    "guide": "选读“有我之境、无我之境”条，任选其中一例解释区别。",
+    "order": 30027
+  },
+  {
+    "id": "read-12-07",
+    "originalDate": "2026-12-07",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "梁斌《红旗谱》",
+    "guide": "读开篇朱老巩护钟的一段，记一个冲突如何引出人物与乡村关系。",
+    "order": 30028
+  },
+  {
+    "id": "read-12-08",
+    "originalDate": "2026-12-08",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "卢新华《伤痕》",
+    "guide": "读结尾母女未能相见的部分，找一处个人遭遇与时代背景的联系。",
+    "order": 30029
+  },
+  {
+    "id": "read-12-09",
+    "originalDate": "2026-12-09",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "韩少功《爸爸爸》",
+    "guide": "读开头丙崽出场的一段，记一处人物语言与村落叙事的关系。",
+    "order": 30030
+  },
+  {
+    "id": "read-12-10",
+    "originalDate": "2026-12-10",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "余华《十八岁出门远行》",
+    "guide": "读抢苹果前后的一段，比较叙述者的期待与实际遭遇。",
+    "order": 30031
+  },
+  {
+    "id": "read-12-11",
+    "originalDate": "2026-12-11",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "汪曾祺《受戒》",
+    "guide": "读结尾明海与小英子划船的一段，圈一处对话或景物描写。",
+    "order": 30032
+  },
+  {
+    "id": "read-12-12",
+    "originalDate": "2026-12-12",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "陈忠实《白鹿原》",
+    "guide": "读第一章开头，记一句叙述如何把个人命运和家族史连起来。",
+    "order": 30033
+  },
+  {
+    "id": "read-12-14",
+    "originalDate": "2026-12-14",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "王安忆《长恨歌》",
+    "guide": "读开头“弄堂”一节，记一处空间描写怎样带出上海日常生活。",
+    "order": 30034
+  },
+  {
+    "id": "read-12-15",
+    "originalDate": "2026-12-15",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "金庸《射雕英雄传》",
+    "guide": "读第一回开头说书人的一段，想想历史背景怎样通过讲述进入小说。",
+    "order": 30035
+  },
+  {
+    "id": "read-12-16",
+    "originalDate": "2026-12-16",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "旧篇回读：《史记·项羽本纪》与《阿Q正传》",
+    "guide": "各回看一处标注，比较两篇怎样用细节写人物。",
+    "order": 30036
+  },
+  {
+    "id": "read-12-17",
+    "originalDate": "2026-12-17",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "旧篇回读：《雨巷》与《声声慢》",
+    "guide": "各回看一处标注，用一句话分别说明意象或声音的作用。",
+    "order": 30037
+  },
+  {
+    "id": "read-12-18",
+    "originalDate": "2026-12-18",
+    "course": "作品阅读",
+    "category": "reading",
+    "kind": "作品选读",
+    "title": "旧篇回读：任选一篇已读作品",
+    "guide": "回看自己的标注，闭卷复述一个可以写进主观题的例证。",
+    "order": 30038
+  }
+]
