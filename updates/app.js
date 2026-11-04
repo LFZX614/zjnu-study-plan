@@ -45,7 +45,7 @@ function dailyTaskText(t){
  if(t.kind==='旧词'||t.kind==='新词')return {title:detail};
  if(t.kind==='阅读')return {title:detail.startsWith('重做')?'英语一阅读：重做旧真题 1 篇':'英语一真题阅读 1 篇',detail};
  if(t.kind==='选择题'){
-  const count=detail.match(/(\d+)[题道]/)?.[1];
+  const count=detail.replace('肖1000题','').match(/(\d+)[题道]/)?.[1];
   return {title:'肖1000题：'+(/^(重做|只看)/.test(detail)?'旧错题':'练习与订正')+(count?' '+count+' 题':''),
    detail:detail+' 把错因整理进笔记。'};
  }
