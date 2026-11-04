@@ -19,12 +19,18 @@ function nav(){document.querySelectorAll('[data-view]').forEach(b=>b.classList.t
 function render(){if(!DATA)return;nav();$('#content').innerHTML=({today:renderToday,calendar:renderCalendar,backlog:renderBacklog,knowledge:renderKnowledge,plan:renderPlan,backup:renderBackup}[view]||renderToday)();paintSave();paintTimer();}
 function controls(){return`<div class="date-controls"><button class="btn small" data-action="prev" aria-label="前一天" ${selectedDate===DATA.start?'disabled':''}>‹</button><input id="date-picker" type="date" value="${selectedDate}" min="${DATA.start}" max="${DATA.end}" aria-label="选择计划日期"><button class="btn small" data-action="next" aria-label="后一天" ${selectedDate===DATA.end?'disabled':''}>›</button><button class="btn small" data-action="today">${today()<DATA.start?'明天':'今天'}</button></div>`;}
 function heading(title,sub){return`<div class="heading-row"><div><div class="eyebrow">岸上 / 每日学习打卡</div><h1>${title}</h1><p class="subtitle">${sub}</p></div></div>`;}
+function questionsFor(t){return (t.reviewOf?find(t.reviewOf):t)?.questions;}
+function questionKey(q){return q.kind+'｜'+q.title;}
 function cardQuestions(t){
- const q=(t.reviewOf?find(t.reviewOf):t)?.questions;
+ const q=questionsFor(t);
  if(!q)return '';
- const list=items=>'<ol>'+items.map(x=>'<li><span class="pill gray">'+esc(x.kind)+'</span> '+esc(x.title)+'</li>').join('')+'</ol>';
  const all=q.priority.concat(q.extra);
  const learned=t.reviewOf?[]:all.filter(x=>E.questionDone(DATA,S,t.course,x.title));
+ const checked=E.rec(S,t).checkedQuestions||[];
+ const list=items=>'<ol>'+items.map(x=>{
+  const previous=learned.includes(x);
+  return `<li><label class="question-check"><input type="checkbox" data-question-index="${all.indexOf(x)}" ${previous||checked.includes(questionKey(x))?'checked':''} ${previous?'disabled':''}><span><span class="pill gray">${esc(x.kind)}</span> ${esc(x.title)}</span></label></li>`;
+ }).join('')+'</ol>';
  const pending=all.filter(x=>!learned.includes(x));
  let main=q.priority.filter(x=>!learned.includes(x));
  if(!main.length)main=pending.slice(0,2);
@@ -38,6 +44,7 @@ function cardQuestions(t){
 function dailyTaskText(t){
  const detail=t.title.replace(/^(下午|晚间)[：:]/,'');
  if(t.originalDate==='2026-11-04'){
+  if(t.kind==='附加题型')return {title:'英语一完形填空 1 篇',detail:'完成一整篇英语一真题完形填空，订正并记录错因。'};
   if(t.kind==='新词')return {title:'学习新词 100–200 个'};
   if(t.kind==='网课')return {title:'政治网课：马原 1 节',detail:'徐涛网课，从上次停下的位置接着看。'};
   if(t.kind==='回顾')return {title:'政治背诵：马原专题一至三'};
@@ -97,6 +104,19 @@ function flushNotes(){if(noteTimer)save();}
 document.addEventListener('input',ev=>{const el=ev.target;if(el.matches('[data-note]')){const id=el.dataset.note;if(!find(id))return;S.records[id]={...(S.records[id]||{}),note:el.value};el.classList.toggle('has-note',!!el.value);const status=el.parentElement.querySelector('.note-status');if(status)status.textContent='正在保存…';clearTimeout(noteTimer);noteTimer=setTimeout(()=>{save();if(status)status.textContent=storageOK?'已保存':'保存失败，请备份';},250);}else if(el.matches('[data-day-note]')){S.dayNotes[el.dataset.dayNote]=el.value;clearTimeout(noteTimer);noteTimer=setTimeout(save,250);}});
 document.addEventListener('focusout',ev=>{if(ev.target.matches('[data-note],[data-day-note]'))save();});
 document.addEventListener('change',ev=>{const el=ev.target;if(el.id==='date-picker')setDate(el.value);if(el.id==='course-filter'){courseFilter=el.value;render();}if(el.id==='only-open'){onlyOpen=el.checked;render();}if(el.id==='auto-carry'){S.settings.autoCarry=el.checked;S.lastAutoDate=null;save();if(el.checked)autoApply();render();}});
+document.addEventListener('change',ev=>{
+ const input=ev.target;
+ if(!input.matches('[data-question-index]'))return;
+ const t=find(input.closest('[data-task-id]').dataset.taskId);
+ const q=questionsFor(t);
+ const question=q?.priority.concat(q.extra)[Number(input.dataset.questionIndex)];
+ if(!question)return;
+ const record=E.rec(S,t),key=questionKey(question);
+ const checked=new Set(record.checkedQuestions||[]);
+ if(input.checked)checked.add(key);else checked.delete(key);
+ S.records[t.id]={...record,checkedQuestions:[...checked]};
+ save();
+});
 document.addEventListener('submit',async ev=>{if(ev.target.id!=='search-form')return;ev.preventDefault();const f=new FormData(ev.target);searchText=String(f.get('text')||'').trim();searchCourse=String(f.get('course')||'');searchMode=String(f.get('mode')||'questions');searchPage=0;if(searchMode==='points'&&!points){render();try{const r=await fetch('points.json?v=11-light');if(!r.ok)throw Error();points=await r.json();}catch{toast('笔记考点暂时读取失败，请稍后重试。');}}render();});
 document.addEventListener('click',ev=>{const el=ev.target.closest('button,a[data-action],a.brand');if(!el||!DATA)return;try{
  if(el.matches('a.brand')){ev.preventDefault();go('today');return;}
@@ -120,7 +140,7 @@ document.addEventListener('click',ev=>{const el=ev.target.closest('button,a[data
  if(action==='export-old'){try{download('岸上旧版学习记录.json',JSON.parse(localStorage.getItem(OLD)));}catch{toast('旧记录读取失败，未修改原数据。');}}
  if(action==='search-prev'&&searchPage>0){searchPage--;render();}
  if(action==='search-next'){searchPage++;render();}
- if(action==='confirm-import'){const incoming=window.pendingImport;if(!incoming)return;for(const[id,r]of Object.entries(incoming.records)){const local=S.records[id];if(!local)S.records[id]=r;else S.records[id]={...r,...local,done:!!(local.done||r.done),note:local.note||r.note||'',inProgress:!!(local.inProgress||r.inProgress),completedAt:local.done&&local.completedAt?local.completedAt:r.completedAt||local.completedAt||null,...(!local.done&&(r.done||r.moves?.at(-1)?.to===r.dueDate)?{dueDate:r.dueDate,moves:r.moves}:{})};}for(const[k,v]of Object.entries(incoming.dayNotes))if(!S.dayNotes[k])S.dayNotes[k]=v;window.pendingImport=null;S.carryPolicy=null;S.lastAutoDate=null;save();closeModal();autoApply();render();toast('备份已合并，本机已有备注保留。');}
+ if(action==='confirm-import'){const incoming=window.pendingImport;if(!incoming)return;for(const[id,r]of Object.entries(incoming.records)){const local=S.records[id];if(!local)S.records[id]=r;else S.records[id]={...r,...local,done:!!(local.done||r.done),note:local.note||r.note||'',inProgress:!!(local.inProgress||r.inProgress),checkedQuestions:[...new Set([...(r.checkedQuestions||[]),...(local.checkedQuestions||[])])],completedAt:local.done&&local.completedAt?local.completedAt:r.completedAt||local.completedAt||null,...(!local.done&&(r.done||r.moves?.at(-1)?.to===r.dueDate)?{dueDate:r.dueDate,moves:r.moves}:{})};}for(const[k,v]of Object.entries(incoming.dayNotes))if(!S.dayNotes[k])S.dayNotes[k]=v;window.pendingImport=null;S.carryPolicy=null;S.lastAutoDate=null;save();closeModal();autoApply();render();toast('备份已合并，本机已有备注保留。');}
  }catch(error){toast(error.message||'操作暂未完成，请先导出备份。');}});
 $('#quick-export').addEventListener('click',exportAll);
 $('#import-file').addEventListener('change',async ev=>{const file=ev.target.files[0];if(!file)return;try{if(file.size>25*1024*1024)throw Error('备份过大，请确认文件。');const incoming=E.normalize(JSON.parse(await file.text()),DATA);window.pendingImport=incoming;openModal(`<h2>合并学习备份</h2><p>这份备份包含${Object.values(incoming.records).filter(x=>x.done).length}项完成记录、${Object.values(incoming.records).filter(x=>x.note).length}项任务备注。</p><p>本机已有备注与日期安排保留，缺少的记录从备份补入；完成状态取两份中已完成的一份。</p><div class="row"><button class="btn" data-action="export">先导出本机备份</button><button class="btn primary" data-action="confirm-import">合并这份备份</button></div>`);}catch(e){toast(e.message||'备份无法读取，当前记录没有改变。');}finally{ev.target.value='';}});

@@ -30,4 +30,6 @@ E.setDone(s,moduleCard,true,'2026-11-07T13:00:00Z');
 E.auto(D,s,'2026-11-07');
 assert.equal(E.due(s,review),'2026-11-09');
 assert.equal(E.normalize(JSON.parse(JSON.stringify(s)),D).records[moduleCard.id].done,true);
+s.records[moduleCard.id].checkedQuestions=['简答题｜示例题'];
+assert.deepEqual(E.normalize(JSON.parse(JSON.stringify(s)),D).records[moduleCard.id].checkedQuestions,['简答题｜示例题']);
 console.log('Topic totals, preview, capacities, Sunday, delayed completion and backup round trip passed.');
