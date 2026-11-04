@@ -17,7 +17,8 @@ for(const day of D.days){
  assert(items.reduce((n,t)=>n+E.cost(t),0)<=8);
  assert(items.filter(t=>!t.reviewOf).length<=3);
 }
-assert.equal(cards.filter(t=>!t.reviewOf&&E.due(s,t)==='queue').length,0);
+assert.equal(cards.filter(t=>!t.reviewOf&&E.due(s,t)==='queue').length,3);
+assert.deepEqual(E.tasksFor(D,s,'2026-11-04').filter(t=>t.module).map(t=>t.id).sort(),['m-2b8a049b23e1b32b','m-6243a0f3fd835d17']);
 const review=cards.find(t=>t.interval===1&&t.originalDate==='2026-11-05');
 const moduleCard=cards.find(t=>t.id===review.reviewOf);
 assert.equal(E.due(s,review),'queue');
