@@ -47,6 +47,17 @@ const server = http.createServer((req, res) => {
     await page.getByRole('heading', {name: '一轮覆盖与间隔回顾', exact: true}).waitFor();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('zjnu-checkin-v7')).progressProfile), 'progress-2026-11-05-v1');
     assert.deepEqual(errors, []);
+    const uncalibrated = await browser.newPage({timezoneId: 'Asia/Shanghai'});
+    await uncalibrated.clock.install({time: new Date('2026-11-05T14:00:00+08:00')});
+    await uncalibrated.goto('http://127.0.0.1:' + server.address().port + '/?date=2026-11-05');
+    await uncalibrated.getByRole('heading', {name: '请先导入已确认的五科进度', exact: true}).waitFor();
+    await uncalibrated.locator('#import-file').setInputFiles(process.argv[2]);
+    await uncalibrated.getByRole('button', {name: '合并这份备份', exact: true}).click();
+    await uncalibrated.getByRole('heading', {name: '[复习] 秦汉散文与史记', exact: true}).waitFor();
+    assert.equal(await uncalibrated.getByRole('heading', {name: '现代汉语概说', exact: true}).count(), 0);
+    assert.equal(await uncalibrated.getByRole('heading', {name: '文学革命与现代社团', exact: true}).count(), 0);
+    assert.equal(await uncalibrated.getByRole('heading', {name: '[复习] 先秦诸子与历史散文', exact: true}).count(), 0);
+    await uncalibrated.close();
     console.log('Mobile browser, November 7 tasks, coverage, reload and JS errors verified.');
   } finally {
     if (browser) await browser.close();

@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='single-round-v1';
+const CARRY_POLICY='single-round-v2';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(Array.isArray(r.checkedQuestions))s.records[id].checkedQuestions=[...new Set(r.checkedQuestions.filter(q=>typeof q==='string'&&q.length<=1000))].slice(0,100);if(r.inProgress===true)s.records[id].inProgress=true;if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -68,7 +68,7 @@ function allowed(data,t,date,s){
  if(day.weekday===6||date<'2026-11-05')return false;
  if(!s)return true;
  const items=tasksFor(data,s,date).filter(x=>x.module&&x.id!==t.id&&!done(s,x));
- if(t.reviewOf)return items.filter(x=>x.reviewOf).length<12;
+ if(t.reviewOf)return items.filter(x=>x.reviewOf).reduce((sum,x)=>sum+(x.fixedDate?10:5),0)+(t.fixedDate?10:5)<=20;
  const fresh=items.filter(x=>!x.reviewOf);
  return date<='2026-12-17'&&fresh.length<3&&fresh.reduce((n,x)=>n+cost(x),0)+cost(t)<=7;
 }
@@ -164,22 +164,36 @@ function scheduleSpaced(data,s,today){
   }
   if(!base){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
   const target=t.fixedDate||offset(base,t.interval);
+  const source=byId.get(t.reviewOf);
+  const historical=!t.fixedDate&&(t.legacy||base<'2026-11-04'||Boolean(source&&rec(s,source).learnedBefore));
   if(target>profile.end){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
-  reviewItems.push({t,target});
+  reviewItems.push({t,target,historical});
  }
- reviewItems.sort((a,b)=>Number(Boolean(b.t.fixedDate))-Number(Boolean(a.t.fixedDate))||Number(b.t.interval===1&&b.target>=today)-Number(a.t.interval===1&&a.target>=today)||a.target.localeCompare(b.target)||a.t.interval-b.t.interval||a.t.order-b.t.order);
+ const firstInterval=new Map();
+ for(const item of reviewItems){
+  const previous=firstInterval.get(item.t.reviewOf)||Infinity;
+  firstInterval.set(item.t.reviewOf,Math.min(previous,item.t.interval));
+ }
+ const priority=item=>item.t.fixedDate?0:!item.historical&&item.t.interval===1?1:item.historical&&item.t.interval===firstInterval.get(item.t.reviewOf)?2:!item.historical?3:4;
+ reviewItems.sort((a,b)=>priority(a)-priority(b)||a.target.localeCompare(b.target)||a.t.interval-b.t.interval||a.t.order-b.t.order);
  const last=new Map();
  for(const t of modules.filter(t=>t.reviewOf&&done(s,t))){
   const date=localDate(rec(s,t).completedAt);
   if(date&&date>(last.get(t.reviewOf)||''))last.set(t.reviewOf,date);
  }
- for(const {t,target} of reviewItems){
+ for(const {t,target,historical} of reviewItems){
   const key=t.fixedDate?t.id:t.reviewOf;
   const previous=last.get(key);
-  const min=previous&&previous>=target?nextDay(previous):target;
-  const day=days.find(d=>d.date>=min&&load.get(d.date).reviews.length<12);
+  const intervalMin=previous&&previous>=target?nextDay(previous):target;
+  const min=historical&&intervalMin<=today?nextDay(today):intervalMin;
+  const minutes=t.fixedDate?10:5;
+  const day=days.find(d=>{
+   const reviews=load.get(d.date).reviews;
+   const budget=reviews.reduce((sum,item)=>sum+(item.fixedDate?10:5),0);
+   return d.date>=min&&budget+minutes<=20&&(!historical||!reviews.some(item=>item.historical));
+  });
   s.records[t.id]={...rec(s,t),dueDate:day?.date||'queue'};
-  if(day){load.get(day.date).reviews.push(t);last.set(key,day.date);}
+  if(day){load.get(day.date).reviews.push({...t,historical});last.set(key,day.date);}
  }
  return pending.filter(t=>original.get(t.id)!==due(s,t)).map(t=>({id:t.id,target:due(s,t)}));
 }

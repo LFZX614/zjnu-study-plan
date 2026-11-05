@@ -23,7 +23,7 @@ for (const day of data.days) {
   const reviews = tasks.filter(task => task.reviewOf);
   assert(fresh.length <= 3);
   assert(fresh.reduce((sum, task) => sum + E.cost(task), 0) <= 7);
-  assert(reviews.length <= 12);
+  assert(reviews.reduce((sum, task) => sum + (task.fixedDate ? 10 : 5), 0) <= 20);
   if (day.weekday === 6) assert.equal(tasks.length, 0);
 }
 for (const course of new Set(first.map(task => task.course))) {
@@ -33,6 +33,12 @@ for (const course of new Set(first.map(task => task.course))) {
   }
 }
 const find = title => first.find(task => task.title === title);
+assert.equal(E.done(state, find('现代汉语概说')), true);
+assert.equal(E.done(state, find('文学革命与现代社团')), true);
+assert.deepEqual(
+  E.tasksFor(data, state, '2026-11-05').filter(task => task.course === '古代文学' && task.reviewOf).map(task => task.title),
+  ['秦汉散文与史记']
+);
 assert.equal(E.done(state, find('中世纪文学与但丁')), false);
 assert.equal(E.done(state, find('古希腊罗马文学')), true);
 assert.equal(E.done(state, find('语音 1｜音素、音位、声韵调及四呼')), false);
