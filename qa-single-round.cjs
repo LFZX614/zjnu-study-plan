@@ -51,8 +51,17 @@ const server = http.createServer((req, res) => {
     await uncalibrated.clock.install({time: new Date('2026-11-05T14:00:00+08:00')});
     await uncalibrated.goto('http://127.0.0.1:' + server.address().port + '/?date=2026-11-05');
     await uncalibrated.getByRole('heading', {name: '请先导入已确认的五科进度', exact: true}).waitFor();
-    await uncalibrated.locator('#import-file').setInputFiles(process.argv[2]);
+    await uncalibrated.locator('[data-view="backup"]').click();
+    await uncalibrated.getByRole('heading', {name: '把学习记录，好好留下。', exact: true}).waitFor();
+    await uncalibrated.reload();
+    await uncalibrated.getByRole('button', {name: '导入备份', exact: true}).waitFor();
+    const [chooser] = await Promise.all([
+      uncalibrated.waitForEvent('filechooser'),
+      uncalibrated.getByRole('button', {name: '导入备份', exact: true}).click()
+    ]);
+    await chooser.setFiles(process.argv[2]);
     await uncalibrated.getByRole('button', {name: '合并这份备份', exact: true}).click();
+    await uncalibrated.locator('[data-view="today"]').click();
     await uncalibrated.getByRole('heading', {name: '[复习] 秦汉散文与史记', exact: true}).waitFor();
     assert.equal(await uncalibrated.getByRole('heading', {name: '现代汉语概说', exact: true}).count(), 0);
     assert.equal(await uncalibrated.getByRole('heading', {name: '文学革命与现代社团', exact: true}).count(), 0);
