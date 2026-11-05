@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
     await page.getByRole('heading', {name: '一轮覆盖与间隔回顾', exact: true}).waitFor();
     const content = await page.locator('#content').innerText();
     assert(content.includes('剩余 '+(95-seed.confirmedProgress.entries.filter(entry=>entry.status==='learned').length)+' 个'));
-    assert(content.includes('12月10日'));
+    assert.match(content, /12\s*月\s*10\s*日/);
     await page.screenshot({path: 'qa-single-round-mobile.png', fullPage: true});
     await page.reload();
     await page.getByRole('heading', {name: '一轮覆盖与间隔回顾', exact: true}).waitFor();
@@ -63,9 +63,16 @@ const server = http.createServer((req, res) => {
     await uncalibrated.getByRole('button', {name: '合并这份备份', exact: true}).click();
     await uncalibrated.locator('[data-view="today"]').click();
     await uncalibrated.getByRole('heading', {name: '[复习] 秦汉散文与史记', exact: true}).waitFor();
+    await uncalibrated.getByRole('heading', {name: '外国文学 ＋ 文学理论', exact: true}).waitFor();
+    await uncalibrated.getByRole('heading', {name: '[复习] 古希腊罗马文学｜已背复测', exact: true}).waitFor();
+    assert.equal(await uncalibrated.getByRole('heading', {name: '语音 1｜音素、音位、声韵调及四呼', exact: true}).count(), 0);
     assert.equal(await uncalibrated.getByRole('heading', {name: '现代汉语概说', exact: true}).count(), 0);
     assert.equal(await uncalibrated.getByRole('heading', {name: '文学革命与现代社团', exact: true}).count(), 0);
     assert.equal(await uncalibrated.getByRole('heading', {name: '[复习] 先秦诸子与历史散文', exact: true}).count(), 0);
+    await uncalibrated.locator('#date-picker').fill('2026-11-06');
+    await uncalibrated.locator('#date-picker').dispatchEvent('change');
+    await uncalibrated.getByRole('heading', {name: '现当代文学 ＋ 现代汉语', exact: true}).waitFor();
+    await uncalibrated.getByRole('heading', {name: '语音 1｜音素、音位、声韵调及四呼', exact: true}).waitFor();
     await uncalibrated.close();
     console.log('Mobile browser, November 7 tasks, coverage, reload and JS errors verified.');
   } finally {

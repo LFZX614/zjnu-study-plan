@@ -6474,5 +6474,20 @@
       ],
       "extra": []
     }
+  },
+  {
+    "id": "review-2026-11-05-greek-check",
+    "course": "外国文学",
+    "title": "古希腊罗马文学｜已背复测",
+    "category": "professional",
+    "kind": "闭卷回忆",
+    "module": true,
+    "units": 1,
+    "reviewOf": "m-365cbf3558899029",
+    "interval": 0,
+    "fixedDate": "2026-11-05",
+    "originalDate": "2026-11-05",
+    "order": 20990,
+    "guide": "今天外国文学用10分钟闭卷复测。先回忆三大悲剧家及代表作、两部荷马史诗，再读《俄狄浦斯王》身份揭晓的一段。"
   }
 ]

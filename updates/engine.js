@@ -1,7 +1,7 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='single-round-v2';
+const CARRY_POLICY='single-round-v3';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(Array.isArray(r.checkedQuestions))s.records[id].checkedQuestions=[...new Set(r.checkedQuestions.filter(q=>typeof q==='string'&&q.length<=1000))].slice(0,100);if(r.inProgress===true)s.records[id].inProgress=true;if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
@@ -67,6 +67,7 @@ function allowed(data,t,date,s){
  if(t.category!=='professional')return true;
  if(day.weekday===6||date<'2026-11-05')return false;
  if(!s)return true;
+ if(!t.reviewOf&&!day.subjects.includes(t.course))return false;
  const items=tasksFor(data,s,date).filter(x=>x.module&&x.id!==t.id&&!done(s,x));
  if(t.reviewOf)return items.filter(x=>x.reviewOf).reduce((sum,x)=>sum+(x.fixedDate?10:5),0)+(t.fixedDate?10:5)<=20;
  const fresh=items.filter(x=>!x.reviewOf);
@@ -83,6 +84,7 @@ function auto(data,s,today,at=new Date().toISOString()){
  if(!data.spaced)return legacyAuto(data,s,today,at);
  applyProgress(data,s);
  if(today<'2026-11-03'||(s.carryPolicy===CARRY_POLICY&&s.lastAutoDate===today))return[];
+ if(s.carryPolicy===CARRY_POLICY&&!s.settings.autoCarry&&s.lastAutoDate!==null)return[];
  if(s.carryPolicy!==CARRY_POLICY&&today==='2026-11-03'){
   legacyAuto({...data,tasks:data.tasks.filter(t=>!t.module)},s,today,at);
  }
@@ -102,7 +104,7 @@ function applyProgress(data,s){
   if(!t)continue;
   const old=rec(s,t);
   const completed=localDate(old.completedAt);
-  if(completed&&completed>profile.asOf)continue;
+  if(old.done&&completed&&completed>=profile.asOf)continue;
   if(entry.status==='learned'){
    s.records[t.id]={...old,done:true,completedAt:old.completedAt||entry.completedAt||null,
     reviewBase:completed||localDate(entry.completedAt)||profile.asOf,learnedBefore:!completed&&!entry.completedAt,dueDate:completed||localDate(entry.completedAt)||'queue',inProgress:false};
@@ -132,7 +134,7 @@ function scheduleSpaced(data,s,today){
   for(const t of first.filter(t=>done(s,t)&&localDate(rec(s,t).completedAt)===day.date))slot.newTasks.push(t);
   const used=new Set(slot.newTasks.map(t=>t.course));
   while(slot.newTasks.length<(day.date==='2026-11-07'?2:3)){
-   const candidates=courses.filter(course=>queues.get(course).length&&slot.newTasks.filter(t=>t.course===course).length<2).map(course=>queues.get(course)[0]).filter(t=>{
+   const candidates=courses.filter(course=>day.subjects.includes(course)&&queues.get(course).length&&slot.newTasks.filter(t=>t.course===course).length<3).map(course=>queues.get(course)[0]).filter(t=>{
     if(t.course==='现当代文学'&&day.date<'2026-11-06')return false;
     if(slot.newTasks.reduce((n,x)=>n+cost(x),0)+cost(t)>7)return false;
     if(t.course==='古代文学'&&t.bookOrder===10&&day.date<'2026-11-07')return false;
@@ -140,7 +142,7 @@ function scheduleSpaced(data,s,today){
     const move=rec(s,t).moves?.at(-1);
     return !move||move.to==='queue'||move.to<=day.date||move.to>profile.newDeadline;
    }).sort((a,b)=>{
-    const score=t=>Number(day.date==='2026-11-07'&&['古代文学','外国文学'].includes(t.course))*100+Number(Boolean(rec(s,t).inProgress))*4+Number(day.subjects.includes(t.course))*2+queues.get(t.course).length/10-Number(used.has(t.course))*5;
+    const score=t=>Number(day.date==='2026-11-07'&&['古代文学','外国文学'].includes(t.course))*100+Number(Boolean(rec(s,t).inProgress))*4+queues.get(t.course).length/Math.max(1,days.filter(d=>d.date>=day.date&&d.date<=profile.newDeadline&&d.subjects.includes(t.course)).length)-Number(used.has(t.course))*.25;
     return score(b)-score(a)||a.order-b.order;
    });
    const t=candidates[0];
@@ -185,7 +187,7 @@ function scheduleSpaced(data,s,today){
   const key=t.fixedDate?t.id:t.reviewOf;
   const previous=last.get(key);
   const intervalMin=previous&&previous>=target?nextDay(previous):target;
-  const min=historical&&intervalMin<=today?nextDay(today):intervalMin;
+  const min=historical&&intervalMin<=profile.asOf?nextDay(profile.asOf):intervalMin;
   const minutes=t.fixedDate?10:5;
   const day=days.find(d=>{
    const reviews=load.get(d.date).reviews;
