@@ -40,12 +40,12 @@ const server = http.createServer((req, res) => {
     await page.getByRole('button', {name: '☷ 分配与使用说明'}).click();
     await page.getByRole('heading', {name: '一轮覆盖与间隔回顾', exact: true}).waitFor();
     const content = await page.locator('#content').innerText();
-    assert(content.includes('84'));
+    assert(content.includes('剩余 '+(95-seed.confirmedProgress.entries.filter(entry=>entry.status==='learned').length)+' 个'));
     assert(content.includes('12月10日'));
     await page.screenshot({path: 'qa-single-round-mobile.png', fullPage: true});
     await page.reload();
     await page.getByRole('heading', {name: '一轮覆盖与间隔回顾', exact: true}).waitFor();
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('zjnu-checkin-v7')).progressProfile), 'progress-2026-11-05-v1');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('zjnu-checkin-v7')).progressProfile), seed.confirmedProgress.version);
     assert.deepEqual(errors, []);
     const uncalibrated = await browser.newPage({timezoneId: 'Asia/Shanghai'});
     await uncalibrated.clock.install({time: new Date('2026-11-05T14:00:00+08:00')});
