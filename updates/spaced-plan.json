@@ -6450,5 +6450,29 @@
     "units": 1,
     "reviewOf": "m-ffb46d3d1a4f9b8e",
     "interval": 7
+  },
+  {
+    "id": "review-2026-11-07-homer-heroes",
+    "course": "外国文学",
+    "title": "阿喀琉斯与奥德修斯的英雄形象比较",
+    "kind": "闭卷回忆",
+    "category": "professional",
+    "module": true,
+    "units": 1,
+    "reviewOf": "m-365cbf3558899029",
+    "interval": 2,
+    "fixedDate": "2026-11-07",
+    "originalDate": "2026-11-07",
+    "order": 21000,
+    "guide": "单次回顾，闭卷5–10分钟。用退战、复战、归还遗体和独眼巨人洞穴脱险举例。",
+    "questions": {
+      "priority": [
+        {
+          "kind": "简答",
+          "title": "比较阿喀琉斯与奥德修斯的英雄形象"
+        }
+      ],
+      "extra": []
+    }
   }
 ]

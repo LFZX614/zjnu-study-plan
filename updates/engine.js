@@ -1,10 +1,17 @@
 (function(root,factory){const E=factory();if(typeof module==='object'&&module.exports)module.exports=E;else root.StudyEngine=E;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
 const REV='checkin-v7-doc51';
-const CARRY_POLICY='textbook-v3';
+const CARRY_POLICY='single-round-v1';
 function fresh(){return{schema:1,revision:REV,records:{},selectedDate:null,settings:{autoCarry:true},undo:[],carryPolicy:null,lastAutoDate:null,dayNotes:{},timer:null};}
 function normalize(input,data){const s=fresh(),known=new Set(data.tasks.map(t=>t.id)),dates=new Set(data.days.map(d=>d.date));if(!input||input.schema!==1||input.revision!==REV)throw Error('这不是当前51天打卡版本的备份。');
  for(const[id,r]of Object.entries(input.records||{})){if(!known.has(id)||!r||typeof r!=='object')continue;const note=typeof r.note==='string'?r.note.slice(0,20000):'';s.records[id]={note,done:r.done===true,completedAt:typeof r.completedAt==='string'?r.completedAt.slice(0,40):null};if(Array.isArray(r.checkedQuestions))s.records[id].checkedQuestions=[...new Set(r.checkedQuestions.filter(q=>typeof q==='string'&&q.length<=1000))].slice(0,100);if(r.inProgress===true)s.records[id].inProgress=true;if(dates.has(r.dueDate)||r.dueDate==='queue')s.records[id].dueDate=r.dueDate;s.records[id].moves=Array.isArray(r.moves)?r.moves.slice(-30).filter(m=>m&&typeof m.from==='string'&&typeof m.to==='string').map(m=>({from:m.from.slice(0,10),to:m.to.slice(0,10),at:String(m.at||'').slice(0,40),reason:String(m.reason||'').slice(0,80)})):[];}
+ for(const [id,r] of Object.entries(input.records||{})){if(!s.records[id])continue;if(r.learnedBefore===true)s.records[id].learnedBefore=true;if(/^\d{4}-\d{2}-\d{2}$/.test(r.reviewBase||''))s.records[id].reviewBase=r.reviewBase;}
+ if(input.confirmedProgress&&typeof input.confirmedProgress.version==='string'){
+  const profile=input.confirmedProgress;
+  s.confirmedProgress={version:profile.version.slice(0,100),asOf:'2026-11-05',newDeadline:'2026-12-10',end:'2026-12-18',
+   entries:Array.isArray(profile.entries)?profile.entries.filter(entry=>known.has(entry.id)&&['learned','inProgress','notStarted'].includes(entry.status)).map(entry=>({id:entry.id,status:entry.status,...(typeof entry.completedAt==='string'?{completedAt:entry.completedAt.slice(0,40)}:{})})):[]};
+ }
+ s.progressProfile=typeof input.progressProfile==='string'?input.progressProfile:null;
  s.carryPolicy=input.carryPolicy===CARRY_POLICY?CARRY_POLICY:null;s.settings.autoCarry=input.settings?.autoCarry!==false;s.selectedDate=dates.has(input.selectedDate)?input.selectedDate:null;s.lastAutoDate=typeof input.lastAutoDate==='string'?input.lastAutoDate:null;
  for(const[k,v]of Object.entries(input.dayNotes||{}))if(dates.has(k)&&typeof v==='string')s.dayNotes[k]=v.slice(0,20000);
  if(input.timer&&Number.isFinite(input.timer.end)&&['focus','break'].includes(input.timer.mode))s.timer={end:input.timer.end,mode:input.timer.mode};return s;}
@@ -54,7 +61,17 @@ function questionDone(data,s,course,title){return Boolean(completion(s,data.lega
 function reviewReady(data,s,t){return t.legacy?Boolean(completion(s,t.group)):data.tasks.some(x=>x.id===t.reviewOf&&done(s,x));}
 function offset(date,n){for(let i=0;i<n;i++)date=nextDay(date);return date;}
 const cost=t=>t.units??(t.kind==='论述题'?3:t.kind==='简答题'||t.kind==='分析题'?2:1);
-function allowed(data,t,date,s){const d=data.days.find(x=>x.date===date);if(!d)return false;if(t.category!=='professional')return true;if(d.weekday===6||date<'2026-11-03')return false;if(t.module&&date<'2026-11-04')return false;if(!s)return true;const ts=tasksFor(data,s,date).filter(x=>x.category==='professional'&&x.id!==t.id&&(t.module?x.module:true));if(t.module)return ts.length<6&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&(t.reviewOf||ts.filter(x=>!x.reviewOf).length<3);return ts.length<(ts.concat(t).some(x=>cost(x)===3)?5:6)&&ts.reduce((n,x)=>n+cost(x),0)+cost(t)<=8&&ts.filter(x=>x.course===t.course).length<3;}
+function allowed(data,t,date,s){
+ const day=data.days.find(d=>d.date===date);
+ if(!day)return false;
+ if(t.category!=='professional')return true;
+ if(day.weekday===6||date<'2026-11-05')return false;
+ if(!s)return true;
+ const items=tasksFor(data,s,date).filter(x=>x.module&&x.id!==t.id&&!done(s,x));
+ if(t.reviewOf)return items.filter(x=>x.reviewOf).length<12;
+ const fresh=items.filter(x=>!x.reviewOf);
+ return date<='2026-12-17'&&fresh.length<3&&fresh.reduce((n,x)=>n+cost(x),0)+cost(t)<=7;
+}
 function tasksFor(data,s,date){return data.tasks.filter(t=>due(s,t)===date).sort((a,b)=>a.order-b.order);}
 function stat(data,s,date){const ts=tasksFor(data,s,date),complete=ts.filter(t=>done(s,t)).length;return{total:ts.length,complete,percent:ts.length?Math.round(100*complete/ts.length):0};}
 function slots(data,s,t,minDate){const d=data.days.find(d=>d.date>=minDate&&(!t.module||t.reviewOf||d.subjects.includes(t.course))&&allowed(data,t,d.date,s));return d?d.date:'queue';}
@@ -64,6 +81,7 @@ function defer(data,s,ids,minDate,reason='手动顺延',at=new Date().toISOStrin
  const patches=[],results=[];for(const id of ids){const t=data.tasks.find(x=>x.id===id);if(!t||done(s,t))continue;const target=slots(data,s,t,minDate);const patch=move(data,s,t,target,reason,at);if(patch)patches.push(patch);results.push({id,target});}remember(s,'顺延任务',patches);return results;}
 function auto(data,s,today,at=new Date().toISOString()){
  if(!data.spaced)return legacyAuto(data,s,today,at);
+ applyProgress(data,s);
  if(today<'2026-11-03'||(s.carryPolicy===CARRY_POLICY&&s.lastAutoDate===today))return[];
  if(s.carryPolicy!==CARRY_POLICY&&today==='2026-11-03'){
   legacyAuto({...data,tasks:data.tasks.filter(t=>!t.module)},s,today,at);
@@ -76,61 +94,92 @@ function auto(data,s,today,at=new Date().toISOString()){
  s.lastAutoDate=today;
  return result;
 }
-function scheduleSpaced(data,s,today){
- const modules=data.tasks.filter(t=>t.module);
- const pending=modules.filter(t=>!done(s,t)&&(!t.legacy||activeLegacy(s,t)));
- const firstPass=pending.filter(t=>!t.reviewOf);
- const original=new Map(pending.map(t=>[t.id,due(s,t)]));
- const days=data.days.filter(d=>d.date>=today&&d.date>='2026-11-04'&&d.weekday!==6);
- const assignment=new Map(days.map(d=>[d.date,[]]));
- for(const t of modules.filter(t=>done(s,t))){
-  assignment.get(due(s,t))?.push(t);
- }
- function place(t,minDate){
-  const d=days.find(d=>{
-   if(d.date<minDate)return false;
-   if(!t.reviewOf&&minDate<=today&&t.originalDate<today&&!d.subjects.includes(t.course))return false;
-   const items=assignment.get(d.date);
-   return items.length<6&&items.reduce((sum,x)=>sum+cost(x),0)+cost(t)<=8&&
-    (t.reviewOf?items.filter(x=>x.reviewOf).length<3&&!items.some(x=>x.reviewOf===t.reviewOf):items.filter(x=>!x.reviewOf).length<3);
-  });
-  if(d)assignment.get(d.date).push(t);
-  s.records[t.id]={...rec(s,t),dueDate:d?.date||'queue'};
- }
- const byId=new Map(modules.map(t=>[t.id,t]));
- const lastReview=new Map();
- for(const t of modules.filter(t=>t.reviewOf&&done(s,t))){
-  const date=localDate(rec(s,t).completedAt)||due(s,t);
-  if(date>(lastReview.get(t.reviewOf)||''))lastReview.set(t.reviewOf,date);
- }
- const scheduled=pending.filter(t=>t.reviewOf).map(t=>{
-  if(t.legacy){
-   const base=completion(s,t.group);
-   return {t,min:offset(base,t.interval)};
+function applyProgress(data,s){
+ const profile=s.confirmedProgress||data.progressProfile;
+ if(!profile||s.progressProfile===profile.version)return;
+ for(const entry of profile.entries){
+  const t=data.tasks.find(t=>t.id===entry.id);
+  if(!t)continue;
+  const old=rec(s,t);
+  const completed=localDate(old.completedAt);
+  if(completed&&completed>profile.asOf)continue;
+  if(entry.status==='learned'){
+   s.records[t.id]={...old,done:true,completedAt:old.completedAt||entry.completedAt||null,
+    reviewBase:completed||localDate(entry.completedAt)||profile.asOf,learnedBefore:!completed&&!entry.completedAt,dueDate:completed||localDate(entry.completedAt)||'queue',inProgress:false};
+  }else{
+   s.records[t.id]={...old,done:false,completedAt:null,inProgress:entry.status==='inProgress'};
+   delete s.records[t.id].reviewBase;
   }
-  const source=byId.get(t.reviewOf);
-  const base=source&&done(s,source)?localDate(rec(s,source).completedAt)||due(s,source):null;
-  if(!base||base==='queue')return {t,min:null};
-  const min=offset(base,t.interval);
-  return {t,min};
- }).sort((a,b)=>(a.min||'9999').localeCompare(b.min||'9999')||a.t.interval-b.t.interval);
- for(const {t,min} of scheduled){
-  if(!min){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
-  const previous=lastReview.get(t.reviewOf);
-  const earliest=previous&&previous>=min?nextDay(previous):min;
-  place(t,earliest);
-  if(due(s,t)!=='queue')lastReview.set(t.reviewOf,due(s,t));
  }
- firstPass.sort((a,b)=>Number(Boolean(rec(s,b).inProgress))-Number(Boolean(rec(s,a).inProgress))||a.originalDate.localeCompare(b.originalDate)||a.order-b.order);
- const courseFloor=new Map();
- for(const t of firstPass){
-  const manual=rec(s,t).moves?.at(-1)?.to;
-  const originalDate=original.get(t.id);
-  if(manual==='queue'&&originalDate==='queue')continue;
-  const target=manual&&originalDate===manual?manual:t.originalDate;
-  const floor=courseFloor.get(t.course)||target;
-  place(t,floor==='queue'?'9999':floor>target?floor:target);
-  courseFloor.set(t.course,due(s,t));
+ s.progressProfile=profile.version;
+ s.lastAutoDate=null;
+}
+function scheduleSpaced(data,s,today){
+ const profile=s.confirmedProgress||data.progressProfile||{asOf:'2026-11-05',newDeadline:'2026-12-10',end:'2026-12-18'};
+ const modules=data.tasks.filter(t=>t.module);
+ const first=modules.filter(t=>!t.reviewOf);
+ const pending=modules.filter(t=>!done(s,t));
+ const original=new Map(pending.map(t=>[t.id,due(s,t)]));
+ const days=data.days.filter(d=>d.date>=today&&d.date>=profile.asOf&&d.date<=profile.end&&d.weekday!==6);
+ const load=new Map(days.map(d=>[d.date,{newTasks:[],reviews:[]}]));
+ const plans=new Map();
+ const courses=[...new Set(first.map(t=>t.course))];
+ const queues=new Map(courses.map(course=>[course,first.filter(t=>t.course===course&&!done(s,t)).sort((a,b)=>a.bookOrder-b.bookOrder||a.order-b.order)]));
+ const remaining=first.filter(t=>!done(s,t));
+ for(const t of remaining)s.records[t.id]={...rec(s,t),dueDate:'queue'};
+ for(const day of days.filter(d=>d.date<profile.end)){
+  const slot=load.get(day.date);
+  for(const t of first.filter(t=>done(s,t)&&localDate(rec(s,t).completedAt)===day.date))slot.newTasks.push(t);
+  const used=new Set(slot.newTasks.map(t=>t.course));
+  while(slot.newTasks.length<(day.date==='2026-11-07'?2:3)){
+   const candidates=courses.filter(course=>queues.get(course).length&&slot.newTasks.filter(t=>t.course===course).length<2).map(course=>queues.get(course)[0]).filter(t=>{
+    if(t.course==='现当代文学'&&day.date<'2026-11-06')return false;
+    if(slot.newTasks.reduce((n,x)=>n+cost(x),0)+cost(t)>7)return false;
+    if(t.course==='古代文学'&&t.bookOrder===10&&day.date<'2026-11-07')return false;
+    if(t.course==='外国文学'&&t.bookOrder===2&&day.date<'2026-11-07')return false;
+    const move=rec(s,t).moves?.at(-1);
+    return !move||move.to==='queue'||move.to<=day.date||move.to>profile.newDeadline;
+   }).sort((a,b)=>{
+    const score=t=>Number(day.date==='2026-11-07'&&['古代文学','外国文学'].includes(t.course))*100+Number(Boolean(rec(s,t).inProgress))*4+Number(day.subjects.includes(t.course))*2+queues.get(t.course).length/10-Number(used.has(t.course))*5;
+    return score(b)-score(a)||a.order-b.order;
+   });
+   const t=candidates[0];
+   if(!t)break;
+   queues.get(t.course).shift();used.add(t.course);slot.newTasks.push(t);
+   s.records[t.id]={...rec(s,t),dueDate:day.date};plans.set(t.id,day.date);
+  }
+ }
+ const byId=new Map(first.map(t=>[t.id,t]));
+ const reviewItems=[];
+ for(const t of modules.filter(t=>t.reviewOf&&!done(s,t))){
+  let base;
+  if(t.legacy){
+   base=completion(s,t.group);
+   if(!base||!activeLegacy(s,t)){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
+   const covered=first.some(source=>done(s,source)&&source.course===t.course&&source.questions&&source.questions.priority.concat(source.questions.extra).some(q=>studyKey(source.course,q.title)===studyKey(t.course,t.title)));
+   if(covered){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
+  }else{
+   const source=byId.get(t.reviewOf);
+   base=source&&(done(s,source)?localDate(rec(s,source).completedAt)||rec(s,source).reviewBase:plans.get(source.id));
+  }
+  if(!base){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
+  const target=t.fixedDate||offset(base,t.interval);
+  if(target>profile.end){s.records[t.id]={...rec(s,t),dueDate:'queue'};continue;}
+  reviewItems.push({t,target});
+ }
+ reviewItems.sort((a,b)=>Number(Boolean(b.t.fixedDate))-Number(Boolean(a.t.fixedDate))||Number(b.t.interval===1&&b.target>=today)-Number(a.t.interval===1&&a.target>=today)||a.target.localeCompare(b.target)||a.t.interval-b.t.interval||a.t.order-b.t.order);
+ const last=new Map();
+ for(const t of modules.filter(t=>t.reviewOf&&done(s,t))){
+  const date=localDate(rec(s,t).completedAt);
+  if(date&&date>(last.get(t.reviewOf)||''))last.set(t.reviewOf,date);
+ }
+ for(const {t,target} of reviewItems){
+  const key=t.fixedDate?t.id:t.reviewOf;
+  const previous=last.get(key);
+  const min=previous&&previous>=target?nextDay(previous):target;
+  const day=days.find(d=>d.date>=min&&load.get(d.date).reviews.length<12);
+  s.records[t.id]={...rec(s,t),dueDate:day?.date||'queue'};
+  if(day){load.get(day.date).reviews.push(t);last.set(key,day.date);}
  }
  return pending.filter(t=>original.get(t.id)!==due(s,t)).map(t=>({id:t.id,target:due(s,t)}));
 }
