@@ -1,2 +1,4 @@
 dist/
 qa-*.png
+.local-tools/
+同步服务上传包/

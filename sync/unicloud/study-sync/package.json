@@ -1,0 +1,1 @@
+{"name":"study-sync","version":"1.0.0","main":"index.js","private":true,"cloudfunction-config":{"path":"/study-sync","timeout":20,"memorySize":256}}
