@@ -3,6 +3,8 @@ const {chromium}=require('C:/Users/hyun0/.cache/codex-runtimes/codex-primary-run
 const root=path.resolve(__dirname,'../dist'),plan=JSON.parse(fs.readFileSync(path.join(root,'plan.json'),'utf8')),base=JSON.parse(fs.readFileSync(path.join(__dirname,'clear-base-plan.json'),'utf8'));
 const tasks=plan.days.flatMap(d=>d.tasks),cards=tasks.filter(t=>t.clearType),lessons=cards.filter(t=>t.clearType==='lesson');
 assert.equal(plan.textbookOrderVersion,4);assert.equal(lessons.length,62);assert.equal(plan.clearPlan.units.length,206);assert.equal(new Set(plan.clearPlan.units.map(u=>u.book)).size,12);
+for(const t of lessons){assert(t.examItems?.length,t.id);assert(t.examTypes.includes(t.type));assert(t.title.startsWith('【'));}
+assert.deepEqual(lessons.find(t=>t.id==='clear-2026-11-06-O').examItems.map(q=>q.type),['名词解释','简答题']);
 for(const u of plan.clearPlan.units)assert.equal(cards.filter(t=>t.units.some(x=>x.id===u.id)).length,1,'coverage '+u.id);
 const evidence=plan.clearPlan.questions.flatMap(q=>q.evidence.map(e=>e.id));assert.equal(evidence.length,389);assert.equal(new Set(evidence).size,389);assert.equal(plan.clearPlan.questions.length,349);
 const retained=new Set([...tasks,...plan.archivedTasks].map(t=>t.id));for(const t of [...base.days.flatMap(d=>d.tasks),...(base.archivedTasks||[])])assert(retained.has(t.id),'lost '+t.id);
@@ -14,6 +16,10 @@ const server=http.createServer((q,r)=>{const u=new URL(q.url,'http://localhost')
 (async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});try{
  const url='http://127.0.0.1:'+server.address().port,errors=[];
  const p=await browser.newPage({viewport:{width:390,height:844},timezoneId:'Asia/Shanghai'});p.on('pageerror',e=>errors.push(e.message));await p.clock.install({time:new Date('2026-11-07T14:00:00+08:00')});
+ await p.goto(url+'/?date=2026-11-06');await p.getByText('全量框架＋重点记牢＋考前完整复习',{exact:true}).waitFor();
+ await p.locator('#type-filter').selectOption('名词解释');assert.equal(await p.locator('[data-clear-card="clear-2026-11-06-O"] .clear-exam-item').count(),1);assert.equal(await p.locator('[data-clear-card="clear-2026-11-06-O"] .clear-exam-item h3').innerText(),'新月诗派');
+ await p.locator('#type-filter').selectOption('简答题');assert((await p.locator('[data-clear-card="clear-2026-11-06-O"] .clear-exam-item h3').innerText()).includes('三美'));
+ await p.locator('#type-filter').selectOption('分析题');assert.equal(await p.locator('[data-clear-card="clear-2026-11-06-O"]').count(),0);assert.equal(await p.locator('[data-clear-card="clear-2026-11-06-H"]').count(),1);
  await p.goto(url+'/?date=2026-11-07');await p.getByText('全量框架＋重点记牢＋考前完整复习',{exact:true}).waitFor();
  const id='clear-2026-11-07-C',source=lessons.find(t=>t.id===id);
  assert((await p.locator('[data-clear-card="'+id+'"]').innerText()).includes('司马相如与西汉辞赋'));

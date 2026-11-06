@@ -2,7 +2,7 @@ from pathlib import Path
 import hashlib,zipfile,json,shutil
 ROOT=Path(__file__).resolve().parent
 archive=ROOT/'site.zip'
-EXPECTED="bb1b13556bfc3248394b503ff35fcb9cd407c5dd6fe94378c8c8760f08e6dcb3"
+EXPECTED="a5ba05ad9cb5030da3885299fc4bc2c6e1b9d1b611895d65c4049ebcc8eb5905"
 if hashlib.sha256(archive.read_bytes()).hexdigest()!=EXPECTED:
  raise SystemExit('Site archive checksum mismatch')
 out=ROOT/'dist'
@@ -14,7 +14,7 @@ with zipfile.ZipFile(archive) as z:
  z.extractall(out)
 plan=json.loads((out/'plan.json').read_text(encoding='utf-8'))
 assert plan['textbookOrderVersion']==4
-assert plan['version']=='clear-full-review-20261106-v4'
+assert plan['version']=='clear-full-review-20261106-v4-types1'
 assert len(plan['clearPlan']['units'])==206
 assert len(plan['clearPlan']['questions'])==349
 assert len({e['id'] for q in plan['clearPlan']['questions'] for e in q['evidence']})==389

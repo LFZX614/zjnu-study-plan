@@ -83,3 +83,13 @@ const clearBooksPaint=renderBooks;
 renderBooks=function(){clearBooksPaint();if(plan.clearPlan&&$('#clear-question-results'))$('#clear-question-results').insertAdjacentHTML('beforebegin','<details><summary>真题来源代号与年份口径</summary><ul>'+Object.entries(plan.clearPlan.sources).map(([k,v])=>'<li>'+esc(k)+'：'+esc(v)+'</li>').join('')+'</ul><p class="tiny">题型B：填空／识记；N：名词解释；S：简答；L：论述／分析；R：文学评论。</p></details>');};
 const clearSettingsBase=renderSettings;
 renderSettings=function(){clearSettingsBase();const rows=$('#main').querySelectorAll('.setting-row'),last=rows[rows.length-1];if(last)last.innerHTML='<div><h3>全量框架、重点记忆与间隔回忆</h3><p>专业课不设置单题分钟数。回忆从实际学习日起排，遗忘后缩短间隔。周日保留轻量回忆。</p><p>学习尝试、主干独立提取和教材基础分别保存；旧记录、笔记和改期保留。完整清单收尾至12月18日。</p></div>';};
+// A lesson keeps its original identity; each question displays its own preparation type.
+const clearTypedMatchesBase=matches;
+matches=function(t){if(!t.examTypes)return clearTypedMatchesBase(t);return (type==='all'||t.examTypes.includes(type))&&(filter==='all'||filter==='done'&&done(t)||filter==='review'&&t.type==='复习回顾'||filter==='new'&&t.type!=='复习回顾');};
+function clearExamHTML(t){const src=clearSource(t),qs=src.examItems||[];if(!qs.length)return '';const visible=qs.filter(q=>type==='all'||!qs.some(x=>x.type===type)||q.type===type);return visible.map(q=>`<div class="clear-exam-item"><span class="type-tag">${esc(q.type)}</span><h3>${esc(q.title)}</h3></div>`).join('')+'<p class="tiny">设问按备考题型整理；原卷题型与原题见真题依据。</p>';}
+const clearTypedCardBase=clearCardHTML;
+clearCardHTML=function(t){let html=clearTypedCardBase(t);if(clearSource(t).examItems)html=html.replace(`<h3>${esc(t.title)}</h3>`,clearExamHTML(t));return html.replace('<h4>配套识记与例证</h4>','<h4>填空与识记 · 配套基础与例证</h4>').replace('<h4>教材位置与基础范围</h4>','<h4>课本梳理 · 教材位置与基础范围</h4>');};
+const clearTypedOpenBase=openTask;
+openTask=function(id){clearTypedOpenBase(id);const t=currentTask;if(!t?.clearType||!clearSource(t).examItems)return;const heading=[...$('#task-content').querySelectorAll('h3')].find(el=>el.textContent==='① 重点要会什么');if(heading?.nextElementSibling){heading.textContent='① 按题型准备';heading.nextElementSibling.outerHTML=clearExamHTML(t);}};
+const clearTypedRenderBase=render;
+render=function(){clearTypedRenderBase();const select=$('#type-filter');if(select){for(const label of ['填空与识记','分析题','补漏复测','练习'])if(![...select.options].some(o=>o.value===label))select.add(new Option(label,label));select.value=type;}};
