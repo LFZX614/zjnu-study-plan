@@ -33,7 +33,7 @@ function clearRecord(t){
  const source=clearSource(t),previous=state.clearLearning[source.id]||{},history=previous.history||[];
  if(history.some(h=>h.date>date)){toast('这项已有更晚的回忆记录，请使用实际最新日期，避免倒排复习');return false;}
  const level=Number($('#clear-rating').value),stamp=new Date().toISOString(),checks=state.clearChecks[t.id]||{};
- for(const u of source.units||[])if(checks[u.id])state.clearCoverage[u.id]={covered:true,firstCovered:state.clearCoverage[u.id]?.firstCovered||date,lastChecked:date,updatedAt:stamp};
+ for(const u of source.units||[])if(checks[u.id]&&(!source.rowKind||level>=2))state.clearCoverage[u.id]={covered:true,firstCovered:state.clearCoverage[u.id]?.firstCovered||date,lastChecked:date,updatedAt:stamp};
  const basics=(source.units||[]).every(u=>state.clearCoverage[u.id]?.covered);
  const independent=level>=2;
  const firstSuccess=previous.firstSuccess||(independent?date:null);

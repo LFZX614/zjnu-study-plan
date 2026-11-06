@@ -9,7 +9,7 @@ function initialiseChapterRows(){
 }
 const chapterInitBase=initV2;initV2=function(){chapterInitBase();initialiseChapterRows();};
 const chapterDoneBase=done;
-done=function(t){if(t.rowKind==='chapter'&&t.units?.length)return t.units.every(u=>state.clearCoverage?.[u.id]?.covered);return chapterDoneBase(t);};
+done=function(t){if(t.rowKind==='chapter'&&t.units?.length){const p=state.clearLearning?.[t.id];return (!p?.active||p.level>=2)&&t.units.every(u=>state.clearCoverage?.[u.id]?.covered);}return chapterDoneBase(t);};
 const chapterOpenBase=openTask;
 openTask=function(id){chapterOpenBase(id);const t=currentTask;if(!t?.rowKind)return;
  const source=clearSource(t),heading=[...$('#task-content').querySelectorAll('h3')].find(h=>/①/.test(h.textContent));
