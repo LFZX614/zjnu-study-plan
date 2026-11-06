@@ -2,7 +2,7 @@ from pathlib import Path
 import hashlib,zipfile,json,shutil
 ROOT=Path(__file__).resolve().parent
 archive=ROOT/'site.zip'
-EXPECTED="84225cc6954a42a9a2318b13884a3d2efb5950bd9c3733b2bf2629ee581431e0"
+EXPECTED="bb1b13556bfc3248394b503ff35fcb9cd407c5dd6fe94378c8c8760f08e6dcb3"
 if hashlib.sha256(archive.read_bytes()).hexdigest()!=EXPECTED:
  raise SystemExit('Site archive checksum mismatch')
 out=ROOT/'dist'
@@ -13,11 +13,15 @@ with zipfile.ZipFile(archive) as z:
    raise SystemExit('Invalid archive path')
  z.extractall(out)
 plan=json.loads((out/'plan.json').read_text(encoding='utf-8'))
-assert plan['textbookOrderVersion']==2
+assert plan['textbookOrderVersion']==4
+assert plan['version']=='clear-full-review-20261106-v4'
+assert len(plan['clearPlan']['units'])==206
+assert len(plan['clearPlan']['questions'])==349
+assert len({e['id'] for q in plan['clearPlan']['questions'] for e in q['evidence']})==389
 assert len(plan['days'])>40
 for name in ['index.html','app-v2.js','materials/index.html','materials/theory-activity.html','materials/foreign-ancient.html','materials/theory-activity.pdf','materials/foreign-ancient.pdf','legacy/index.html']:
  assert (out/name).is_file(),name
-print('study: daily plan, two PDFs and interactive quizzes ready')
+print('study: explicit daily tasks, complete textbook map, evidence and recall ready')
 for name in ['config.js','merge.js','cloud.js']:
  shutil.copyfile(ROOT/'sync'/name,out/('cloud-'+name))
 index=out/'index.html'

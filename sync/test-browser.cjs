@@ -31,9 +31,12 @@ const {chromium}=require('C:/Users/hyun0/.cache/codex-runtimes/codex-primary-run
   }
   async function login(p,email){await p.locator('#cloud-login [name=email]').fill(email);await p.locator('#cloud-login [name=password]').fill('Test-only-Password8');await p.locator('#cloud-login [value=login]').click();await p.locator('[data-cloud=merge]').waitFor()}
   const a=await device(),b=await device();
-  await a.evaluate(()=>{state.notes.phone='手机笔记';save()});await login(a,'owner@example.test');await a.locator('[data-cloud=merge]').click();await a.waitForFunction(()=>document.querySelector('[data-cloud-status]').textContent.startsWith('已同步'));
+  await a.evaluate(()=>{state.notes.phone='手机笔记';state.clearLearning['clear-2026-11-07-C']={active:true,level:2,stage:0,nextDue:'2026-11-08',updatedAt:'2026-11-07T06:00:00Z'};state.clearCoverage.B010={covered:true,lastChecked:'2026-11-07',updatedAt:'2026-11-07T06:00:00Z'};state.clearChecks['clear-2026-11-07-C']={B010:true,updatedAt:'2026-11-07T06:00:00Z'};save()});await login(a,'owner@example.test');await a.locator('[data-cloud=merge]').click();await a.waitForFunction(()=>document.querySelector('[data-cloud-status]').textContent.startsWith('已同步'));
   await b.evaluate(()=>{state.notes.computer='电脑笔记';save()});await login(b,'owner@example.test');await b.locator('[data-cloud=merge]').click();await b.waitForFunction(()=>state.notes.phone==='手机笔记');
+  assert.equal(await b.evaluate(()=>state.clearLearning['clear-2026-11-07-C'].nextDue),'2026-11-08');assert(await b.evaluate(()=>state.clearCoverage.B010.covered&&state.clearChecks['clear-2026-11-07-C'].B010));
+  await b.evaluate(()=>{state.clearLearning['clear-2026-11-07-C']={...state.clearLearning['clear-2026-11-07-C'],level:1,nextDue:'2026-11-08',updatedAt:'2026-11-08T06:00:00Z'};save()});await b.locator('[data-cloud=sync]').click();await b.waitForFunction(()=>document.querySelector('[data-cloud-status]').textContent.startsWith('已同步'));
   await a.locator('[data-cloud=sync]').click();await a.waitForFunction(()=>state.notes.computer==='电脑笔记');
+  assert.equal(await a.evaluate(()=>state.clearLearning['clear-2026-11-07-C'].level),1,'latest recall rating must sync back');
   conflict=true;await a.evaluate(()=>{state.notes.phone='修改后的笔记';save()});await a.locator('[data-cloud=sync]').click();await a.waitForFunction(()=>state.notes.concurrent==='另一台设备');assert.equal(rows['owner@example.test'].data.notes.phone,'修改后的笔记');
   await a.evaluate(()=>{state.notes.phone='';state.checks.test={a:false};save()});await a.locator('[data-cloud=sync]').click();await a.waitForFunction(()=>document.querySelector('[data-cloud-status]').textContent.startsWith('已同步'));
   await b.locator('[data-cloud=sync]').click();await b.waitForFunction(()=>state.notes.phone==='');
