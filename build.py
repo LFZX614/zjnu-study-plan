@@ -2,7 +2,7 @@ from pathlib import Path
 import hashlib,zipfile,json,shutil
 ROOT=Path(__file__).resolve().parent
 archive=ROOT/'site.zip'
-EXPECTED="4c673b791534d6a41bfefc549d80eff112e408a9437753356708931ef4cd0409"
+EXPECTED="3cbe24257c0f74b6d33f2c7621bcacc8c175ab12946acb5b2914954b464f00ae"
 if hashlib.sha256(archive.read_bytes()).hexdigest()!=EXPECTED:
  raise SystemExit('Site archive checksum mismatch')
 out=ROOT/'dist'
