@@ -13,6 +13,17 @@ with zipfile.ZipFile(archive) as z:
    raise SystemExit('Invalid archive path')
  z.extractall(out)
 plan=json.loads((out/'plan.json').read_text(encoding='utf-8'))
+english={'days':[]}
+for source in sorted((ROOT/'scripts/english-practice').glob('week-*.json')):
+ part=json.loads(source.read_text(encoding='utf-8'))
+ english['days'].extend(part['days'])
+ english['revision']=part['revision']
+english_days={day['date']:day['tasks'] for day in english['days']}
+for day in plan['rebalanced']['days']:
+ if day['date'] in english_days:
+  day['tasks']=[task for task in day['tasks'] if task['course']!='英语']+english_days[day['date']]
+plan['englishPracticeRevision']=english['revision']
+(out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 assert plan['textbookOrderVersion']==4
 assert plan['version']=='chapter-rows-20261106-v1'
 assert len(plan['clearPlan']['units'])==206
