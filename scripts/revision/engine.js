@@ -8,7 +8,15 @@
   const out={...t};for(const k of ['title','course','book','chapter','scope'])if(typeof e[k]==='string')out[k]=e[k];
   if(typeof e.type==='string'){out.type=e.type;out.displayType=e.type;}
   if(typeof e.scope==='string')out.detail=e.scope;
+  if(t.reviewTargets&&((typeof e.title==='string'&&e.title!==t.title)||(typeof e.scope==='string'&&e.scope!==t.scope)||(typeof e.type==='string'&&e.type!==t.displayType)))out.reviewTargets=[{type:out.displayType==='复习'?out.reviewQuestionType||'课本梳理':out.displayType,title:out.title,action:'按自定要求检测',requirement:out.scope||out.detail||'按修改后的题目回忆并核对。'}];
   return out;
+ }
+ function describeReview(t,data,state={}){
+  const edit=state.taskEdits?.[t.id],guide=edit&&!edit.reset?null:data.reviewGuides?.[t.sourceId],question=(data.coverage||[]).find(q=>q.id===t.sourceId);
+  const type=guide?.type||t.reviewQuestionType||(t.type!=='复习'?t.displayType||t.type:null)||question?.type||'课本梳理';
+  const title=guide?.title||t.title;
+  const targets=guide?.targets||[{type,title,action:['名词解释','简答题','论述题'].includes(type)?'背诵':type==='填空与识记'?'识记':'合书检测',requirement:t.scope||t.detail||'按原任务已学范围合书回忆，再核对教材和笔记。'}];
+  return {title,reviewQuestionType:type,displayType:type,reviewTargets:targets};
  }
  function build(data,state,today){
   const records=state.records||{},moves=state.moves||{},deleted=state.deletedTasks||{},completed=t=>!!records[t.id]?.done;
@@ -34,7 +42,8 @@
   for(const t of learn.values()){
    if(!completed(t)||gone(t))continue;const anchor=records[t.id].completedOn||today;
    for(const interval of intervals){const id='v3:auto:'+t.sourceId+':'+interval,record=records[id],date=plus(anchor,interval);
-    const child=applyEdits({...t,id,date:moves[id]?.date||(record?.done?record.scheduledOn||record.completedOn:date),plannedDate:date,manual:!!moves[id],phase:'auto-review',displayType:'复习',type:'复习',estimate:interval===1?Math.min(5,t.estimate||5):Math.min(20,Math.max(5,Math.round((t.estimate||10)/2))),sourceTask:t.id,interval,blocked:[],scope:'合书回忆本任务范围，再核对遗漏。第'+interval+'天回忆；按实际完成日期生成，延期后保留原到期日。',due:date},state);
+    const spec=describeReview(t,data,state);
+    const child=applyEdits({...t,...spec,id,date:moves[id]?.date||(record?.done?record.scheduledOn||record.completedOn:date),plannedDate:date,manual:!!moves[id],phase:'auto-review',type:'复习',estimate:interval===1?Math.min(5,t.estimate||5):Math.min(20,Math.max(5,Math.round((t.estimate||10)/2))),sourceTask:t.id,interval,blocked:[],scope:spec.reviewTargets.map(q=>'【'+q.type+'】'+q.title+'｜'+q.action+'：'+q.requirement).join('\n')+'\n第'+interval+'天回忆；沿用已有答案。同一题与另一条复习重合时只检测一次，勿重复抄写。',due:date},state);
     if(!gone(child))list.push(child);
    }
   }
@@ -60,5 +69,5 @@
   out.sort((a,b)=>a.date.localeCompare(b.date)||rank(a)-rank(b)||(a.order||0)-(b.order||0));
   return{tasks:out,warnings,loads:Object.fromEntries(loads)};
  }
- const api={build,plus,rotation,applyEdits,validDate};if(typeof module!=='undefined')module.exports=api;root.StudyProgress=api;
+ const api={build,plus,rotation,applyEdits,validDate,describeReview};if(typeof module!=='undefined')module.exports=api;root.StudyProgress=api;
 })(globalThis);

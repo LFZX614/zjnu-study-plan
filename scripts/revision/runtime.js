@@ -7,6 +7,9 @@
  const professional=c=>['古代文学','现当代文学','外国文学','文学理论','现代汉语'].includes(c);
  const options=(values,current)=>[...new Set([current,...values])].filter(Boolean).map(v=>`<option ${v===current?'selected':''}>${esc(v)}</option>`).join('');
  const types=['课本梳理','名词解释','简答题','论述题','填空与识记','分析题','配套检测','作品阅读','复习','练习'];
+ const taskRowBase=taskHTML;
+ taskHTML=function(t){const row=taskRowBase(t);if(!t.reviewTargets?.length)return row;return '<div class="revision-review-row">'+row+'<p class="revision-recall"><b>复习 · '+esc(t.reviewTargets.length===1?t.reviewTargets[0].action:'按下面清单检测')+'</b></p>'+(t.reviewTargets.length>1?'<ul class="revision-recall-list">'+t.reviewTargets.map(q=>'<li><b>'+esc(q.action)+'</b>｜【'+esc(q.type)+'】'+esc(q.title)+'</li>').join('')+'</ul>':'')+'</div>';};
+ matches=function(t){const review=t.type==='复习'||t.displayType==='复习';return(type==='all'||t.type===type||t.reviewQuestionType===type||t.reviewTargets?.some(q=>q.type===type))&&(filter==='all'||filter==='done'&&done(t)||filter==='review'&&review||filter==='new'&&!review);};
  const openBase=openTask;
  function questionHTML(q){const years=[...new Set((q.evidence||[]).map(e=>e.year).filter(Boolean))].join('、');return `<p class="revision-question"><label><input type="checkbox" data-question-check="${esc(q.id)}" ${state.chapterChecks?.[q.id]?.done?'checked':''}><span>${esc(q.title)}${years?'（'+esc(years)+'）':''}</span></label><small>${esc(q.id)} · 原整理问法，年份仅据现有资料</small></p>`;}
  openTask=function(id){openBase(id);const t=currentTask;if(!t||t.id!==id)return;
