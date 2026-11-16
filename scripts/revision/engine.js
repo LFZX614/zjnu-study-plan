@@ -14,6 +14,8 @@
   const records=state.records||{},moves=state.moves||{},deleted=state.deletedTasks||{},completed=t=>!!records[t.id]?.done;
   const gone=t=>!!deleted[t.id]?.deleted||!!deleted[t.sourceTask]?.deleted||!!deleted[t.sourceTaskId]?.deleted;
   const flat=data.days.flatMap(d=>d.tasks.map(t=>applyEdits({...t,plannedDate:d.date},state)));
+  const choiceDefault=data.days.flatMap(d=>d.tasks).find(t=>t.course==='政治'&&t.title.startsWith('1000题｜马原｜第四章'))?.title;
+  const activeChoice=state.politics?.choiceRevision==='choice-manual-20261116-v1'?state.politics.v3ChapterName:choiceDefault;
   const ids=new Set(flat.map(t=>t.id)),legacy=(data.legacyTasks||[]).filter(t=>!ids.has(t.id)&&completed(t)).map(t=>applyEdits({...t,date:records[t.id]?.scheduledOn||records[t.id]?.completedOn||t.plannedDate,history:true},state));
   const learn=new Map([...flat,...legacy].filter(t=>t.phase==='first'||t.course==='政治'&&t.type==='记忆').map(t=>[t.sourceId,t]));
   const baseline=new Map((data.coverage||[]).filter(r=>r.first&&r.first<data.days[0].date).map(r=>[r.id,r.first]));
@@ -25,7 +27,9 @@
    const recall=t.sourceId?.match(/^pol-recall-(.+)-(1|3|7|14)$/);if(recall&&learn.has(recall[1])&&!completed(t))continue;
    if(t.parentId&&deleted['v3:learn:'+t.parentId]?.deleted)continue;
    const political=t.course==='政治'&&t.title.startsWith('1000题');
-   list.push({...t,title:political?(records[t.id]?.snapshot?.title||state.politics?.v3ChapterName||t.title):t.title,date:moves[t.id]?.date||records[t.id]?.scheduledOn||t.date||t.plannedDate,manual:!!moves[t.id],blocked:(t.prerequisites||[]).filter(r=>!dateOf(r.id)).map(r=>r.id)});
+   const choiceTitle=completed(t)?records[t.id]?.snapshot?.title:state.taskEdits?.[t.id]?.reset?null:state.taskEdits?.[t.id]?.title;
+   const choiceScope=political&&!completed(t)&&!state.taskEdits?.[t.id]?.scope?(state.politics?.choiceRevision==='choice-manual-20261116-v1'?'继续当前选定章节的练习与订正。':'当前进度：马原第四章多选题订正，先完成剩余订正，再遮住解析重答错题。')+'勾选仅表示本次练习完成，不表示整章完成；整章结束后在任务详情手动切换下一章。':t.scope;
+   list.push({...t,scope:choiceScope,title:political?(choiceTitle||activeChoice||t.title):t.title,date:moves[t.id]?.date||records[t.id]?.scheduledOn||t.date||t.plannedDate,manual:!!moves[t.id],blocked:(t.prerequisites||[]).filter(r=>!dateOf(r.id)).map(r=>r.id)});
   }
   for(const t of learn.values()){
    if(!completed(t)||gone(t))continue;const anchor=records[t.id].completedOn||today;

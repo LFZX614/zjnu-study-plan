@@ -6,6 +6,12 @@ const source=a.tasks.find(t=>t.type==='课本梳理'&&t.questionIndex?.length),r
 const clone=x=>JSON.parse(JSON.stringify(x)),today='2026-11-16';
 assert.equal(a.chapters.length,160);assert.equal(new Set(a.questionIndex.map(q=>q.id)).size,349);assert.equal(a.pendingChecks.length,38);
 const originalRun=engine.build(data,{},today);assert.equal(new Set(originalRun.tasks.map(t=>t.id)).size,originalRun.tasks.length);
+const choiceTasks=originalRun.tasks.filter(t=>t.course==='政治'&&t.title.startsWith('1000题'));assert(choiceTasks.length);assert(choiceTasks.every(t=>t.title.includes('第四章')));
+const choiceSix=data.days.flatMap(d=>d.tasks).find(t=>t.title.startsWith('1000题｜马原｜第六章'));
+const choiceState={politics:{v3ChapterName:choiceSix.title},records:{[choiceSix.id]:{done:true,completedOn:today,scheduledOn:today,snapshot:choiceSix}}};
+assert(engine.build(data,choiceState,today).tasks.filter(t=>t.course==='政治'&&t.title.startsWith('1000题')&&!choiceState.records[t.id]?.done).every(t=>t.title.includes('第四章')));
+assert.equal(engine.build(data,choiceState,today).tasks.find(t=>t.id===choiceSix.id).title,choiceSix.title);
+choiceState.politics.choiceRevision='choice-manual-20261116-v1';assert(engine.build(data,choiceState,today).tasks.filter(t=>t.course==='政治'&&t.title.startsWith('1000题')).every(t=>t.title.includes('第六章')));
 for(const t of originalRun.tasks.filter(t=>t.revision))assert.equal(t.date,t.plannedDate,'Approved date retained: '+t.title);
 const ancient=a.chapters.filter(c=>c.course==='古代文学');assert(ancient[0].title.includes('两晋诗坛'));assert(ancient[1].title.includes('陶渊明'));assert(ancient[3].title.includes('谢灵运'));assert(ancient[4].title.includes('永明体'));
 const s={records:{[source.id]:{done:true,completedOn:today,scheduledOn:source.date},[retired.id]:{done:true,completedOn:today,scheduledOn:today}},notes:{[retired.id]:'旧组笔记'},moves:{},custom:[{id:'mine',course:'古代文学',type:'简答题',title:'自定任务',date:today}],taskEdits:{},deletedTasks:{}};
@@ -25,6 +31,7 @@ const server=http.createServer((req,res)=>{const f=path.resolve(root,'.'+new URL
  await page.addInitScript(seed=>{if(!localStorage.getItem('anshang-daily-v1'))localStorage.setItem('anshang-daily-v1',JSON.stringify(seed));},seed);
  await page.goto('http://127.0.0.1:'+server.address().port+'/?date='+source.date);await page.locator('.revision-chapter').first().waitFor();
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.evaluate(()=>openTask(allTasks().find(t=>t.course==='政治'&&t.type==='选择题').id));assert((await page.locator('#progress-politics-chapter').inputValue()).includes('第四章'));await page.locator('#progress-politics-chapter').selectOption({label:choiceSix.title});await page.locator('#progress-politics-save').click();assert.equal(await page.evaluate(()=>state.politics.choiceRevision),'choice-manual-20261116-v1');assert(await page.evaluate(()=>allTasks().filter(t=>t.course==='政治'&&t.type==='选择题'&&t.title.startsWith('1000题')).every(t=>t.title.includes('第六章'))));await page.evaluate(()=>openTask(allTasks().find(t=>t.course==='政治'&&t.type==='选择题').id));await page.locator('#progress-politics-chapter').selectOption({label:choiceTasks[0].title});await page.locator('#progress-politics-save').click();
  await page.locator(`[data-detail="${source.id}"]`).first().click();await page.locator('#task-note').fill('测试笔记');await page.locator('#save-note').click();
  await page.locator('#revision-edit').click();await page.locator('#revision-edit-form [name=title]').fill('改后标题：保留记录');await page.locator('#revision-edit-form [name=type]').selectOption('简答题');await page.locator('#revision-edit-form [name=scope]').fill('按教材分点自测');await page.locator('#revision-edit-form [name=date]').fill('2026-11-19');await page.getByRole('button',{name:'保存修改',exact:true}).click();
  assert.equal(await page.evaluate(id=>getTask(id).date,source.id),'2026-11-19');await page.reload();await page.waitForFunction(()=>!!plan?.taskRevision);
