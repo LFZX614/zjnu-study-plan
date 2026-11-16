@@ -40,3 +40,5 @@ page=index.read_text(encoding='utf-8')
 if 'src="cloud-cloud.js' not in page:
  page=page.replace('</body>','<script src="cloud-config.js?v=1"></script><script src="cloud-merge.js?v=1"></script><script src="cloud-cloud.js?v=1"></script></body>')
 index.write_text(page,encoding='utf-8')
+import runpy
+runpy.run_path(str(ROOT/'scripts'/'revision'/'install.py'))

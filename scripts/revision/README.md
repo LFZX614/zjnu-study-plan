@@ -1,0 +1,11 @@
+# Confirmed textbook task revision, 2026-11-16
+
+`approved-data.json` is the frozen import of the user-reviewed daily Markdown list. Its `sourceDigest` identifies that local input. It contains 160 forthcoming chapter/section locations, 568 individually typed task rows including consolidation, 349 original question groups with their evidence, and 38 earlier locations awaiting the learner's own check.
+
+`build.py` first verifies/extracts the existing archive and applies the English overlay, then runs `install.py`. The revision removes previous professional-course rows from the active schedule while retaining their definitions in `legacyTasks`. Public-course tasks must compare equal before and after import. Only 113 semantically matching task IDs and their original review source IDs are reused; new split rows do not inherit completion of an old combined chapter. The browser never rewrites a user's existing records, notes, moves or custom tasks during migration.
+
+`engine.js` retains completion-anchored reviews, manual date precedence, old completed task history and deleted-source suppression. Approved forthcoming task dates are preserved. Workload warnings remain visible rather than silently rearranging the imported dates. Overdue unfinished tasks can move to the next course day in chapter order; manual moves take precedence.
+
+`runtime.js` adds chapter grouping, task editing and reversible deletion. Edits and deletion/restoration use separate timestamped maps. Deleting one automatic review can be distinguished from deleting its source and all reminders. Resetting content uses a timestamped reset marker; it does not erase a manual date, note or completion. Existing backup merging and generic cloud merging include both new maps. Question-index checks are separate from task completion. The previous professional-course notes and early pending locations remain accessible in settings.
+
+Run `python3 build.py`, then `node scripts/test-task-revision.cjs`. The browser regression uses Playwright from the local Codex runtime and Chrome. It covers imported dates/order, review anchoring, edits/reset, manual moves, reversible/cascading deletion, custom tasks, old records/notes, backup round trips, concurrent cloud merge, and mobile/desktop views. The UI is tested against a local server with an isolated browser profile and no account login.

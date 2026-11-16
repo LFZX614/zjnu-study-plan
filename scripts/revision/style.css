@@ -1,0 +1,12 @@
+.revision-chapter{margin:22px 0;padding-top:14px;border-top:1px solid var(--line,#7774)}
+.revision-chapter h3{font-size:17px;line-height:1.6;margin:5px 0 12px;font-weight:700;color:var(--text)}
+.revision-chapter small,.revision-source{color:var(--muted);font-size:12px;line-height:1.65}
+.revision-source{margin:0 0 8px 44px;overflow-wrap:anywhere}
+.revision-notice{font-size:14px;line-height:1.8;padding:14px 0;border-bottom:1px solid var(--line,#7774);color:var(--text)}
+.revision-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#revision-edit-form input,#revision-edit-form select,#revision-edit-form textarea{width:100%;max-width:100%;box-sizing:border-box;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line,#7777);border-radius:7px;padding:10px}
+#revision-action-panel{margin-top:16px}#revision-edit-form label{display:block;margin:12px 0}#revision-edit-form textarea{min-height:120px}
+.revision-index{padding:12px 0;border-bottom:1px solid var(--line,#7774);overflow-wrap:anywhere}.revision-index summary{cursor:pointer;line-height:1.8;font-weight:700}
+.revision-question label{display:flex!important;align-items:flex-start;gap:9px;line-height:1.8}.revision-question input{width:18px!important;flex-shrink:0;margin-top:6px}.revision-question small{display:block;color:var(--muted);padding-left:27px;font-size:12px}
+#task-content .dialog-actions{flex-wrap:wrap;gap:8px}#revision-action-panel button{max-width:100%;white-space:normal}.subject .subject-header h2{color:var(--text)}
+@media(max-width:600px){.revision-fields{grid-template-columns:1fr}.revision-chapter h3{font-size:16px}.revision-source{margin-left:36px}}
