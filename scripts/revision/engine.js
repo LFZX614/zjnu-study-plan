@@ -16,7 +16,7 @@
   const type=guide?.type||t.reviewQuestionType||(t.type!=='复习'?t.displayType||t.type:null)||question?.type||'课本梳理';
   const title=guide?.title||t.title;
   const targets=guide?.targets||[{type,title,action:['名词解释','简答题','论述题'].includes(type)?'背诵':type==='填空与识记'?'识记':'合书检测',requirement:t.scope||t.detail||'按原任务已学范围合书回忆，再核对教材和笔记。'}];
-  return {title,reviewQuestionType:type,displayType:type,reviewTargets:targets};
+  return {title,reviewQuestionType:type,displayType:type,reviewTargets:targets,reviewChecklist:!!guide?.chapterChecklist};
  }
  function build(data,state,today){
   const records=state.records||{},moves=state.moves||{},deleted=state.deletedTasks||{},completed=t=>!!records[t.id]?.done;
@@ -43,7 +43,7 @@
    if(!completed(t)||gone(t))continue;const anchor=records[t.id].completedOn||today;
    for(const interval of intervals){const id='v3:auto:'+t.sourceId+':'+interval,record=records[id],date=plus(anchor,interval);
     const spec=describeReview(t,data,state);
-    const child=applyEdits({...t,...spec,id,date:moves[id]?.date||(record?.done?record.scheduledOn||record.completedOn:date),plannedDate:date,manual:!!moves[id],phase:'auto-review',type:'复习',estimate:interval===1?Math.min(5,t.estimate||5):Math.min(20,Math.max(5,Math.round((t.estimate||10)/2))),sourceTask:t.id,interval,blocked:[],scope:spec.reviewTargets.map(q=>'【'+q.type+'】'+q.title+'｜'+q.action+'：'+q.requirement).join('\n')+'\n第'+interval+'天回忆；沿用已有答案。同一题与另一条复习重合时只检测一次，勿重复抄写。',due:date},state);
+    const child=applyEdits({...t,...spec,id,date:moves[id]?.date||(record?.done?record.scheduledOn||record.completedOn:date),plannedDate:date,manual:!!moves[id],phase:'auto-review',type:'复习',estimate:interval===1?Math.min(5,t.estimate||5):Math.min(20,Math.max(5,Math.round((t.estimate||10)/2))),sourceTask:t.id,interval,blocked:[],scope:(spec.reviewChecklist?'本章题单只复测已学内容；未学题仍按原安排待补，整章打卡不会自动认定逐题已学。\n':'')+spec.reviewTargets.map(q=>'【'+q.type+'】'+q.title+'｜'+q.action+'：'+q.requirement).join('\n')+'\n第'+interval+'天回忆；沿用已有答案。同一题与另一条复习重合时只检测一次，勿重复抄写。',due:date},state);
     if(!gone(child))list.push(child);
    }
   }

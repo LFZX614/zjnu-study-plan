@@ -2,8 +2,15 @@ const fs=require('fs'),path=require('path'),http=require('http'),assert=require(
 const {chromium}=require('C:/Users/hyun0/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const root=path.resolve(__dirname,'../dist'),data=JSON.parse(fs.readFileSync(path.join(root,'plan.json'),'utf8')).rebalanced,engine=require('./revision/engine.js');
 const sources=['framework-141-part1','framework-141-part2','framework-17-part1','framework-17-part2','framework-17-part3','framework-17-part4','r2-59'];
+const outlines=[...data.approved.tasks,...data.legacyTasks.filter(t=>t.phase==='first')].filter(t=>t.type==='课本梳理');
+for(const t of outlines)assert(data.reviewGuides[t.sourceId]?.targets.length,'Missing framework guide '+t.sourceId);
+const originalQuestions=[...data.approved.tasks,...data.approved.questionIndex,...data.legacyTasks];
+for(const g of Object.values(data.reviewGuides))for(const q of g.targets)if(q.sourceTaskId)assert(originalQuestions.some(t=>t.id===q.sourceTaskId&&t.title===q.title));
+assert(!JSON.stringify(data.reviewGuides['framework-26']).includes('谢灵运'));assert(!JSON.stringify(data.reviewGuides['framework-26']).includes('永明体'));
+assert(data.reviewGuides['framework-127'].targets.some(q=>q.title.includes('构词')));assert(data.reviewGuides['framework-128'].targets.some(q=>q.title.includes('义素')));
 const seed={records:{},notes:{},moves:{},custom:[],legacy:[],theme:'dark'};
 for(const source of sources){const t=data.legacyTasks.find(t=>t.sourceId===source&&t.phase==='first');assert(t);seed.records[t.id]={done:true,completedOn:'2026-11-13',scheduledOn:'2026-11-13',updatedAt:'2026-11-13T10:00:00Z'};seed.notes[t.id]='保留原答案：'+source;}
+for(const source of ['framework-27','framework-38','framework-22','framework-127']){const t=data.legacyTasks.find(t=>t.sourceId===source&&t.phase==='first');seed.records[t.id]={done:true,completedOn:'2026-11-13',scheduledOn:'2026-11-13'};}
 const before=JSON.stringify(seed),result=engine.build(data,seed,'2026-11-16');assert.equal(JSON.stringify(seed),before);
 for(const source of sources){const rs=result.tasks.filter(t=>t.phase==='auto-review'&&t.sourceId===source);assert.equal(rs.length,4);for(const t of rs){assert(t.reviewTargets.length);assert.equal(t.type,'复习');assert.equal(t.displayType,data.reviewGuides[source].type);assert(t.scope.includes('沿用已有答案'));}}
 const zhu=result.tasks.find(t=>t.phase==='auto-review'&&t.sourceId==='framework-17-part3');assert.equal(zhu.title,'朱自清散文的特点');assert.equal(zhu.reviewTargets[0].action,'背诵');
@@ -16,5 +23,6 @@ const server=http.createServer((req,res)=>{const f=path.resolve(root,'.'+new URL
  assert(await page.getByRole('button',{name:'【简答题】朱自清散文的特点',exact:true}).count());assert(await page.getByRole('button',{name:'【简答题】周作人散文的艺术风格',exact:true}).count());assert((await page.locator('.revision-recall-list').allTextContents()).some(t=>t.includes('【名词解释】语丝社')&&t.includes('【名词解释】语丝派')));
  await page.getByRole('button',{name:'【简答题】朱自清散文的特点',exact:true}).first().click();assert((await page.locator('.progress-detail').textContent()).includes('此前确认'));assert(await page.locator('#revision-edit').count());await page.locator('#task-dialog .close').click();
  await page.locator('[data-filter="review"]').click();await page.locator('#type-filter').selectOption('名词解释');assert((await page.locator('.revision-recall-list').allTextContents()).some(t=>t.includes('【名词解释】语丝社')));await page.locator('#type-filter').selectOption('简答题');assert(await page.getByRole('button',{name:'【简答题】朱自清散文的特点',exact:true}).count());assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.locator('#type-filter').selectOption('all');for(const course of ['古代文学','外国文学','文学理论','现代汉语']){const section=page.locator('[data-course="'+course+'"]');assert(await section.locator('.revision-recall-list').count());assert((await section.textContent()).includes('只复测已学'));}
  await page.clock.fastForward(3000);await page.locator('[data-course="现当代文学"]').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(__dirname,'../../../tmp/explicit-review-mobile.png'),fullPage:false});assert.deepEqual(errors,[]);console.log('PASS explicit review questions/types, visible memorization list, auxiliary understanding, original IDs/notes/moves, review and question-type filtering, mobile layout.');
  }finally{await browser.close();server.close();}})().catch(e=>{console.error(e);server.close();process.exitCode=1;});
