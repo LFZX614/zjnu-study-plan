@@ -42,3 +42,4 @@ if 'src="cloud-cloud.js' not in page:
 index.write_text(page,encoding='utf-8')
 import runpy
 runpy.run_path(str(ROOT/'scripts'/'revision'/'install.py'))
+runpy.run_path(str(ROOT/'scripts'/'approved'/'install.py'))
