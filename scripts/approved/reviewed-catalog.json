@@ -1,0 +1,6520 @@
+{
+  "catalog": [
+    {
+      "id": "v4:C:recall:652ba066abcd0a4",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "《诗经》的艺术特色及后世影响",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。赋比兴、语言与结构、抒情及现实关怀、后世影响；配准确篇目。与杜甫继承题共用证据。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 1,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "v4:C:recall:e0c9c6d7ad1fe9c",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "《庄子》散文的艺术特色",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。寓言、想象、语言与结构等角度联系具体篇章；不将先秦诸子全部展开。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 2,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "v4:C:recall:eacf7f697e7be07",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "楚辞艺术与屈原的文学史地位",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。先《离骚》等具体作品的抒情主体、想象与语言，再概括楚辞特色和屈原影响；《天问》保留一个补充角度，不另背整篇。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 3,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "v4:C:recall:b7b7afa875b0ba0",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "汉赋的发展阶段、特点与代表作品",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。回忆发展线、文体特征与作家作品；不因本次重排重新作为新学。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 4,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "v4:C:recall:c018377b35ade48",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "《史记》的写人与叙事艺术",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。回忆具体人物、叙事与文学价值；“史家之绝唱，无韵之离骚”按设问组织，若原来只背过部分则补缺口。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 5,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "v4:C:recall:7170ad6c6b1f96f",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "汉乐府的内容与艺术特色",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "仅回忆已背范围并核对缺口，不重新作为新学。内容、叙事、人物和语言共用主干；不重复背2017、2018年两种问法。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 6,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "v4:C:recall:e41542b7c6a69e8",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "《九歌》",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "已学基础回忆：核对定义及一例，错处才补。",
+      "evidence": [
+        {
+          "id": "Q126",
+          "year": 2015,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p4 一1",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "《九歌》"
+        },
+        {
+          "id": "Q136",
+          "year": 2016,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p5 一1",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "《九歌》"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 7,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "v4:C:recall:45b8f2495f97052",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "《离骚》",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "已学基础回忆：核对定义及一例，错处才补。",
+      "evidence": [
+        {
+          "id": "Q138",
+          "year": 2016,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p5 一3",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "《离骚》"
+        },
+        {
+          "id": "Q336",
+          "year": 2024,
+          "paper": "939",
+          "source": "F",
+          "loc": "939 二1",
+          "status": "Word回忆版",
+          "version": "2024Word版",
+          "kind": "N",
+          "text": "《离骚》"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 8,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:C:recall:c23439cdb14ed55",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "汉乐府",
+      "section": "已学部分",
+      "rank": 0,
+      "scope": "已学基础回忆：核对定义及一例，错处才补。",
+      "evidence": [
+        {
+          "id": "Q048",
+          "year": 2009,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p2 一1",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "汉乐府"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 9,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "repair-1",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "赋比兴",
+      "section": "先秦",
+      "rank": 1,
+      "scope": "原已列复习但未真正显示；恢复定义、区别和篇目例证的短回忆。",
+      "evidence": [
+        {
+          "id": "Q021",
+          "year": 2007,
+          "kind": "N",
+          "text": "赋比兴"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 10,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "repair-2",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "《论语》",
+      "section": "先秦",
+      "rank": 1,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。这些独立名解没有逐项完成依据；已会就回忆，缺项才补。",
+      "evidence": [
+        {
+          "id": "Q062",
+          "year": 2010,
+          "kind": "N",
+          "text": "《论语》"
+        },
+        {
+          "id": "Q147",
+          "year": 2017,
+          "kind": "N",
+          "text": "《论语》"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 11,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "repair-3",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "《晏子春秋》",
+      "section": "先秦",
+      "rank": 1,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。这些独立名解没有逐项完成依据；已会就回忆，缺项才补。",
+      "evidence": [
+        {
+          "id": "Q104",
+          "year": 2013,
+          "kind": "N",
+          "text": "《晏子春秋》"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 12,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-4",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "《尚书》",
+      "section": "先秦",
+      "rank": 1,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。这些独立名解没有逐项完成依据；已会就回忆，缺项才补。",
+      "evidence": [
+        {
+          "id": "Q137",
+          "year": 2016,
+          "kind": "N",
+          "text": "《尚书》"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 13,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "repair-5",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "《战国策》的艺术特点",
+      "section": "先秦",
+      "rank": 1,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。已背相关散文内容则只补本题角度。",
+      "evidence": [
+        {
+          "id": "Q080",
+          "year": 2011,
+          "kind": "S",
+          "text": "《战国策》的艺术特点"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 14,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "repair-6",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "汉代经学文风",
+      "section": "秦汉",
+      "rank": 2,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q108",
+          "year": 2013,
+          "kind": "S",
+          "text": "汉代经学文风"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 15,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-7",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "《古诗十九首》",
+      "section": "秦汉",
+      "rank": 2.9,
+      "scope": "现有任务保留，移回秦汉相关位置，不再拖到魏晋、唐代之后才零散处理。",
+      "evidence": [
+        {
+          "id": "Q076",
+          "year": 2011,
+          "kind": "N",
+          "text": "古诗十九首"
+        },
+        {
+          "id": "Q286",
+          "year": 2023,
+          "kind": "N",
+          "text": "《古诗十九首》"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 16,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "repair-8",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "建安七子",
+      "section": "魏晋南北朝",
+      "rank": 3.0,
+      "scope": "2026年11月18日用户明确确认已经背过。本项只回忆原有定义、要点与例证，错处才补，不再安排新背；实际首背日期未提供，不补造完成日期。",
+      "evidence": [
+        {
+          "id": "Q035",
+          "year": 2008,
+          "kind": "N",
+          "text": "建安七子"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 17,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "repair-9",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "建安风骨",
+      "section": "魏晋南北朝",
+      "rank": 3.0,
+      "scope": "2026年11月18日用户明确确认已经背过。本项只回忆原有定义、要点与例证，错处才补，不再安排新背；实际首背日期未提供，不补造完成日期。",
+      "evidence": [
+        {
+          "id": "Q245",
+          "year": 2022,
+          "kind": "N",
+          "text": "建安风骨"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 18,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "repair-11",
+      "course": "古代文学",
+      "type": "复习",
+      "title": "三曹的贡献",
+      "section": "魏晋南北朝",
+      "rank": 3.1,
+      "scope": "2026年11月18日用户明确确认已经背过。本项只回忆原有定义、要点与例证，错处才补，不再安排新背；实际首背日期未提供，不补造完成日期。",
+      "evidence": [
+        {
+          "id": "Q120",
+          "year": 2014,
+          "kind": "S",
+          "text": "三曹的贡献"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 19,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "v4:C:learn:ba4a581167c2c07",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "正始、太康至元嘉：诗歌发展线索",
+      "section": "魏晋南北朝",
+      "rank": 3.2,
+      "scope": "建安、正始、太康、元嘉、永明各一个定位，三曹各一特点。不另列一套整个时期贡献长答案。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 20,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "supplement-306",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "正始之音",
+      "section": "魏晋南北朝",
+      "rank": 3.21,
+      "scope": "阮籍、嵇康及诗风转变；定义、代表与区别。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。川夜魏晋篇",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 21,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "supplement-307",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "太康诗风、游仙诗与玄言诗",
+      "section": "魏晋南北朝",
+      "rank": 3.22,
+      "scope": "分别列代表作家、主旨和辨识特点；每类一个例证，不要求背三篇长论述。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。川夜40—41页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 22,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "v4:C:learn:3788c4168a3cc54",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "陶渊明诗歌的艺术特色",
+      "section": "魏晋南北朝",
+      "rank": 3.3,
+      "scope": "田园生活、情景事理交融、平淡自然的语言与境界；用具体诗作解释，不能只背“平淡”。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 23,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "repair-12",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "谢灵运山水诗的成就与艺术特点",
+      "section": "魏晋南北朝",
+      "rank": 3.4,
+      "scope": "依川夜底本“谢灵运山水诗成就”小节，形成明确分点及诗例，覆盖山水审美、写景艺术与诗风；属于底本备考设问，不冒称本校同名真题。",
+      "evidence": [],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 24,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "repair-13",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "鲍照诗歌的艺术成就",
+      "section": "魏晋南北朝",
+      "rank": 3.5,
+      "scope": "依川夜底本“鲍照诗歌艺术成就”小节，形成题材、诗体与艺术特点的分点及诗例；与谢灵运分列，属于底本设问，不冒称本校同名真题。",
+      "evidence": [],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 25,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "repair-10",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "永明体",
+      "section": "魏晋南北朝",
+      "rank": 3.6,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。随对应章节安排，使用已有同名任务，不重复增加。",
+      "evidence": [
+        {
+          "id": "Q090",
+          "year": 2012,
+          "kind": "N",
+          "text": "永明体"
+        },
+        {
+          "id": "Q157",
+          "year": 2018,
+          "kind": "N",
+          "text": "永明体"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 26,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "repair-14",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "谢朓山水诗的旨趣与风格",
+      "section": "魏晋南北朝",
+      "rank": 3.7,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q130",
+          "year": 2015,
+          "kind": "S",
+          "text": "谢朓山水诗的旨趣风格"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 27,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "supplement-308",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "宫体诗、庾信与南北朝民歌",
+      "section": "魏晋南北朝",
+      "rank": 3.75,
+      "scope": "三部分分别定位，民歌比较题仅列差异与例证，不能当作已精背。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。川夜47—48页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 28,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "repair-15",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "骈文的主要特点",
+      "section": "魏晋南北朝",
+      "rank": 3.8,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q052",
+          "year": 2009,
+          "kind": "S",
+          "text": "骈文的主要特点"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 29,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "supplement-309",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "魏晋文学批评与志人、志怪小说",
+      "section": "魏晋南北朝",
+      "rank": 3.9,
+      "scope": "《典论·论文》《文赋》《文心雕龙》分别记作者和核心主张；志人、志怪分别记特点及代表。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。川夜53—58页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 30,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-16",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "魏晋南北朝的文学贡献",
+      "section": "魏晋南北朝",
+      "rank": 3.99,
+      "scope": "先过三曹、陶渊明、谢灵运、鲍照、谢朓等具体内容，再归纳贡献；复用已学例子，不另背一段空泛通史。",
+      "evidence": [
+        {
+          "id": "Q067",
+          "year": 2010,
+          "kind": "S",
+          "text": "魏晋南北朝的文学贡献"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 31,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-17",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "唐诗兴盛的主要原因",
+      "section": "隋唐五代",
+      "rank": 4.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q026",
+          "year": 2007,
+          "kind": "S",
+          "text": "唐诗兴盛的主要原因"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 32,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "supplement-310",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "初唐诗歌与盛唐山水田园、边塞诗",
+      "section": "隋唐五代",
+      "rank": 4.1,
+      "scope": "初唐转变、王孟与高岑各列特点和例证；为盛唐综合题准备材料。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 33,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "v4:C:learn:a61f8fc7fe6d0c4",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "李白的浪漫主义：特点与诗例",
+      "section": "隋唐五代",
+      "rank": 4.15,
+      "scope": "想象、抒情、语言三点，各与诗例相连；不单独展开其全部题材。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 34,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "v4:C:learn:91650f80995dfa9",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "杜诗艺术特色与对《诗经》的继承",
+      "section": "隋唐五代",
+      "rank": 4.2,
+      "scope": "现实关怀、诗史、艺术表达与《诗经》的继承发展；先诗篇与特色，后比较继承。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 35,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "repair-18",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "盛唐诗歌的主要成就",
+      "section": "隋唐五代",
+      "rank": 4.25,
+      "scope": "李白、杜甫等具体作家过完后，按诗歌内容、艺术探索和风格归纳，使用原有作品例证。",
+      "evidence": [
+        {
+          "id": "Q086",
+          "year": 2011,
+          "kind": "L",
+          "text": "盛唐诗歌的主要成就"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 36,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "repair-19",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "元白诗派的理论主张与创作实践",
+      "section": "隋唐五代",
+      "rank": 4.3,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。理论与作品实践对应，不只背作者作品表。",
+      "evidence": [
+        {
+          "id": "Q387",
+          "year": 2024,
+          "kind": "L",
+          "text": "元白诗派的理论主张和创作实践"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 37,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "v4:C:learn:c4d3966e1554adf",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "韩愈古文的艺术特色与文学史意义",
+      "section": "隋唐五代",
+      "rank": 4.5,
+      "scope": "先韩、柳各自作品与风格，再比较；古文运动用背景、主张、代表与意义概括，宋代部分只保留承接，不另背全史。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 38,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "v4:C:learn:47a406f7950b9c1",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "柳宗元古文特点；再归纳韩柳与古文运动",
+      "section": "隋唐五代",
+      "rank": 4.6,
+      "scope": "先韩、柳各自作品与风格，再比较；古文运动用背景、主张、代表与意义概括，宋代部分只保留承接，不另背全史。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 39,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "v3:learn:r2-133",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "唐代古文运动",
+      "section": "隋唐五代",
+      "rank": 4.7,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q049",
+          "year": 2009,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p2 一2",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "唐代古文运动"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 40,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "v3:learn:r2-139",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "唐传奇",
+      "section": "隋唐五代",
+      "rank": 4.8,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q289",
+          "year": 2023,
+          "paper": "939",
+          "source": "A",
+          "loc": "p8 二4",
+          "status": "汇编回忆资料 与E去重",
+          "version": "汇编",
+          "kind": "N",
+          "text": "唐传奇"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 41,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-20",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "唐传奇兴起的主要原因与分期",
+      "section": "隋唐五代",
+      "rank": 4.8,
+      "scope": "沿用已有“唐传奇”名解，再补原因、阶段和代表作，不另重复定义。",
+      "evidence": [
+        {
+          "id": "Q068",
+          "year": 2010,
+          "kind": "S",
+          "text": "唐传奇兴起的主要原因和分期"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 42,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-172",
+      "course": "古代文学",
+      "type": "填空识记",
+      "title": "南唐词的开启者（仅A记载）",
+      "section": "隋唐五代",
+      "rank": 4.9,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q279",
+          "year": 2023,
+          "paper": "939",
+          "source": "A",
+          "loc": "p8 一4",
+          "status": "汇编回忆资料 与E去重",
+          "version": "汇编",
+          "kind": "B",
+          "text": "南唐词的开启者（仅A记载）"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 43,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-173",
+      "course": "古代文学",
+      "type": "填空识记",
+      "title": "被评为“眼界始大，感慨遂深”的五代词人",
+      "section": "隋唐五代",
+      "rank": 4.91,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q372",
+          "year": 2024,
+          "paper": "825",
+          "source": "H",
+          "loc": "p1 一5",
+          "status": "图片PDF另一版本 用户确认年份",
+          "version": "2024图片PDF版",
+          "kind": "B",
+          "text": "被评为“眼界始大，感慨遂深”的五代词人"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 44,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-24",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "宋代诗歌的主要发展线索",
+      "section": "宋金",
+      "rank": 5.0,
+      "scope": "按川夜宋代部分已有作家、诗派顺序建立代表作家与诗风线索，只补路线，不默认每位诗人都新增论述题。",
+      "evidence": [],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 45,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-182",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "江西诗派",
+      "section": "宋金",
+      "rank": 5.1,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q116",
+          "year": 2014,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p4 一1",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "江西诗派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 46,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "supplement-311",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "《沧浪诗话》",
+      "section": "宋金",
+      "rank": 5.12,
+      "scope": "按底本整理作者、核心诗论及辨识要点；保留原真题核对入口。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 47,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-175",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "柳永对词的贡献",
+      "section": "宋金",
+      "rank": 5.2,
+      "scope": "题材、慢词与铺叙、语言与传播、文学史贡献，配词作。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 48,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:C:learn:bee664a76576b42",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "苏轼对词的贡献",
+      "section": "宋金",
+      "rank": 5.3,
+      "scope": "题材、抒情主体与境界、表现方法及词体观念，结合词作说明。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 49,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "v3:learn:r2-180",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "豪放词派",
+      "section": "宋金",
+      "rank": 5.31,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q022",
+          "year": 2007,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p1 一2",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "豪放词派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 50,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "v4:C:learn:5a627b72eebeb09",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "周邦彦词的艺术特色",
+      "section": "宋金",
+      "rank": 5.4,
+      "scope": "章法、炼字、音律与题材表现联系具体词作；依据底本和教材，不凭名词堆叠。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 51,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "v4:C:learn:e550c545aa3b701",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "李清照南渡词的情感与艺术",
+      "section": "宋金",
+      "rank": 5.5,
+      "scope": "南渡语境、情感变化、语言与艺术，各留一要点及词例。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 52,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "v4:C:learn:37de79a0f12dbb1",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "辛弃疾词的思想艺术",
+      "section": "宋金",
+      "rank": 5.6,
+      "scope": "题材情感、意象与用典、语言句法、风格与表现；豪放之外也要有文本说明。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 53,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "v3:learn:r2-225",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "辛派词人",
+      "section": "宋金",
+      "rank": 5.61,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q384",
+          "year": 2024,
+          "paper": "825",
+          "source": "H",
+          "loc": "p3 二2",
+          "status": "图片PDF另一版本 用户确认年份",
+          "version": "2024图片PDF版",
+          "kind": "N",
+          "text": "辛派词人"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 54,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "v3:learn:r2-232",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "骚雅派",
+      "section": "宋金",
+      "rank": 5.7,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q127",
+          "year": 2015,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p4 一2",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "骚雅派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 55,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "repair-21",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "欧阳修散文的“六一风神”",
+      "section": "宋金",
+      "rank": 5.8,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q095",
+          "year": 2012,
+          "kind": "S",
+          "text": "欧阳修散文的“六一风神”"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 56,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "repair-22",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "欧阳修的文道论",
+      "section": "宋金",
+      "rank": 5.8,
+      "scope": "围绕“大抵道胜者，文不难自至也”解释文道关系；与上一题共用作家笔记，分别回答设问。",
+      "evidence": [
+        {
+          "id": "Q142",
+          "year": 2016,
+          "kind": "S",
+          "text": "欧阳修“大抵道胜者，文不难自至也”的文道论"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 57,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "repair-23",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "唐宋古文运动的发展与成就",
+      "section": "宋金",
+      "rank": 5.99,
+      "scope": "保留韩愈、柳宗元单题，补过欧阳修后再做唐宋串联。此题与原有唐代韩柳题共享材料，不能再标成韩柳已全部覆盖唐宋。",
+      "evidence": [
+        {
+          "id": "Q031",
+          "year": 2007,
+          "kind": "L",
+          "text": "唐宋古文运动"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 58,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "repair-27",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "宋话本的出现为何是古代小说的“一次变迁”",
+      "section": "元代及话本",
+      "rank": 6.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q027",
+          "year": 2007,
+          "kind": "S",
+          "text": "宋话本的出现为何是古代小说的“一次变迁”"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 59,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-28",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "宋元话本的分类与代表作品",
+      "section": "元代及话本",
+      "rank": 6.0,
+      "scope": "分类、代表作品准确对应，与上一题共用话本笔记。",
+      "evidence": [
+        {
+          "id": "Q385",
+          "year": 2024,
+          "kind": "S",
+          "text": "宋元话本的分类和代表作品"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 60,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "v3:learn:r2-260",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "诸宫调",
+      "section": "元代及话本",
+      "rank": 6.1,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q158",
+          "year": 2018,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p5 一2",
+          "status": "网络回忆版 含按专业选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "诸宫调"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 61,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-26",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "元曲四大家及其代表作",
+      "section": "元代及话本",
+      "rank": 6.2,
+      "scope": "掌握作家、代表作与基本辨识，按原题范围回答，不另要求每位作家完整成就。",
+      "evidence": [
+        {
+          "id": "Q054",
+          "year": 2009,
+          "kind": "S",
+          "text": "元曲四大家及其代表作"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 62,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-25",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "南戏及其艺术形式特点",
+      "section": "元代及话本",
+      "rank": 6.3,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q040",
+          "year": 2008,
+          "kind": "S",
+          "text": "南戏及其艺术形式特点"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 63,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "supplement-312",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "《西厢记》的戏剧冲突与人物塑造",
+      "section": "元代及话本",
+      "rank": 6.4,
+      "scope": "明确莺莺、张生、红娘与冲突推进；原作品定位拆出，不与《牡丹亭》混作一条。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 64,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-29",
+      "course": "古代文学",
+      "type": "简答题",
+      "title": "《牡丹亭》的文化警示意味",
+      "section": "明代及明清小说",
+      "rank": 7.0,
+      "scope": "从原“《西厢记》《牡丹亭》的作品定位”中拆出本题；作品定位作为前置，另准备思想、文化意义与情节例证。",
+      "evidence": [
+        {
+          "id": "Q290",
+          "year": 2023,
+          "kind": "S",
+          "text": "《牡丹亭》的文化警示意味"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 65,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "v3:learn:r2-290",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "临川四梦",
+      "section": "明代及明清小说",
+      "rank": 7.01,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q091",
+          "year": 2012,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p3 一2",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "临川四梦"
+        },
+        {
+          "id": "Q117",
+          "year": 2014,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p4 一2",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "临川四梦"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 66,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "v4:C:learn:c556bd3aa8aef35",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "《聊斋志异》的思想艺术与传奇法",
+      "section": "明代及明清小说",
+      "rank": 7.1,
+      "scope": "选具体故事说明人物、叙事、虚实和文体融合；“传奇法”作为艺术主干的一个角度。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 67,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "v3:learn:r2-292",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "“二拍”",
+      "section": "明代及明清小说",
+      "rank": 7.2,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q148",
+          "year": 2017,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p5 一2",
+          "status": "网络回忆版",
+          "version": "汇编",
+          "kind": "N",
+          "text": "“二拍”"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 68,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "v4:C:learn:16eea6bebee3d68",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "《三国演义》的艺术成就与七实三虚",
+      "section": "明代及明清小说",
+      "rank": 7.3,
+      "scope": "历史真实与虚构、人物、结构和叙事；先具体例子，后说明虚实关系。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 69,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "v4:C:learn:9eed87e9f4783d9",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "《水浒传》《西游记》的叙事辨识",
+      "section": "明代及明清小说",
+      "rank": 7.4,
+      "scope": "每部只记结构与人物塑造两条，配一例。两本定位不等同全文阅读或两篇艺术成就长答案。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 70,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "repair-31",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "《儒林外史》的讽刺艺术",
+      "section": "明代及明清小说",
+      "rank": 7.6,
+      "scope": "沿用已有讽刺艺术框架，明确论点、手法与例证，能按论述题展开；替换泛泛的课本梳理，不另外多排一份重复任务。",
+      "evidence": [
+        {
+          "id": "Q101",
+          "year": 2012,
+          "kind": "L",
+          "text": "《儒林外史》的讽刺艺术"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 71,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "supplement-313",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "《金瓶梅》的世情描写与小说艺术",
+      "section": "明代及明清小说",
+      "rank": 7.69,
+      "scope": "先掌握具体表现及例证，再做与《红楼梦》的比较。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 72,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "v4:C:learn:1efc1f9df0af968",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "《红楼梦》人物塑造与艺术创新",
+      "section": "明代及明清小说",
+      "rank": 7.7,
+      "scope": "人物的复杂性、个性化语言、心理与关系网络，联系叙事创新；继承《金瓶梅》在相关内容认识后再补比较角度。 原题型与备考整理题分别看详情，不冒称所有标题都是逐字原题。",
+      "evidence": [],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 73,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "repair-30",
+      "course": "古代文学",
+      "type": "论述题",
+      "title": "《红楼梦》对《金瓶梅》小说艺术的继承与发展",
+      "section": "明代及明清小说",
+      "rank": 7.7,
+      "scope": "先补《金瓶梅》必要的作品与艺术背景，再与已学《红楼梦》作比较；只补对照角度，不重背红楼主干。",
+      "evidence": [
+        {
+          "id": "Q113",
+          "year": 2013,
+          "kind": "L",
+          "text": "《红楼梦》对《金瓶梅》小说艺术的继承与发展"
+        }
+      ],
+      "source": "川夜底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 74,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "v3:learn:r2-293",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "公安派",
+      "section": "明代及明清小说",
+      "rank": 7.9,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q063",
+          "year": 2010,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p2 一2",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "公安派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 75,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "supplement-314",
+      "course": "古代文学",
+      "type": "课本梳理",
+      "title": "明清诗文与词派的演变",
+      "section": "清代",
+      "rank": 8.0,
+      "scope": "按底本保留明诗文、清诗、清词、清文四栏作家流派定位；已有名解另验收。这里是定位，不代表各派大题已准备。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 76,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "v3:learn:r2-295",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "阳羡词派",
+      "section": "清代",
+      "rank": 8.1,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q105",
+          "year": 2013,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p4 一2",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "阳羡词派"
+        },
+        {
+          "id": "Q337",
+          "year": 2024,
+          "paper": "939",
+          "source": "F",
+          "loc": "939 二2",
+          "status": "Word回忆版",
+          "version": "2024Word版",
+          "kind": "N",
+          "text": "阳羡词派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 77,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "v3:learn:r2-345",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "桐城派",
+      "section": "清代",
+      "rank": 8.2,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q034",
+          "year": 2008,
+          "paper": "早年科目代码未明",
+          "source": "A",
+          "loc": "p2 一1",
+          "status": "汇编转录 含选做",
+          "version": "汇编",
+          "kind": "N",
+          "text": "桐城派"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 78,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "v3:learn:r2-348",
+      "course": "古代文学",
+      "type": "名词解释",
+      "title": "清季四大家（A记“清季四大词人”，名称有异）",
+      "section": "清代",
+      "rank": 8.3,
+      "scope": "保留基础补缺：只准备这个名词或这一条对应及一个例子，不增加本章大题。",
+      "evidence": [
+        {
+          "id": "Q244",
+          "year": 2022,
+          "paper": "939",
+          "source": "C",
+          "loc": "p1 名2",
+          "status": "单独回忆版 与A去重",
+          "version": "回忆版",
+          "kind": "N",
+          "text": "清季四大家（A记“清季四大词人”，名称有异）"
+        }
+      ],
+      "source": "川夜《中国文学史笔记》及袁行霈教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 79,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-32",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "五四文学革命的历史意义与基本特征",
+      "section": "文学思潮与运动（一）",
+      "rank": 2.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 80,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "repair-33",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《人的文学》",
+      "section": "文学思潮与运动（一）",
+      "rank": 2.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q001",
+          "year": 2004,
+          "kind": "N",
+          "text": "《人的文学》"
+        },
+        {
+          "id": "Q036",
+          "year": 2008,
+          "kind": "N",
+          "text": "《人的文学》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 81,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "repair-34",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《文学改良刍议》",
+      "section": "文学思潮与运动（一）",
+      "rank": 2.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q023",
+          "year": 2007,
+          "kind": "N",
+          "text": "《文学改良刍议》"
+        },
+        {
+          "id": "Q200",
+          "year": 2021,
+          "kind": "N",
+          "text": "《文学改良刍议》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 82,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "repair-35",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "创造社",
+      "section": "文学思潮与运动（一）",
+      "rank": 2.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q243",
+          "year": 2022,
+          "kind": "N",
+          "text": "创造社"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 83,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "repair-36",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "周作人1918年在《新青年》发表的文章",
+      "section": "文学思潮与运动（一）",
+      "rank": 2.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q285",
+          "year": 2023,
+          "kind": "B",
+          "text": "周作人1918年在《新青年》发表的文章"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 84,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "repair-37",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "郁达夫自叙体小说的艺术特征",
+      "section": "小说（一）",
+      "rank": 3.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q291",
+          "year": 2023,
+          "kind": "S",
+          "text": "郁达夫自叙体小说的艺术特征"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 85,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "v4:O:recall:7985145fc6e288f",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《呐喊》《彷徨》的思想内容",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 86,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "v4:O:recall:6330e3d580d7465",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "鲁迅小说对中国小说现代化的贡献",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 87,
+      "plannedDate": "2026-11-22"
+    },
+    {
+      "id": "v4:O:recall:395ec88865d9a47",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "阿Q形象、精神胜利法与典型意义",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 88,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "v4:O:recall:922391881572136",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "1938年许广平、郑振铎等编纂出版的书",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 89,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "v4:O:recall:6bbf11a1f3d7d2c",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《狂人日记》的发表时间",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 90,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v4:O:recall:3fe240cd4ffda55",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "“鲁迅风”杂文",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 91,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "v4:O:recall:02d6995473fad13",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "鲁迅杂文的思想内容、艺术特色与文体贡献",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 92,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "v4:O:recall:fc9206023e9df90",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "以历史题材写作的小说集《故事新编》",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 93,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "v4:O:recall:7fae8bdd6eff506",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《野草》的思想内涵与艺术特色",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 94,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "repair-38",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《彷徨》的命名与思想情绪",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q015",
+          "year": 2005,
+          "kind": "S",
+          "text": "《彷徨》命名的涵义并列举集内三篇小说"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 95,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-39",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "结合《影的告别》分析《野草》的生命哲学",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q163",
+          "year": 2018,
+          "kind": "S",
+          "text": "结合《影的告别》论《野草》的生命哲学"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 96,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "repair-40",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "为什么鲁迅说最喜欢《孔乙己》",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q197",
+          "year": 2020,
+          "kind": "L",
+          "text": "为什么鲁迅说最喜欢《孔乙己》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 97,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "repair-41",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "鲁迅对中国现当代文学史的贡献",
+      "section": "鲁迅",
+      "rank": 4.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q125",
+          "year": 2014,
+          "kind": "L",
+          "text": "鲁迅对中国现当代文学史的贡献"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 98,
+      "plannedDate": "2026-11-29"
+    },
+    {
+      "id": "repair-59",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《莎菲女士的日记》的女性形象与心理书写",
+      "section": "丁玲（跨三个十年）",
+      "rank": 5.0,
+      "scope": "用户明确确认丁玲尚未学习。按底本准备分点和作品例证，先完成三项具体作品，再准备创作转变和整体艺术特点；不要求一律整篇精背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "未学（用户最新确认）",
+      "originalType": "简答题",
+      "catalogNumber": 99,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-60",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《水》等作品与丁玲走向革命的创作阶段",
+      "section": "丁玲（跨三个十年）",
+      "rank": 5.0,
+      "scope": "用户明确确认丁玲尚未学习。按底本准备分点和作品例证，先完成三项具体作品，再准备创作转变和整体艺术特点；不要求一律整篇精背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "未学（用户最新确认）",
+      "originalType": "简答题",
+      "catalogNumber": 100,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-61",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《太阳照在桑干河上》的农村书写",
+      "section": "丁玲（跨三个十年）",
+      "rank": 5.0,
+      "scope": "用户明确确认丁玲尚未学习。按底本准备分点和作品例证，先完成三项具体作品，再准备创作转变和整体艺术特点；不要求一律整篇精背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "未学（用户最新确认）",
+      "originalType": "简答题",
+      "catalogNumber": 101,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-42",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "丁玲的创作阶段与转变",
+      "section": "丁玲（跨三个十年）",
+      "rank": 5.0,
+      "scope": "用户明确确认丁玲尚未学习。按底本准备分点和作品例证，先完成三项具体作品，再准备创作转变和整体艺术特点；不要求一律整篇精背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "未学（用户最新确认）",
+      "originalType": "简答题",
+      "catalogNumber": 102,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-43",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "丁玲小说贯穿各阶段的艺术特点",
+      "section": "丁玲（跨三个十年）",
+      "rank": 5.0,
+      "scope": "用户明确确认丁玲尚未学习。按底本准备分点和作品例证，先完成三项具体作品，再准备创作转变和整体艺术特点；不要求一律整篇精背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "未学（用户最新确认）",
+      "originalType": "简答题",
+      "catalogNumber": 103,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-44",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《女神》的思想与艺术成就",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q060",
+          "year": 2009,
+          "kind": "L",
+          "text": "《女神》的思想艺术成就"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "论述题",
+      "catalogNumber": 104,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-45",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《凤凰涅槃》的文学史意义",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q341",
+          "year": 2024,
+          "kind": "S",
+          "text": "《凤凰涅槃》的文学史意义"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 105,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-46",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "徐志摩诗歌的创作特色",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q111",
+          "year": 2013,
+          "kind": "S",
+          "text": "徐志摩诗歌创作特色"
+        },
+        {
+          "id": "Q153",
+          "year": 2017,
+          "kind": "S",
+          "text": "徐志摩创作的艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 106,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-47",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《再别康桥》的意境美与音韵美",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q016",
+          "year": 2005,
+          "kind": "S",
+          "text": "徐志摩《再别康桥》的意境美和音韵美"
+        },
+        {
+          "id": "Q042",
+          "year": 2008,
+          "kind": "S",
+          "text": "徐志摩《再别康桥》的意境美和音韵美"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 107,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "repair-48",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "闻一多“三美”主张及其诗作体现",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 108,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "repair-49",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "新月派诗歌理论",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q083",
+          "year": 2011,
+          "kind": "S",
+          "text": "新月派诗歌理论"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 109,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "repair-50",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "新月诗派",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 110,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "repair-51",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《尝试集》",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q338",
+          "year": 2024,
+          "kind": "N",
+          "text": "《尝试集》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 111,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-52",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《新月诗选》的编者",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q188",
+          "year": 2020,
+          "kind": "B",
+          "text": "《新月诗选》的编者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 112,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "repair-53",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《十四行集》的作者",
+      "section": "新诗（一）",
+      "rank": 6.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q380",
+          "year": 2024,
+          "kind": "B",
+          "text": "《十四行集》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "填空识记",
+      "catalogNumber": 113,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "v4:O:recall:bd96acc71377935",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "语丝社",
+      "section": "散文（一）",
+      "rank": 7.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 114,
+      "plannedDate": "2026-12-06"
+    },
+    {
+      "id": "v4:O:recall:63fabf950b3aa5f",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "语丝派",
+      "section": "散文（一）",
+      "rank": 7.0,
+      "scope": "本项属于第一个十年，按本次要求转为回忆已有内容，不再新学重背。合书回忆后核对遗漏；薄弱处修补，不因这次调整自动记作实际完成。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 115,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-54",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "周作人散文的艺术风格与文体贡献",
+      "section": "散文（一）",
+      "rank": 7.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q055",
+          "year": 2009,
+          "kind": "S",
+          "text": "周作人散文的艺术风格"
+        },
+        {
+          "id": "Q069",
+          "year": 2010,
+          "kind": "S",
+          "text": "周作人散文的艺术特色"
+        },
+        {
+          "id": "Q123",
+          "year": 2014,
+          "kind": "S",
+          "text": "周作人散文的艺术特色"
+        },
+        {
+          "id": "Q204",
+          "year": 2021,
+          "kind": "S",
+          "text": "周作人散文的艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 116,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-55",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "《喝茶》的语言、趣味与评论思路",
+      "section": "散文（一）",
+      "rank": 7.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q199",
+          "year": 2020,
+          "kind": "R",
+          "text": "评论《雨天的书》中的《喝茶》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "评论题",
+      "catalogNumber": 117,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "repair-56",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "朱自清散文的主要类型与作品例证",
+      "section": "散文（一）",
+      "rank": 7.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q041",
+          "year": 2008,
+          "kind": "S",
+          "text": "朱自清散文的主要类型及作品举例"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 118,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "repair-57",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "爱美剧运动",
+      "section": "戏剧（一）",
+      "rank": 8.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [
+        {
+          "id": "Q011",
+          "year": 2005,
+          "kind": "N",
+          "text": "“爱美剧”运动"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 119,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "repair-58",
+      "course": "现当代文学",
+      "type": "复习",
+      "title": "田汉、丁西林与早期话剧发展",
+      "section": "戏剧（一）",
+      "rank": 8.0,
+      "scope": "恢复已学内容的回忆入口，先合书回忆再核对，不作为新学重背；保留原题型和具体角度。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "已学回忆",
+      "originalType": "课本梳理",
+      "catalogNumber": 120,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "repair-62",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "左联",
+      "section": "文学思潮与运动（二）",
+      "rank": 9.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。沿用原任务及其记录，不因这次校正而自动改成未背或重复新增。",
+      "evidence": [
+        {
+          "id": "Q064",
+          "year": 2010,
+          "kind": "N",
+          "text": "左联"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 121,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "repair-64",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "30年代小说的左翼、京派与海派",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "每种路向只定位主要主张和一个作家作品，与已有巴金、老舍、沈从文题连接，不再整章抄背。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 122,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "repair-74",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "新感觉派的特征",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q178",
+          "year": 2019,
+          "kind": "S",
+          "text": "新感觉派的特征"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 123,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-104",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "京派小说",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "沿用现有京派名解，兼顾“京派小说”的原题问法，补小说特征和作品例证；替换原卡，不重复新增。",
+      "evidence": [
+        {
+          "id": "Q139",
+          "year": 2016,
+          "kind": "N",
+          "text": "京派小说"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 124,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-105",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "新感觉派圣手穆时英及其未完成长篇小说",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q182",
+          "year": 2020,
+          "kind": "B",
+          "text": "新感觉派圣手穆时英及其未完成长篇小说"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 125,
+      "plannedDate": "2026-11-23"
+    },
+    {
+      "id": "repair-106",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "东北作家群",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q192",
+          "year": 2020,
+          "kind": "N",
+          "text": "东北作家群"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 126,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "repair-107",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《丈夫》的作者",
+      "section": "小说（二）",
+      "rank": 10.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q330",
+          "year": 2024,
+          "kind": "B",
+          "text": "《丈夫》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 127,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v3:learn:r2-123",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "社会剖析小说",
+      "section": "茅盾",
+      "rank": 11.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 128,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "v3:learn:r2-150",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "吴荪甫出自的作品",
+      "section": "茅盾",
+      "rank": 11.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 129,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "repair-73",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《子夜》的艺术成就",
+      "section": "茅盾",
+      "rank": 11.0,
+      "scope": "将现有《子夜》定位直接修正为本题，保留人物、结构、社会剖析与作品例证；不再另背一份定位卡。",
+      "evidence": [
+        {
+          "id": "Q019",
+          "year": 2005,
+          "kind": "L",
+          "text": "《子夜》的艺术成就"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 130,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "v4:O:learn:2e029c6b84c5f15",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《家》的思想内容、人物与艺术特点",
+      "section": "巴金",
+      "rank": 12,
+      "scope": "《家》的主题、人物与艺术。分别准备两部作品，再比较变化；两次完成，不把两部长篇伪装成一天一题。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 131,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v4:O:learn:9946515733d7abc",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《寒夜》的悲剧意蕴与艺术特色",
+      "section": "巴金",
+      "rank": 12.3,
+      "scope": "《寒夜》的悲剧；完成后再比较前后变化。分别准备两部作品，再比较变化；两次完成，不把两部长篇伪装成一天一题。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 132,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v3:learn:r2-152",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "曾树生出自巴金哪部作品",
+      "section": "巴金",
+      "rank": 12.3,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 133,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v3:learn:r2-160",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《寒夜》",
+      "section": "巴金",
+      "rank": 12.3,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 134,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v4:O:learn:53e9ac684203a91",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "巴金前后期创作的变化",
+      "section": "巴金",
+      "rank": 12.8,
+      "scope": "《寒夜》的悲剧；完成后再比较前后变化。分别准备两部作品，再比较变化；两次完成，不把两部长篇伪装成一天一题。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 135,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v4:O:learn:5476a53e708dc98",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "祥子的形象与悲剧原因",
+      "section": "老舍",
+      "rank": 13.0,
+      "scope": "祥子悲剧；联系老舍小说特点。祥子的悲剧与市民文化批判、京味、幽默相连。《四世同堂》只保留一个辅助例证。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 136,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v4:O:learn:0827c3921b6b2c7",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "老舍小说的京味与幽默",
+      "section": "老舍",
+      "rank": 13.0,
+      "scope": "祥子悲剧；联系老舍小说特点。祥子的悲剧与市民文化批判、京味、幽默相连。《四世同堂》只保留一个辅助例证。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 137,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "v3:learn:r2-208",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《四世同堂》包括的三部分",
+      "section": "老舍",
+      "rank": 13.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 138,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "v4:O:learn:a60a22c228fca07",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《边城》的思想意蕴与艺术特色",
+      "section": "沈从文",
+      "rank": 14.0,
+      "scope": "《边城》的思想、艺术与人性理想。人性理想、悲剧意味、文体与艺术特点共用具体作品例证，不另背四种同类问法。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 139,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "v3:learn:r2-148",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《从文自传》",
+      "section": "沈从文",
+      "rank": 14.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 140,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-75",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "戴望舒《雨巷》的情绪内涵与象征艺术",
+      "section": "新诗（二）",
+      "rank": 15.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q006",
+          "year": 2004,
+          "kind": "S",
+          "text": "戴望舒《雨巷》的情绪内涵及象征艺术"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 141,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-65",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "30年代散文的主要流派与辨识",
+      "section": "散文（二）",
+      "rank": 16.0,
+      "scope": "按底本已有流派定位，和梁实秋、论语派及絮语体各题对应；具体题已准备的不重复写。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 142,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-76",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "梁实秋散文的艺术特色",
+      "section": "散文（二）",
+      "rank": 16.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q084",
+          "year": 2011,
+          "kind": "S",
+          "text": "梁实秋散文艺术特色"
+        },
+        {
+          "id": "Q097",
+          "year": 2012,
+          "kind": "S",
+          "text": "梁实秋散文艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 143,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-77",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "论语派散文的特征",
+      "section": "散文（二）",
+      "rank": 16.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q171",
+          "year": 2019,
+          "kind": "S",
+          "text": "论语派散文特征"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 144,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-78",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "絮语体散文",
+      "section": "散文（二）",
+      "rank": 16.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。原任务误放进“小说（一）”；本次改回散文部分，具体已背状态不据旧分组推定。",
+      "evidence": [
+        {
+          "id": "Q170",
+          "year": 2019,
+          "kind": "N",
+          "text": "絮语体散文"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 145,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "repair-108",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "夏衍等于1929年建立的戏剧社（人名按原资料保留）",
+      "section": "戏剧（二）",
+      "rank": 17.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q187",
+          "year": 2020,
+          "kind": "B",
+          "text": "夏衍等于1929年建立的戏剧社（人名按原资料保留）"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 146,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:O:learn:16489b74e8c22d7",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《雷雨》的戏剧冲突、人物与结构",
+      "section": "曹禺",
+      "rank": 18,
+      "scope": "《雷雨》的冲突、人物与结构。先各自的冲突、人物和结构，再比较。只将总体贡献作为已学内容的归纳，两次完成。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 147,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-151",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《雷雨》中最“雷雨式的人物”",
+      "section": "曹禺",
+      "rank": 18,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 148,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:O:learn:6c7dc0c8966aadb",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《日出》的社会批判与结构特点",
+      "section": "曹禺",
+      "rank": 18.2,
+      "scope": "《日出》横断面结构；再比较两部剧。先各自的冲突、人物和结构，再比较。只将总体贡献作为已学内容的归纳，两次完成。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 149,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-79",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "曹禺《原野》的思想与艺术表现",
+      "section": "曹禺",
+      "rank": 18.3,
+      "scope": "以原题“结合作品谈《原野》”为入口，按底本明确主题、人物、戏剧表现及例证，不仅列作品名。",
+      "evidence": [
+        {
+          "id": "Q193",
+          "year": 2020,
+          "kind": "S",
+          "text": "结合作品谈曹禺《原野》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 150,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-66",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "《北京人》的作品定位",
+      "section": "曹禺",
+      "rank": 18.4,
+      "scope": "只定位主要人物关系、主题和戏剧表达要点，不临时要求全文阅读或另背整篇长答案。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 151,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:O:learn:60cc76e7ee4b558",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《雷雨》与《日出》的结构比较",
+      "section": "曹禺",
+      "rank": 18.9,
+      "scope": "《日出》横断面结构；再比较两部剧。先各自的冲突、人物和结构，再比较。只将总体贡献作为已学内容的归纳，两次完成。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 152,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v3:learn:r2-155",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "孤岛文学",
+      "section": "文学思潮与运动（三）",
+      "rank": 19.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 153,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "v4:O:learn:70a8f3d5a7a171d",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "《延安文艺座谈会上的讲话》",
+      "section": "文学思潮与运动（三）",
+      "rank": 19.0,
+      "scope": "服务对象、与生活／实践的联系、文艺作用及影响，保留核心观点与一个作品联系。2022年已有主观题，降级意味着主动承担细问风险。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 154,
+      "plannedDate": "2026-11-30"
+    },
+    {
+      "id": "repair-63",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "文协",
+      "section": "文学思潮与运动（三）",
+      "rank": 19.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。沿用原任务及其记录，不再笼统归入第一个十年的复习。",
+      "evidence": [
+        {
+          "id": "Q190",
+          "year": 2020,
+          "kind": "N",
+          "text": "文协"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 155,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-80",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "赵树理农村小说的创作特色",
+      "section": "赵树理",
+      "rank": 20.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q085",
+          "year": 2011,
+          "kind": "S",
+          "text": "赵树理农村小说创作特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 156,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-81",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "张爱玲小说艺术的独特性",
+      "section": "小说（三）",
+      "rank": 21.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q102",
+          "year": 2012,
+          "kind": "L",
+          "text": "张爱玲小说艺术独特性"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 157,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-82",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《围城》的艺术特色",
+      "section": "小说（三）",
+      "rank": 21.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q173",
+          "year": 2019,
+          "kind": "S",
+          "text": "《围城》的艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 158,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-109",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《财主底儿女们》的作者",
+      "section": "小说（三）",
+      "rank": 21.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q379",
+          "year": 2024,
+          "kind": "B",
+          "text": "《财主底儿女们》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 159,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-83",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "艾青诗歌的“土地”意象及其意义",
+      "section": "新诗（三）",
+      "rank": 22.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q070",
+          "year": 2010,
+          "kind": "S",
+          "text": "艾青诗歌的“土地”意象及意义"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 160,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-84",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "七月诗派",
+      "section": "新诗（三）",
+      "rank": 22.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q106",
+          "year": 2013,
+          "kind": "N",
+          "text": "七月诗派"
+        },
+        {
+          "id": "Q149",
+          "year": 2017,
+          "kind": "N",
+          "text": "七月诗派"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 161,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-85",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "评述七月诗派",
+      "section": "新诗（三）",
+      "rank": 22.0,
+      "scope": "沿用名解的代表作家与诗学追求，再补具体作品及贡献；不是另背一套完全不同的答案。",
+      "evidence": [
+        {
+          "id": "Q205",
+          "year": 2021,
+          "kind": "S",
+          "text": "评述七月诗派"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 162,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "repair-86",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "九叶诗人",
+      "section": "新诗（三）",
+      "rank": 22.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q118",
+          "year": 2014,
+          "kind": "N",
+          "text": "九叶诗人"
+        },
+        {
+          "id": "Q167",
+          "year": 2019,
+          "kind": "N",
+          "text": "九叶诗人"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 163,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-67",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "40年代戏剧的广场与剧场两条线",
+      "section": "40年代戏剧",
+      "rank": 24.0,
+      "scope": "沿底本路线梳理代表作家、作品和戏剧形态，不把本章所有作品逐一扩写成大题。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 164,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "supplement-315",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "台湾新文学的发生与代表作家",
+      "section": "台湾文学",
+      "rank": 25,
+      "scope": "按底本列时代背景、作家作品与文学特征；不新增无资料的大题答案。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 165,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "v3:learn:r2-213",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "“双百”方针",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 166,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "v3:learn:r2-243",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "第一次文代会",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 167,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-110",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《我们夫妇之间》",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q079",
+          "year": 2011,
+          "kind": "N",
+          "text": "《我们夫妇之间》"
+        },
+        {
+          "id": "Q119",
+          "year": 2014,
+          "kind": "N",
+          "text": "《我们夫妇之间》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 168,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-111",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "“三红一创”“青山保林”",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q160",
+          "year": 2018,
+          "kind": "N",
+          "text": "“三红一创”“青山保林”"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 169,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-112",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "林道静",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q169",
+          "year": 2019,
+          "kind": "N",
+          "text": "林道静"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 170,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-113",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《铁道游击队》的作者",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q184",
+          "year": 2020,
+          "kind": "B",
+          "text": "《铁道游击队》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 171,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-114",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "三突出原则",
+      "section": "1949—1976文学思潮",
+      "rank": 26.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q168",
+          "year": 2019,
+          "kind": "N",
+          "text": "三突出原则"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 172,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-87",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "“干预生活”文学思潮的兴起及其影响",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。先明确思潮，再进入下一个具体作品任务。",
+      "evidence": [
+        {
+          "id": "Q007",
+          "year": 2004,
+          "kind": "S",
+          "text": "50年代“干预生活”文学思潮的兴起及对创作的影响"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 173,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-88",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《组织部来了个年轻人》的“干预生活”小说特点",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "与上一题共享背景，只补作品人物、批判对象和叙事表现。",
+      "evidence": [
+        {
+          "id": "Q057",
+          "year": 2009,
+          "kind": "S",
+          "text": "王蒙《组织部来了个年轻人》的“干预生活”小说特点"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 174,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-89",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "农业合作化文学的特征",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "以底本《创业史》等作品组织分点和例证，不把所有农村作家分别新增成大题。",
+      "evidence": [
+        {
+          "id": "Q174",
+          "year": 2019,
+          "kind": "S",
+          "text": "农业合作社文学的特征"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 175,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "repair-115",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《组织部新来的年轻人》的官僚形象（原资料如此记载）",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q185",
+          "year": 2020,
+          "kind": "B",
+          "text": "《组织部新来的年轻人》的官僚形象（原资料如此记载）"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 176,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-116",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《创业史》的作者",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q242",
+          "year": 2022,
+          "kind": "B",
+          "text": "《创业史》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 177,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-117",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《三里湾》的作者及农业合作化题材",
+      "section": "50、60年代小说",
+      "rank": 27.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q333",
+          "year": 2024,
+          "kind": "B",
+          "text": "《三里湾》的作者及农业合作化题材"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 178,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-68",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "十七年与文革诗歌的主要路向",
+      "section": "50、60年代新诗",
+      "rank": 28.0,
+      "scope": "只保底本中主要路向、代表诗人作品和时期对应；不把全部诗歌史放进一条背诵任务。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 179,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "v3:learn:r2-211",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《茶馆》",
+      "section": "50、60年代戏剧",
+      "rank": 29.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 180,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-90",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《茶馆》的思想与艺术特色",
+      "section": "50、60年代戏剧",
+      "rank": 29.0,
+      "scope": "保留现有名解短答；补三幕结构、人物、历史表达与艺术特点，同一主干适配简答和论述。",
+      "evidence": [
+        {
+          "id": "Q020",
+          "year": 2005,
+          "kind": "L",
+          "text": "《茶馆》的思想艺术特色"
+        },
+        {
+          "id": "Q071",
+          "year": 2010,
+          "kind": "S",
+          "text": "《茶馆》的艺术表现特点"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 181,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-69",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "杨朔、秦牧、刘白羽散文的辨识",
+      "section": "50、60年代散文",
+      "rank": 30.0,
+      "scope": "每位作家一个代表作与一个艺术辨识点，依据原框架范围，不升为三篇独立论述。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 182,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "v3:learn:r2-252",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "伤痕文学",
+      "section": "80、90年代文学思潮",
+      "rank": 31.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 183,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-91",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "伤痕文学的文学史意义",
+      "section": "80、90年代文学思潮",
+      "rank": 31.0,
+      "scope": "沿用名解定义，补时代语境、价值与局限及代表作品，不重复抄定义。",
+      "evidence": [
+        {
+          "id": "Q386",
+          "year": 2024,
+          "kind": "S",
+          "text": "伤痕文学的文学史意义"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 184,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-119",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "寻根小说",
+      "section": "80、90年代文学思潮",
+      "rank": 31.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q004",
+          "year": 2004,
+          "kind": "N",
+          "text": "寻根小说"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 185,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-120",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "马原与《冈底斯的诱惑》并列、标志先锋小说实验的作品",
+      "section": "80、90年代文学思潮",
+      "rank": 31.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q183",
+          "year": 2020,
+          "kind": "B",
+          "text": "马原与《冈底斯的诱惑》并列、标志先锋小说实验的作品"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 186,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "repair-121",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《爸爸爸》的作者",
+      "section": "80、90年代文学思潮",
+      "rank": 31.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q284",
+          "year": 2023,
+          "kind": "B",
+          "text": "《爸爸爸》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 187,
+      "plannedDate": "2026-12-07"
+    },
+    {
+      "id": "v4:O:learn:895e137153b32cc",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "寻根文学的时代背景、审美特征与文学史意义",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "准备一套可展开论述的主干：时代背景、文化追问、审美特征、代表作家作品、意义与局限。先依据舍予葵底本认识相关作品，再提取至少一组具体文本例证，不能只背关键词。2012年为结合作品论审美特征，2018、2019年为相关简答；2004、2022、2023年有名词解释。名解从同一主干压缩，不另背长稿。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 188,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "v4:O:learn:dfe0c6f7122a9cb",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "先锋文学的叙事实验与艺术特征",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "准备叙事、语言、结构等实验及其意义，每个主要论点能够解释并联系底本中的代表作品。先理解一个具体文本的实验方式，再组织流派总论。2013、2020年有论述，2017年为艺术特色简答；2023年余华先锋特质为相关作家题，须落实到余华的具体小说，不能只拿《活着》替代前期先锋文本。所有角度共用笔记，不额外新增一套余华总论。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 189,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "repair-70",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "以一部小说说明余华小说的先锋特质",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "先在底本中选已学作品，形成具体叙事与文本例证，再连接既有《活着》福贵题；不以泛泛先锋文学定义替代本题。",
+      "evidence": [
+        {
+          "id": "Q293",
+          "year": 2023,
+          "kind": "L",
+          "text": "以一部小说说明余华小说的先锋特质"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 190,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "repair-92",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "汪曾祺《受戒》的产生时期与文学史意义",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q195",
+          "year": 2020,
+          "kind": "S",
+          "text": "《受戒》产生的历史时期及文学史意义"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 191,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "repair-122",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《人生》高加林的作者",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q378",
+          "year": 2024,
+          "kind": "B",
+          "text": "《人生》高加林的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 192,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "repair-123",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《剪辑错了的故事》的作者",
+      "section": "80年代小说",
+      "rank": 32.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q382",
+          "year": 2024,
+          "kind": "B",
+          "text": "《剪辑错了的故事》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 193,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "v4:O:learn:26e3ceb1bdc5cc6",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "福贵形象与《活着》的生命哲学",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "福贵形象、《活着》的生命态度与表达。人物经历、生命态度、叙事效果，结尾片段并入例证；不同时要求完整精背余华创作转变。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 194,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "v3:learn:r2-276",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《在细雨中呼喊》",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 195,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "v3:learn:r2-302",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "新写实小说",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 196,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "v4:O:learn:a6a16c2469aa6ae",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "新写实小说的产生背景与艺术特征",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "掌握80年代末的产生背景、生活书写、叙事态度、艺术特征和底本中的代表作例证，能够分点解释。2008年简答考背景和主要特征，2012年简答考艺术特色，2021年为名词解释；定义从本主干缩写，不再另外抄一套。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 197,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-93",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "《白鹿原》的文化意义与艺术特色",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "文化意义与艺术表现共享一套主干，按设问调整重心。",
+      "evidence": [
+        {
+          "id": "Q061",
+          "year": 2009,
+          "kind": "L",
+          "text": "陈忠实《白鹿原》的文化意义和艺术表现特点"
+        },
+        {
+          "id": "Q112",
+          "year": 2013,
+          "kind": "S",
+          "text": "《白鹿原》的艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 198,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-124",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "《尘埃落定》",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q140",
+          "year": 2016,
+          "kind": "N",
+          "text": "《尘埃落定》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 199,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-125",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "王琦瑶出自王安忆哪部作品",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q236",
+          "year": 2022,
+          "kind": "B",
+          "text": "王琦瑶出自王安忆哪部作品"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 200,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-126",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《白鹿原》的作者",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q381",
+          "year": 2024,
+          "kind": "B",
+          "text": "《白鹿原》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 201,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-127",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "贾平凹获第七届茅盾文学奖的作品",
+      "section": "90年代小说",
+      "rank": 33.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q186",
+          "year": 2020,
+          "kind": "B",
+          "text": "贾平凹获第七届茅盾文学奖的作品"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 202,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "repair-71",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "余华的创作转变",
+      "section": "90年代小说",
+      "rank": 33.99,
+      "scope": "余华先锋作品和既有《活着》单题均过完后再归纳转变；复用两题材料，不独立新背第三篇长文。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 203,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "v4:O:learn:6bf129cb7c6f232",
+      "course": "现当代文学",
+      "type": "论述题",
+      "title": "朦胧诗的思想艺术特色与创作意义",
+      "section": "80、90年代新诗",
+      "rank": 34.0,
+      "scope": "朦胧诗的思想艺术与创作意义。主体意识、意象和语言、创作意义；以舒婷、北岛等作例证，不另背多套同义问法。 本日所列题目共用原定学习时间和笔记，不因拆成题型行就增加准备范围。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 204,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "v3:learn:r2-299",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "第三代诗人",
+      "section": "80、90年代新诗",
+      "rank": 34.0,
+      "scope": "仅原定短识记范围：核对定义、特征或作者作品对应，不扩写为大题。",
+      "evidence": [],
+      "source": "舍予葵现当代笔记及已提供教材",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 205,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-72",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "第三代诗歌与90年代诗歌的主要变化",
+      "section": "80、90年代新诗",
+      "rank": 34.0,
+      "scope": "作为后朦胧比较与具体诗作分析的前置，按底本辨认变化，不仅记一个流派名。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 206,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-96",
+      "course": "现当代文学",
+      "type": "分析题",
+      "title": "通过《西斯》分析20世纪90年代诗歌变化",
+      "section": "80、90年代新诗",
+      "rank": 34.0,
+      "scope": "用题给文本和底本相关诗歌背景作答，不额外杜撰作品材料。",
+      "evidence": [
+        {
+          "id": "Q208",
+          "year": 2021,
+          "kind": "L",
+          "text": "通过《西斯》分析20世纪90年代诗歌变化"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 207,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-97",
+      "course": "现当代文学",
+      "type": "分析题",
+      "title": "张枣《镜中》的意象与表达",
+      "section": "80、90年代新诗",
+      "rank": 34.0,
+      "scope": "依题给观点和作品文本分析意象、结构、表达；是方法训练，不要求逐字背一篇评论。",
+      "evidence": [
+        {
+          "id": "Q250",
+          "year": 2022,
+          "kind": "L",
+          "text": "结合题给观点鉴赏张枣《镜中》（A明确提及西渡评价）"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 208,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-94",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "朦胧诗与后朦胧诗的思想艺术差异",
+      "section": "80、90年代新诗",
+      "rank": 34.99,
+      "scope": "先过朦胧诗，再补后朦胧诗必要的作品和诗学背景后比较，不从几个名词直接跳综合。",
+      "evidence": [
+        {
+          "id": "Q133",
+          "year": 2015,
+          "kind": "S",
+          "text": "比较朦胧诗派与后朦胧诗的思想艺术差异"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 209,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-95",
+      "course": "现当代文学",
+      "type": "分析题",
+      "title": "杨炼《大雁塔》与韩东《有关大雁塔》的比较",
+      "section": "80、90年代新诗",
+      "rank": 34.99,
+      "scope": "依用户资料中的诗作分析，不背一篇通用赏析；先列比较维度与文本证据。",
+      "evidence": [
+        {
+          "id": "Q179",
+          "year": 2019,
+          "kind": "L",
+          "text": "比较杨炼《大雁塔》与韩东《有关大雁塔》"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 210,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "supplement-316",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "新时期戏剧的探索",
+      "section": "80、90年代戏剧",
+      "rank": 35,
+      "scope": "底本所列代表剧作、舞台探索与文学史位置。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 211,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-98",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "巴金《随想录》的反思与艺术表达",
+      "section": "80年代散文",
+      "rank": 36.0,
+      "scope": "按底本的真话意识、历史与自我反思、表达及篇目组织，不新增全书阅读。",
+      "evidence": [],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 212,
+      "plannedDate": "2026-12-14"
+    },
+    {
+      "id": "repair-99",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "以《干校六记》等为例分析杨绛散文的艺术特色",
+      "section": "80年代散文",
+      "rank": 36.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q143",
+          "year": 2016,
+          "kind": "S",
+          "text": "以《干校六记》等为例分析杨绛散文艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 213,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-100",
+      "course": "现当代文学",
+      "type": "名词解释",
+      "title": "文化散文",
+      "section": "90年代散文",
+      "rank": 37.0,
+      "scope": "定义、关键特征和一个底本例子；已有旧笔记直接沿用，不另抄一份长答案。",
+      "evidence": [
+        {
+          "id": "Q014",
+          "year": 2005,
+          "kind": "N",
+          "text": "文化散文"
+        },
+        {
+          "id": "Q078",
+          "year": 2011,
+          "kind": "N",
+          "text": "文化散文"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 214,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-101",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "余秋雨文化散文的思想与艺术特色",
+      "section": "90年代散文",
+      "rank": 37.0,
+      "scope": "艺术特征、文化意识和评价共用主干；“对余秋雨散文的看法”作为本题评价角度，不再单背第二篇。",
+      "evidence": [
+        {
+          "id": "Q008",
+          "year": 2004,
+          "kind": "S",
+          "text": "对余秋雨散文的看法"
+        },
+        {
+          "id": "Q030",
+          "year": 2007,
+          "kind": "S",
+          "text": "余秋雨文化散文的艺术特征"
+        },
+        {
+          "id": "Q132",
+          "year": 2015,
+          "kind": "S",
+          "text": "余秋雨文化散文的思想及艺术特色"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 215,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-102",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "史铁生《我与地坛》的精神内涵与表达",
+      "section": "90年代散文",
+      "rank": 37.0,
+      "scope": "依据底本与已有片段梳理生命体验、情感与表达，补作者作品对应；不把它冒称为现有样本中的同名简答原题。",
+      "evidence": [
+        {
+          "id": "Q282",
+          "year": 2023,
+          "kind": "B",
+          "text": "《我与地坛》的作者"
+        },
+        {
+          "id": "Q334",
+          "year": 2024,
+          "kind": "B",
+          "text": "《我与地坛》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 216,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-118",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《文化苦旅》的作者",
+      "section": "90年代散文",
+      "rank": 37.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q281",
+          "year": 2023,
+          "kind": "B",
+          "text": "《文化苦旅》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 217,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-128",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《我与地坛》的作者",
+      "section": "90年代散文",
+      "rank": 37.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q282",
+          "year": 2023,
+          "kind": "B",
+          "text": "《我与地坛》的作者"
+        },
+        {
+          "id": "Q334",
+          "year": 2024,
+          "kind": "B",
+          "text": "《我与地坛》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 218,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "supplement-317",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "台港文学的代表作家与文学类型",
+      "section": "台港文学",
+      "rank": 38,
+      "scope": "依底本辨认作家作品和所属类型；不与早期台湾文学合成一个时期。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 219,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-129",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "《文城》的作者",
+      "section": "新世纪小说及真题补充",
+      "rank": 39.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q240",
+          "year": 2022,
+          "kind": "B",
+          "text": "《文城》的作者"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 220,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "supplement-318",
+      "course": "现当代文学",
+      "type": "课本梳理",
+      "title": "新世纪诗歌、戏剧与散文的变化",
+      "section": "2000—2013诗歌、戏剧、散文",
+      "rank": 40,
+      "scope": "按底本分别列三种文体的变化和具体例证。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 221,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-103",
+      "course": "现当代文学",
+      "type": "简答题",
+      "title": "《透明的红萝卜》中黑孩儿的形象",
+      "section": "莫言",
+      "rank": 41.0,
+      "scope": "按本题形成明确分点、解释与底本例证；同主题复用已有笔记，不为相近问法重复背整篇。",
+      "evidence": [
+        {
+          "id": "Q206",
+          "year": 2021,
+          "kind": "S",
+          "text": "莫言《透明的红萝卜》中黑孩儿的形象"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 222,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "repair-130",
+      "course": "现当代文学",
+      "type": "填空识记",
+      "title": "余占鳌出自莫言哪部作品",
+      "section": "莫言",
+      "rank": 41.0,
+      "scope": "只核对题干所问的作者、作品、篇目或人物对应，不扩展成长篇作家成就。",
+      "evidence": [
+        {
+          "id": "Q335",
+          "year": 2024,
+          "kind": "B",
+          "text": "余占鳌出自莫言哪部作品"
+        }
+      ],
+      "source": "舍予葵现当代底本及既有真题核查",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 223,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "外国文学:fr1",
+      "course": "外国文学",
+      "type": "复习",
+      "title": "荷马史诗与古希腊悲剧",
+      "section": "第1章",
+      "rank": 1.0,
+      "scope": "回忆已学框架，核对悲剧作家、代表作及史诗对应；重点回做自己的错题，不新背整章。",
+      "evidence": [
+        "Q220",
+        "Q260",
+        "Q306",
+        "Q353"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [4, 12]",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 224,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "外国文学:fr2",
+      "course": "外国文学",
+      "type": "复习",
+      "title": "骑士文学与《神曲》",
+      "section": "第2章",
+      "rank": 2.001,
+      "scope": "骑士文学口述定义；《神曲》回忆结构、思想二重性及引路人物。底本与旧笔记已学答案继续沿用。",
+      "evidence": [
+        "Q261",
+        "Q307"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [13, 17]",
+      "state": "已学回忆",
+      "originalType": "名词解释／简答题",
+      "catalogNumber": 225,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "外国文学:fr3",
+      "course": "外国文学",
+      "type": "复习",
+      "title": "人文主义",
+      "section": "第3章",
+      "rank": 3.002,
+      "scope": "口述概念、基本主张，联系一个已学例证；作家作品对应只查旧错，不重复制作章节框架。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [18, 20]",
+      "state": "已学回忆",
+      "originalType": "名词解释",
+      "catalogNumber": 226,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "外国文学:f05",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "流浪汉小说",
+      "section": "第3章",
+      "rank": 3.003,
+      "scope": "定义、叙事及主人公特点、底本一例；不扩成小说史。",
+      "evidence": [
+        "Q362"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [19, 20]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 227,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "外国文学:f01",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《堂吉诃德》中堂吉诃德的人物形象",
+      "section": "第3章",
+      "rank": 3.004,
+      "scope": "准备完整简答：悲喜剧因素、理想与现实的矛盾、形象意义，各落到已有底本情节。不要另背三份近义答案。",
+      "evidence": [
+        "Q229"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [20, 22]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 228,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "外国文学:f04",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "莎士比亚的悲剧、人物与故事背景",
+      "section": "第3章",
+      "rank": 3.005,
+      "scope": "本组只核对四大悲剧、哈姆雷特故事国别、福斯塔夫及伊阿古四个对应，不附加各剧大题。章节梳理已做，按查漏处理。",
+      "evidence": [
+        "Q214",
+        "Q262",
+        "Q308",
+        "Q355"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [22, 27]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 229,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "外国文学:f02",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "哈姆雷特的延宕及其原因",
+      "section": "第3章",
+      "rank": 3.006,
+      "scope": "从客观处境、思想与性格等层面解释延宕，联系底本例证；备好简答，并能在形象论述中展开。不能把底本历年标记当本校考频。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [23, 25]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 230,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "外国文学:f03",
+      "course": "外国文学",
+      "type": "论述题",
+      "title": "《哈姆雷特》的悲剧意义与艺术特点",
+      "section": "第3章",
+      "rank": 3.007,
+      "scope": "先用上一题解释人物，再补时代意义和戏剧艺术。形成一份有层次的论述主干，每个艺术要点至少有一个底本例证；延宕段落复用，不重抄。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [23, 27]",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 231,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "外国文学:f06",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "古典主义",
+      "section": "第4章",
+      "rank": 4.008,
+      "scope": "概念、基本原则和一个代表作，准备名解长度。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [28, 31]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 232,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "外国文学:f08",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "弥尔顿三大诗作",
+      "section": "第4章",
+      "rank": 4.009,
+      "scope": "只记三作名称及作者对应，按原始整条记录核对。",
+      "evidence": [
+        "Q357"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [28, 29]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 233,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "外国文学:f07",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "三一律",
+      "section": "第4章",
+      "rank": 4.01,
+      "scope": "说明限制内容、流行背景；区分后世古典主义规范与古希腊戏剧理论，不把起源简化成同一说法。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [29, 33]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 234,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "supplement-319",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《伪君子》中达尔杜弗的形象与喜剧艺术",
+      "section": "第4章",
+      "rank": 4.08,
+      "scope": "虚伪性格及社会基础；冲突、讽刺、夸张分别用情节说明。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本31—32页",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 235,
+      "plannedDate": "2026-11-21"
+    },
+    {
+      "id": "supplement-320",
+      "course": "外国文学",
+      "type": "课本梳理",
+      "title": "启蒙文学的特点与主要作家",
+      "section": "第5章",
+      "rank": 5,
+      "scope": "先建立思想主张、文学体裁、代表作家作品对应，再学浮士德。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本34—43页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 236,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "外国文学:f09",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "浮士德形象与浮士德精神",
+      "section": "第5章",
+      "rank": 5.011,
+      "scope": "以五个追求阶段作线索，回答形象、不断探索与实践精神及其矛盾；准备简答主干，不把整个启蒙时期拉成大题。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [40, 43]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 237,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "外国文学:f10",
+      "course": "外国文学",
+      "type": "课本梳理",
+      "title": "浪漫主义的特征与代表作",
+      "section": "第6章",
+      "rank": 6.012,
+      "scope": "只留形成背景一句、三个特征、两个底本作品对应。用既有页作批注，不重画各国作家全表。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [44, 47]",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 238,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "外国文学:f11",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "湖畔派",
+      "section": "第6章",
+      "rank": 6.013,
+      "scope": "定义、代表作家、主要倾向；按名解准备。",
+      "evidence": [
+        "Q269"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [46, 47]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 239,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f12",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "拜伦式英雄",
+      "section": "第6章",
+      "rank": 6.014,
+      "scope": "概念、性格特征、一个底本人物及局限，不与全部拜伦诗歌成就混背。",
+      "evidence": [
+        "Q315"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [47, 49]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 240,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "supplement-321",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "雨果小说的美丑对照原则",
+      "section": "第6章",
+      "rank": 6.014,
+      "scope": "以底本具体作品、人物及场景为例，不用《悲惨世界》人名填空替代。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本50—54页",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 241,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f14",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "《悲惨世界》的主人公",
+      "section": "第6章",
+      "rank": 6.015,
+      "scope": "只核对作品与主人公；美丑对照暂不增为必背长题。",
+      "evidence": [
+        "Q354"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [50, 55]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 242,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f13",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "多余人形象",
+      "section": "第6章",
+      "rank": 6.016,
+      "scope": "概念、社会处境、一个代表人物；按底本普希金部分先认识，不先做跨作家人物谱系大题。",
+      "evidence": [
+        "Q363"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [54, 55]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 243,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f20",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "惠特曼与《草叶集》",
+      "section": "第6章",
+      "rank": 6.017,
+      "scope": "只核对作者、作品对应；按本次底本放在浪漫主义章的惠特曼部分，不沿用旧教材把他排到后期现实主义章。",
+      "evidence": [
+        "Q212"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [56, 58]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 244,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f15",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《红与黑》中的于连形象",
+      "section": "第7章",
+      "rank": 7.018,
+      "scope": "抓反抗与妥协、野心与阶级处境，联系经历说明性格变化和典型意义。按完整简答准备。",
+      "evidence": [
+        "Q273"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [64, 65]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 245,
+      "plannedDate": "2026-11-28"
+    },
+    {
+      "id": "外国文学:f16",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《高老头》的典型形象与社会意义",
+      "section": "第7章",
+      "rank": 7.019,
+      "scope": "只列三个一级论点，每点一句解释，加一个已经熟悉的情节；不另准备巴尔扎克全部小说成就。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [65, 69]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 246,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "外国文学:f17",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "《人间喜剧》的分类与《双城记》的城市",
+      "section": "第7章",
+      "rank": 7.02,
+      "scope": "两条独立对应各核一次，不延伸成两部作品的长篇梳理。",
+      "evidence": [
+        "Q263",
+        "Q309"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [65, 69]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 247,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "外国文学:f18",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "自然派",
+      "section": "第7章",
+      "rank": 7.021,
+      "scope": "按俄国文学语境定义，举代表作家；与自然主义严格区分。",
+      "evidence": [
+        "Q226"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [70, 74]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 248,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "外国文学:f19",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "安娜·卡列尼娜的形象特征",
+      "section": "第8章",
+      "rank": 8.022,
+      "scope": "从追求、处境、矛盾和悲剧意义组织答案；悲剧原因作本题展开角度，不新增一份重复答案。",
+      "evidence": [
+        "Q366"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [84, 86]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 249,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "外国文学:f21",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《玩偶之家》中娜拉的觉醒与戏剧冲突",
+      "section": "第8章",
+      "rank": 8.023,
+      "scope": "三个论点加一个底本情节：家庭表象、冲突揭露、觉醒出走；不再抄一份全剧梗概。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [90, 91]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 250,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "外国文学:f22",
+      "course": "外国文学",
+      "type": "课本梳理",
+      "title": "自然主义、唯美主义与象征主义",
+      "section": "第9章",
+      "rank": 9.024,
+      "scope": "每种仅一条概念和一个代表作家作品，明确与俄国自然派不同；系统比较大题暂缓。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [95, 103]",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 251,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "外国文学:f23",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《静静的顿河》中葛利高的艺术形象",
+      "section": "第10章",
+      "rank": 10.025,
+      "scope": "使用底本“葛利高里”对应原题“葛利高”，抓哥萨克处境、摇摆与追求、悲剧意义，联系经历答题。",
+      "evidence": [
+        "Q319"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [115, 116]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 252,
+      "plannedDate": "2026-12-05"
+    },
+    {
+      "id": "supplement-322",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "意识流小说",
+      "section": "第11章",
+      "rank": 11,
+      "scope": "定义、时间心理与叙事特点、代表作家作品。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本120—132页",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 253,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "外国文学:f24",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《变形记》的异化主题与艺术表现",
+      "section": "第11章",
+      "rank": 11.026,
+      "scope": "三个要点配一个底本情节；不把卡夫卡生平成就和整个现代主义一起装入本题。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [123, 125]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 254,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "外国文学:f25",
+      "course": "外国文学",
+      "type": "填空识记",
+      "title": "福克纳与约克纳帕塔法小说",
+      "section": "第11章",
+      "rank": 11.027,
+      "scope": "核对作家、虚构地域与原题所指代表作，保留原资料地名误写提示；不要求背完整家族谱系。",
+      "evidence": [
+        "Q356"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [131, 132]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 255,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "外国文学:f26",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "硬汉形象",
+      "section": "第12章",
+      "rank": 12.028,
+      "scope": "定义、主要特征及桑提亚哥一例；不临时增加《老人与海》全文阅读。",
+      "evidence": [
+        "Q270"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [136, 138]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 256,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "supplement-323",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "存在主义文学",
+      "section": "第13章",
+      "rank": 13,
+      "scope": "基本主张、处境与选择、代表作家作品。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本141—145页",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 257,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "supplement-324",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "黑色幽默",
+      "section": "第13章",
+      "rank": 13.01,
+      "scope": "定义、荒诞与喜剧机制、代表作品；区别于荒诞派戏剧。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本141—146页",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 258,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "外国文学:f27",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "荒诞派戏剧",
+      "section": "第13章",
+      "rank": 13.029,
+      "scope": "概念、主要戏剧特征与代表作品，带出《等待戈多》流派归属。",
+      "evidence": [
+        "Q225",
+        "Q264"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [141, 145]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 259,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "外国文学:f28",
+      "course": "外国文学",
+      "type": "名词解释",
+      "title": "魔幻现实主义",
+      "section": "第13章",
+      "rank": 13.03,
+      "scope": "概念、现实与魔幻的结合方式及底本一例，不把不完整的西班牙语作家题当确定答案。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [142, 149]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 260,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "外国文学:f29",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《百年孤独》的魔幻现实主义特征",
+      "section": "第13章",
+      "rank": 13.031,
+      "scope": "三个一级论点、每点一句说明，加一个底本已有例证；与上一名解共用笔记，不再独立写一篇长答案。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [147, 149]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 261,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "外国文学:f30",
+      "course": "外国文学",
+      "type": "简答题",
+      "title": "《等待戈多》的反传统戏剧特征",
+      "section": "第13章",
+      "rank": 13.032,
+      "scope": "按底本作品部分列三个论点和一个场景例证，建立与荒诞派名解的联系；先不做全欧洲戏剧比较。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-外国文学 新版.pdf PDF页 [149, 151]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 262,
+      "plannedDate": "2026-12-12"
+    },
+    {
+      "id": "文学理论:tr1",
+      "course": "文学理论",
+      "type": "复习",
+      "title": "文艺学分支与文学理论的任务",
+      "section": "第1章",
+      "rank": 1.0,
+      "scope": "回忆第一章已学内容和文艺学三个分支；文学本体论旧笔记只核定义，不重背一章。",
+      "evidence": [
+        "Q350"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [5, 7]",
+      "state": "已学回忆",
+      "originalType": "填空识记／简答题",
+      "catalogNumber": 263,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "supplement-325",
+      "course": "文学理论",
+      "type": "课本梳理",
+      "title": "马克思主义文学理论的基石与中国化",
+      "section": "第2章",
+      "rank": 2,
+      "scope": "按底本逐条列理论基石及当代发展线索；学习状态未确认，不能仅凭对象化填空认定整章完成。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本8—11页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 264,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "文学理论:t30",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "文学活动与人的本质力量对象化",
+      "section": "第2章",
+      "rank": 2.001,
+      "scope": "第二章完成未确认，本轮只核这一个与文学活动相连的基础概念及底本一例；不要求重背整章。作为第一章复习后的短补缺。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [9, 11]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 265,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "文学理论:tr2",
+      "course": "文学理论",
+      "type": "复习",
+      "title": "文学四要素与发生学说",
+      "section": "第3章",
+      "rank": 3.002,
+      "scope": "口述四要素关系、文学发生学说和劳动说，核对弗雷泽对应；已背同义问法合并回忆。",
+      "evidence": [
+        "Q213",
+        "Q301",
+        "Q389"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [14, 19]",
+      "state": "已学回忆",
+      "originalType": "名词解释／简答题",
+      "catalogNumber": 266,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "文学理论:tr3",
+      "course": "文学理论",
+      "type": "复习",
+      "title": "文学发展与物质生产的不平衡关系",
+      "section": "第3章",
+      "rank": 3.003,
+      "scope": "回忆已学主干与一个底本例子，不新增文学史长材料。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [19, 20]",
+      "state": "已学回忆",
+      "originalType": "简答题",
+      "catalogNumber": 267,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "文学理论:t01",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "文学的审美意识形态属性",
+      "section": "第4章",
+      "rank": 4.004,
+      "scope": "从文学兼有意识形态性质与审美特性组织简答，分点解释并用一个已学作品说明，避免只背抽象标签。",
+      "evidence": [
+        "Q255"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [23, 26]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 268,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "文学理论:t02",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "话语蕴藉",
+      "section": "第4章",
+      "rank": 4.005,
+      "scope": "定义、文学语言与意义的蕴蓄状态，能区分含蓄与含混并各举底本短例；不把两个概念再扩成两篇新大题。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [27, 29]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 269,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "文学理论:t03",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "话语的五个要素",
+      "section": "第4章",
+      "rank": 4.006,
+      "scope": "按底本核对五要素，能补出原题所缺项。",
+      "evidence": [
+        "Q351"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [27, 28]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 270,
+      "plannedDate": "2026-11-19"
+    },
+    {
+      "id": "supplement-326",
+      "course": "文学理论",
+      "type": "课本梳理",
+      "title": "社会主义时期文学活动的属性与价值取向",
+      "section": "第5章",
+      "rank": 5,
+      "scope": "分别整理基本属性、价值取向及例证。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本30—34页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 271,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "supplement-327",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "雅俗文艺与文学的继承创新",
+      "section": "第5章",
+      "rank": 5.1,
+      "scope": "按底本说明雅俗关系、继承创新和借鉴创造；不是背整章政策表述。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本30—34页",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 272,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "文学理论:t04",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "文学创造的主客体关系",
+      "section": "第6章",
+      "rank": 6.007,
+      "scope": "主客体各一句，关系列两到三个点，使用一个底本例子；只做后续创造过程的前置框架。顺带核对作家的生产者角色。",
+      "evidence": [
+        "Q256"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [37, 43]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 273,
+      "plannedDate": "2026-11-24"
+    },
+    {
+      "id": "supplement-328",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "艺术构思",
+      "section": "第7章",
+      "rank": 7.0075,
+      "scope": "概念、方式和形成过程；与艺术发现、物化区分。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本48—51页",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 274,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "文学理论:t05",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "艺术发现",
+      "section": "第7章",
+      "rank": 7.008,
+      "scope": "定义、特点和一个底本例子；核对发生阶段中材料储备、艺术发现、创作动机的联系。",
+      "evidence": [
+        "Q223",
+        "Q302"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [46, 48]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 275,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "文学理论:t06",
+      "course": "文学理论",
+      "type": "论述题",
+      "title": "结合作品论文学创造的物化过程",
+      "section": "第7章",
+      "rank": 7.009,
+      "scope": "先分清发生、构思、物化，再按“形之于心到形之于手”、语词提炼与技巧运用、动机与效果展开。只选一部已熟作品作例，不另读全书。",
+      "evidence": [
+        "Q367"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [48, 53]",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 276,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "文学理论:t07",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "艺术真实的主要特征",
+      "section": "第8章",
+      "rank": 8.01,
+      "scope": "准确区分生活真实、科学真实与艺术真实；按底本要点组织一份完整简答并联系例子。",
+      "evidence": [
+        "Q365"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [56, 59]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 277,
+      "plannedDate": "2026-11-26"
+    },
+    {
+      "id": "文学理论:t08",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "艺术概括",
+      "section": "第8章",
+      "rank": 8.011,
+      "scope": "定义、个别与一般的关系、一个底本例子。与文学典型有联系，但本次不抢做第十章综合比较。",
+      "evidence": [
+        "Q267"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [57, 58]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 278,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "文学理论:t09",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "诗意的裁判",
+      "section": "第8章",
+      "rank": 8.012,
+      "scope": "定义、善的价值判断与艺术表达的关系、一例；不能只写道德口号。",
+      "evidence": [
+        "Q360"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [58, 60]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 279,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "文学理论:t10",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "如何科学理解“有意味的形式”",
+      "section": "第8章",
+      "rank": 8.013,
+      "scope": "先说明贝尔命题，再谈形式的审美价值及其与内容、情感的关系，联系底本/教材例子。不能把底本一句定义当作完整简答。",
+      "evidence": [
+        "Q318"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [61, 61]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 280,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "supplement-329",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "现实型、理想型与象征型文学的区别",
+      "section": "第9章",
+      "rank": 9,
+      "scope": "三类各有特点和作品例证；不能只背剧本定义。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本64—65页",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 281,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "文学理论:t11",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "剧本",
+      "section": "第9章",
+      "rank": 9.014,
+      "scope": "定义、文学与舞台的双重要求、基本特征；顺带口述底本列出的五种基本体裁名称，不增为五道论述。",
+      "evidence": [
+        "Q218",
+        "Q313"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [65, 68]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 282,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "文学理论:t12",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "文学文本层次与文学意蕴的层次",
+      "section": "第10章",
+      "rank": 10.015,
+      "scope": "用底本的层次表准确对应名称；二者不是同一层级的两套并列表。只核名称及对应，不展开整个文本论。",
+      "evidence": [
+        "Q257"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [72, 74]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 283,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "文学理论:t13",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "文学典型",
+      "section": "第10章",
+      "rank": 10.016,
+      "scope": "定义、特征性与艺术魅力，并用一个已熟人物解释；保留向简答展开的几个要点，不另写重复长答案。",
+      "evidence": [
+        "Q361"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [75, 77]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 284,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "文学理论:t14",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "意境",
+      "section": "第10章",
+      "rank": 10.017,
+      "scope": "定义、情景交融等核心特征及一个底本诗例，能与典型区分。",
+      "evidence": [],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [78, 79]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 285,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "文学理论:t15",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "审美意象",
+      "section": "第10章",
+      "rank": 10.018,
+      "scope": "定义、基本特征，核对形象特征的填空点；与日常广义“意象”区别，不背全部细类。",
+      "evidence": [
+        "Q217"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [80, 81]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 286,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "supplement-330",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "文学典型、意境与审美意象的区别",
+      "section": "第10章",
+      "rank": 10.019,
+      "scope": "先完成三个名解，再比较各自构成、审美特征及作品例证。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本75—81页",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 287,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "supplement-331",
+      "course": "文学理论",
+      "type": "分析题",
+      "title": "文学文本的三个层次",
+      "section": "第10章",
+      "rank": 10.02,
+      "scope": "用一个已学文学片段辨认语言、形象、意蕴；不要只复述名称。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本72—74页",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 288,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "文学理论:t16",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "叙事",
+      "section": "第11章",
+      "rank": 11.019,
+      "scope": "定义、叙述内容/话语/动作的关系；补情节组织逻辑这一条基础对应，不将整个叙事章塞入名解。",
+      "evidence": [
+        "Q224",
+        "Q352"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [85, 89]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 289,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "文学理论:t17",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "零聚焦、内聚焦与外聚焦",
+      "section": "第11章",
+      "rank": 11.02,
+      "scope": "核对三类视角名称，每类识别一个底本简例；不另抄三套理论史。",
+      "evidence": [
+        "Q303"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [88, 89]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 290,
+      "plannedDate": "2026-12-03"
+    },
+    {
+      "id": "supplement-332",
+      "course": "文学理论",
+      "type": "课本梳理",
+      "title": "抒情内容与抒情话语",
+      "section": "第12章",
+      "rank": 12,
+      "scope": "分别掌握抒情与现实、自我社会及话语表现，列可用例证。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本90—96页",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 291,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "supplement-333",
+      "course": "文学理论",
+      "type": "分析题",
+      "title": "抒情作品的声情与景情关系",
+      "section": "第12章",
+      "rank": 12.1,
+      "scope": "选一首已学诗歌，分析声音、画面、修辞及情感；保留实际文本分析。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。底本92—96页",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 292,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "文学理论:t18",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "文学风格",
+      "section": "第13章",
+      "rank": 13.021,
+      "scope": "定义、内在根据与外部表现，联系一个熟悉作家；风格类型长表暂缓。",
+      "evidence": [
+        "Q268"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [99, 103]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 293,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "文学理论:t19",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "创作个性",
+      "section": "第13章",
+      "rank": 13.022,
+      "scope": "定义、与日常个性的区别及与风格的关系，共用上一题作家例子。",
+      "evidence": [
+        "Q314"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [99, 100]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 294,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "文学理论:t20",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "文学消费制约文学生产的主要方面",
+      "section": "第14章",
+      "rank": 14.023,
+      "scope": "按底本分点说明文学消费的制约作用，各配可解释的例子；先核消费的二重性，再答制约关系。",
+      "evidence": [
+        "Q219",
+        "Q272"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [108, 111]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 295,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "文学理论:t21",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "期待视野",
+      "section": "第15章",
+      "rank": 15.024,
+      "scope": "定义、形成原因及文体/形象/意蕴期待的区别；用一个熟悉阅读经验举例。",
+      "evidence": [
+        "Q349"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [120, 123]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 296,
+      "plannedDate": "2026-12-08"
+    },
+    {
+      "id": "文学理论:t22",
+      "course": "文学理论",
+      "type": "名词解释",
+      "title": "召唤结构",
+      "section": "第15章",
+      "rank": 15.025,
+      "scope": "按底本伊瑟尔部分理解文本空白与读者填补，准备概念和一例；不要与英加登术语机械等同。",
+      "evidence": [
+        "Q304"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [122, 123]",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 297,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t23",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "共鸣、净化、领悟与余味",
+      "section": "第15章",
+      "rank": 15.026,
+      "scope": "理清底本接受高潮的几个环节及余味影响；Q216原题不完整，暂不推断唯一缺项答案。",
+      "evidence": [
+        "Q216",
+        "Q258"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [126, 128]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 298,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t24",
+      "course": "文学理论",
+      "type": "简答题",
+      "title": "如何看待文学批评的思想标准",
+      "section": "第16章",
+      "rank": 16.027,
+      "scope": "阐释思想标准的含义、考察维度及与艺术标准的关系；结合作品，避免用政治标签替代文学分析。",
+      "evidence": [
+        "Q228"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [131, 133]",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 299,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t25",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "美学观点与史学观点的批评标准",
+      "section": "第16章",
+      "rank": 16.028,
+      "scope": "核对提出者、两种观点各自的基本指向，作为上一题的背景，不增一篇新论述。",
+      "evidence": [
+        "Q259"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [131, 133]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 300,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t26",
+      "course": "文学理论",
+      "type": "填空识记",
+      "title": "中西文学批评中早期影响深远的模式",
+      "section": "第16章",
+      "rank": 16.029,
+      "scope": "按原题与底本核对模式名称；保留“批判/批评”转录差异，不凭常识补未经核实的词。",
+      "evidence": [
+        "Q305"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [134, 138]",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 301,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t27",
+      "course": "文学理论",
+      "type": "论述题",
+      "title": "结合作品谈语言、文学与审美的关系",
+      "section": "第17章",
+      "rank": 17.03,
+      "scope": "学完话语蕴藉、创造、作品、接受后，先列论点和作品证据，再完整闭卷写这一题。复用已学理论，不重新背一篇万能作文。",
+      "evidence": [
+        "Q230"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [142, 148]",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 302,
+      "plannedDate": "2026-12-10"
+    },
+    {
+      "id": "文学理论:t28",
+      "course": "文学理论",
+      "type": "论述题",
+      "title": "三词组合的文学理论论证",
+      "section": "第17章",
+      "rank": 17.031,
+      "scope": "对应八词选三词真题：自选一组，写三个论点及各自例证；只练选词关系和提纲，不当作与上一题完全同题。",
+      "evidence": [
+        "Q274"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [142, 148]",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 303,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "文学理论:t29",
+      "course": "文学理论",
+      "type": "论述题",
+      "title": "文学、语言与生命的关系",
+      "section": "第17章",
+      "rank": 17.032,
+      "scope": "对应材料题，先拆材料再列三个论点和一组作品证据。原题要求不少于1000字，本轮这里只练提纲，不冒称已经完成整篇训练。",
+      "evidence": [
+        "Q320"
+      ],
+      "source": "C:\\Users\\hyun0\\Documents\\ChatGPT\\现当代考研\\资料库\\舍予葵笔记底本\\舍予葵-文学理论  新版.pdf PDF页 [142, 148]",
+      "state": "待学",
+      "originalType": "论述题",
+      "catalogNumber": 304,
+      "plannedDate": "2026-12-15"
+    },
+    {
+      "id": "H:r0",
+      "course": "现代汉语",
+      "type": "复习",
+      "title": "绪论与语音基础",
+      "section": "现代汉语概说；语音概说",
+      "rank": 0,
+      "scope": "合书说出普通话定义、语音单位，并辨认一个声母的发音部位和方法；错处回看，不重抄整章。",
+      "evidence": [
+        "Q296",
+        "Q344"
+      ],
+      "source": "现代汉语概说.pdf.txt",
+      "state": "已学回忆",
+      "originalType": "填空识记／分析题",
+      "catalogNumber": 305,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "H:r1",
+      "course": "现代汉语",
+      "type": "复习",
+      "title": "元音、复元音与四呼",
+      "section": "元音、韵母、四呼",
+      "rank": 1,
+      "scope": "回忆元音与复元音定义，做两个四呼判断；保留ü与y/w拼写易错点。",
+      "evidence": [
+        "Q221",
+        "Q265"
+      ],
+      "source": "现代汉语的语音.pdf.txt",
+      "state": "已学回忆",
+      "originalType": "名词解释／分析题",
+      "catalogNumber": 306,
+      "plannedDate": "2026-11-22"
+    },
+    {
+      "id": "H:r2",
+      "course": "现代汉语",
+      "type": "复习",
+      "title": "音节结构与音素数",
+      "section": "音节",
+      "rank": 2,
+      "scope": "独立分析两个音节，包括dui；声母韵母、韵头韵腹韵尾、四呼与音素数分别检查。",
+      "evidence": [
+        "Q251"
+      ],
+      "source": "现代汉语的语音.pdf.txt",
+      "state": "已学回忆",
+      "originalType": "分析题",
+      "catalogNumber": 307,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "H:r3",
+      "course": "现代汉语",
+      "type": "复习",
+      "title": "调类、调值与变调",
+      "section": "声调；音变",
+      "rank": 3,
+      "scope": "先分本调和实际读音，再辨上声及“一、不”变调；不用背整章。",
+      "evidence": [
+        "Q297",
+        "Q345"
+      ],
+      "source": "现代汉语的语音.pdf.txt",
+      "state": "已学回忆",
+      "originalType": "填空识记／分析题",
+      "catalogNumber": 308,
+      "plannedDate": "2026-12-01"
+    },
+    {
+      "id": "H:r4",
+      "course": "现代汉语",
+      "type": "复习",
+      "title": "轻声、儿化与“啊”的变读",
+      "section": "音变",
+      "rank": 4,
+      "scope": "能说清轻声和儿化的作用，各举一例；“啊”只查此前做错的变读。",
+      "evidence": [
+        "Q312"
+      ],
+      "source": "现代汉语的语音.pdf.txt",
+      "state": "已学回忆",
+      "originalType": "简答题／分析题",
+      "catalogNumber": 309,
+      "plannedDate": "2026-12-06"
+    },
+    {
+      "id": "H:n1",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "音位与音位变体",
+      "section": "音位及音位变体",
+      "rank": 5,
+      "scope": "分别准备定义、二者关系与一组底本/教材例子；补清音位与音素的区别。",
+      "evidence": [
+        "Q209",
+        "Q358"
+      ],
+      "source": "现代汉语的语音.pdf.txt",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 310,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "H:n2",
+      "course": "现代汉语",
+      "type": "简答题",
+      "title": "象形、指事及其区别",
+      "section": "汉字结构与造字法",
+      "rank": 6,
+      "scope": "定义、区别、各一例，能独立写一份简答；“本、末”作应用例子。",
+      "evidence": [
+        "Q210",
+        "Q271",
+        "Q298"
+      ],
+      "source": "现代汉语的文字.pdf.txt",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 311,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "supplement-334",
+      "course": "现代汉语",
+      "type": "课本梳理",
+      "title": "汉字的性质与规范化",
+      "section": "汉字性质与规范化",
+      "rank": 6.9,
+      "scope": "性质、现代汉字规范化的内容及易错例；造字法不能代替本项。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。文字笔记及黄廖教材",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 312,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "H:n3",
+      "course": "现代汉语",
+      "type": "填空识记",
+      "title": "汉字字体演变与会意、形声",
+      "section": "汉字形体演变；汉字结构",
+      "rank": 7,
+      "scope": "按底本顺序回忆字体线索，联系隶变；会意、形声各掌握定义和一例，核对“明”。不展开整部文字史。",
+      "evidence": [
+        "Q252",
+        "Q346"
+      ],
+      "source": "现代汉语的文字.pdf.txt",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 313,
+      "plannedDate": "2026-11-18"
+    },
+    {
+      "id": "H:n4",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "语素与词",
+      "section": "词汇单位",
+      "rank": 8,
+      "scope": "分别掌握定义；替换法、扩展法各用一个例子说明，不背长篇学说史。",
+      "evidence": [
+        "Q222"
+      ],
+      "source": "现代汉语的词汇（上）.pdf.txt",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 314,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "H:n5",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "联绵词",
+      "section": "单纯词",
+      "rank": 9,
+      "scope": "定义、整体语素性质及底本例子，能说明“蝴蝶”的语素数量。",
+      "evidence": [
+        "Q347",
+        "Q359"
+      ],
+      "source": "现代汉语的词汇（上）.pdf.txt",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 315,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "H:n6",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "单纯词、合成词与构词方式",
+      "section": "词的构成",
+      "rank": 10,
+      "scope": "只选底本中4个代表例，说明判定依据；复合、附加、重叠区分到能举例。",
+      "evidence": [],
+      "source": "现代汉语的词汇（上）.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 316,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "H:n7",
+      "course": "现代汉语",
+      "type": "简答题",
+      "title": "多义词与同音词的区别",
+      "section": "词义关系；参考词汇上词义类型",
+      "rank": 11,
+      "scope": "抓词义联系，分别举例；把“花钱/眼花”的原始记录作为待核例，不把“多义字”表述直接背成结论。",
+      "evidence": [
+        "Q253"
+      ],
+      "source": "现代汉语的词汇（下）.pdf.txt",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 317,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "supplement-335",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "义素与语义场",
+      "section": "词义分析",
+      "rank": 11.1,
+      "scope": "两个定义、作用与各一个例子；区别同义词和同音词。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。词汇笔记",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 318,
+      "plannedDate": "2026-11-20"
+    },
+    {
+      "id": "supplement-336",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "义素分析与语义场判定",
+      "section": "词义分析",
+      "rank": 11.2,
+      "scope": "完成一组词的共同、区别义素分析，再判定关系；不扩成整章习题。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。词汇笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 319,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "H:n8",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "同义词辨析",
+      "section": "同义词",
+      "rank": 12,
+      "scope": "从意义、色彩、用法选择适合的角度，辨析底本中的一组词；不机械套所有角度。",
+      "evidence": [],
+      "source": "现代汉语的词汇（下）.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 320,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "H:n9",
+      "course": "现代汉语",
+      "type": "填空识记",
+      "title": "基本词汇的特点",
+      "section": "词汇的组成",
+      "rank": 13,
+      "scope": "掌握特点和例证，能完成填空；熟语只辨成语、惯用语、歇后语各一例，不另背大题。",
+      "evidence": [
+        "Q299"
+      ],
+      "source": "现代汉语的词汇（上）.pdf.txt",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 321,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "supplement-337",
+      "course": "现代汉语",
+      "type": "课本梳理",
+      "title": "一般词汇与熟语",
+      "section": "词汇的组成",
+      "rank": 13.1,
+      "scope": "区分古语词、方言词、外来词及熟语类型，按底本各举例。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。词汇下笔记",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 322,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "H:n10",
+      "course": "现代汉语",
+      "type": "课本梳理",
+      "title": "词类划分与实词、虚词",
+      "section": "语法性质；词类",
+      "rank": 14,
+      "scope": "用一页现有笔记标出划分依据及实虚词类别；只补缺，不重新制作整章框架。",
+      "evidence": [],
+      "source": "现代汉语的词类.pdf.txt",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 323,
+      "plannedDate": "2026-11-25"
+    },
+    {
+      "id": "H:n11",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "副词、介词与量词的判定",
+      "section": "副词；介词；量词",
+      "rank": 15,
+      "scope": "做3个底本例子，说出判定依据；带出名量词、动量词的区别。其余词类只随实例回查。",
+      "evidence": [
+        "Q300"
+      ],
+      "source": "现代汉语的词类.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 324,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "supplement-338",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "名词、动词、形容词的判别与活用",
+      "section": "词类",
+      "rank": 15.1,
+      "scope": "分别做典型例与易混例，用语法功能说明依据。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。词类笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 325,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "supplement-339",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "区别词、代词、连词、助词的辨析",
+      "section": "词类",
+      "rank": 15.2,
+      "scope": "每类一个代表例；与实词及其他虚词对照。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。词类笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 326,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "H:n12",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "短语类型与层次分析",
+      "section": "短语类型；复杂短语分析",
+      "rank": 16,
+      "scope": "两个底本短语：先判断关系，再逐层切分；歧义只看一组能作不同切分的例子。",
+      "evidence": [],
+      "source": "现代汉语的短语.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 327,
+      "plannedDate": "2026-11-27"
+    },
+    {
+      "id": "H:n13",
+      "course": "现代汉语",
+      "type": "课本梳理",
+      "title": "单句分类与句法成分",
+      "section": "单句分类；句子成分",
+      "rank": 17,
+      "scope": "按主谓/非主谓梳理；主谓宾、定状补各能在例句中指出位置。不展开全部句型体系。",
+      "evidence": [],
+      "source": "现代汉语的单句.pdf.txt",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 328,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "H:n14",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "单句成分与宾语的语义类型",
+      "section": "句子成分；动语和宾语",
+      "rank": 18,
+      "scope": "分析两个底本句子，分清宾语和补语；将“淋雨”的宾语类型纳入核对，说明句法与语义层面区别。",
+      "evidence": [
+        "Q211"
+      ],
+      "source": "现代汉语的单句.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 329,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "H:n15",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "存现句",
+      "section": "特殊句式；存现句",
+      "rank": 19,
+      "scope": "定义、基本格式、一例；辨出存在、出现或消失的表达，不另背各类复杂变式。",
+      "evidence": [
+        "Q311"
+      ],
+      "source": "现代汉语的单句.pdf.txt",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 330,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "H:n16",
+      "course": "现代汉语",
+      "type": "名词解释",
+      "title": "兼语短语",
+      "section": "兼语短语",
+      "rank": 20,
+      "scope": "定义、兼语双重身份与一例，作为下一题前置。",
+      "evidence": [
+        "Q266"
+      ],
+      "source": "现代汉语的短语.pdf.txt",
+      "state": "待学",
+      "originalType": "名词解释",
+      "catalogNumber": 331,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "H:n17",
+      "course": "现代汉语",
+      "type": "简答题",
+      "title": "兼语句与主谓短语作宾语的区别",
+      "section": "特殊句式；兼语句",
+      "rank": 21,
+      "scope": "用“我请他来/我知道他来”说明结构和语义差别；不要误换成主谓谓语句。",
+      "evidence": [
+        "Q227"
+      ],
+      "source": "现代汉语的单句.pdf.txt",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 332,
+      "plannedDate": "2026-12-02"
+    },
+    {
+      "id": "H:n18",
+      "course": "现代汉语",
+      "type": "简答题",
+      "title": "兼语句的常见类型",
+      "section": "兼语句",
+      "rank": 22,
+      "scope": "按底本与教材一致的分类列要点，每类一个短例；不另背兼语结构的重复定义。",
+      "evidence": [
+        "Q364"
+      ],
+      "source": "现代汉语的单句.pdf.txt",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 333,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "supplement-340",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "把字句与被字句",
+      "section": "特殊句式",
+      "rank": 22.1,
+      "scope": "各辨认结构、语义限制与一个常见误用。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。单句笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 334,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "supplement-341",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "连动句与主谓谓语句",
+      "section": "特殊句式",
+      "rank": 22.2,
+      "scope": "各一例结构分析；另保留原兼语与主谓短语作宾语题。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。单句笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 335,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "supplement-342",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "成分残缺、搭配不当与句式杂糅",
+      "section": "单句语病",
+      "rank": 22.3,
+      "scope": "每种一例，先定位结构问题再修改，不以笼统“病句专题”塞入大量练习。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。单句笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 336,
+      "plannedDate": "2026-12-04"
+    },
+    {
+      "id": "H:n19",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "复句关系的判定",
+      "section": "复句的类型",
+      "rank": 23,
+      "scope": "先看分句意义，再看关联词，练3个代表句，含“不是……而是……”与“他不在办公室，就在教室”；不只背关联词口诀。",
+      "evidence": [
+        "Q275",
+        "Q348"
+      ],
+      "source": "现代汉语的复句和句群.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 337,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "H:n20",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "多重复句的层次分析",
+      "section": "多重复句及分析",
+      "rank": 24,
+      "scope": "两个两层底本例句：划分第一层、标关系、继续下分；暂不增加复杂多重嵌套。",
+      "evidence": [],
+      "source": "现代汉语的复句和句群.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 338,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "H:n21",
+      "course": "现代汉语",
+      "type": "填空识记",
+      "title": "句群与复句的区别",
+      "section": "句群",
+      "rank": 25,
+      "scope": "只掌握单位差别和一个例子，随复句回看；不展开多重句群及类型长表。",
+      "evidence": [],
+      "source": "现代汉语的复句和句群.pdf.txt",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 339,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "H:n22",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "比喻、比拟、借代与通感的辨析",
+      "section": "修辞格",
+      "rank": 26,
+      "scope": "用底本例子辨认并说明依据；核对“新伤疤”“绿色的苗/白馒头”两条真题记录，避免无语境硬套唯一答案。",
+      "evidence": [
+        "Q215",
+        "Q254"
+      ],
+      "source": "现代汉语的修辞与语用.pdf.txt",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 340,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "H:n23",
+      "course": "现代汉语",
+      "type": "简答题",
+      "title": "“书山有路勤为径”的辞格与修辞效果",
+      "section": "辞格及表达效果",
+      "rank": 27,
+      "scope": "联系完整两句，先辨辞格，再写与劝学语境相连的效果；借此掌握对偶与比喻的结合。",
+      "evidence": [
+        "Q317"
+      ],
+      "source": "现代汉语的修辞与语用.pdf.txt",
+      "state": "待学",
+      "originalType": "简答题",
+      "catalogNumber": 341,
+      "plannedDate": "2026-12-09"
+    },
+    {
+      "id": "H:n24",
+      "course": "现代汉语",
+      "type": "填空识记",
+      "title": "排比、夸张、反问与设问",
+      "section": "修辞格",
+      "rank": 28,
+      "scope": "各识别一例、说出最基本作用；只留辨认层，不扩成四道论述题。",
+      "evidence": [],
+      "source": "现代汉语的修辞与语用.pdf.txt",
+      "state": "待学",
+      "originalType": "填空识记",
+      "catalogNumber": 342,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "supplement-343",
+      "course": "现代汉语",
+      "type": "课本梳理",
+      "title": "语体与语用原则",
+      "section": "语体与语用",
+      "rank": 29,
+      "scope": "依笔记区分语体，整理合作、礼貌原则及违反准则的表达效果。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。修辞与语用笔记",
+      "state": "待学",
+      "originalType": "课本梳理",
+      "catalogNumber": 343,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "supplement-344",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "词语锤炼与句式选择",
+      "section": "词句锤炼",
+      "rank": 29.1,
+      "scope": "各一个语境比较，说明替换前后的表达效果。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。修辞与语用笔记",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 344,
+      "plannedDate": "2026-12-11"
+    },
+    {
+      "id": "supplement-345",
+      "course": "现代汉语",
+      "type": "分析题",
+      "title": "标点符号的辨析与修改",
+      "section": "标点符号",
+      "rank": 29.2,
+      "scope": "按教材挑选三类易错标点，每类一例；保留规则依据。",
+      "evidence": [],
+      "source": "用户笔记／教材补充；不冒称浙师大同名原题。黄廖下册",
+      "state": "待学",
+      "originalType": "分析题",
+      "catalogNumber": 345,
+      "plannedDate": "2026-12-11"
+    }
+  ],
+  "notes": [
+    "这是待审阅的容量预览，未写入网站；排入日期不等于已经完成，也不等于已证明12小时内可完成。",
+    "保留两门主科学习轮换；其他科只出现到期回忆。每科内复习在前，新学按底本顺序，比较题在具体作品之后。",
+    "公共课从已确认进度接续。政治选择题每次做题加订正30分钟，只显示章节；未做完继续该章，不按日期自动跳章。手册从专题二剩余小标题续背。",
+    "英语保留单词、阅读；周一完形、周二小作文、周三翻译、周四新题型、周五大作文、周六大小作文交替，周日仅单词。模板未定稿不影响先写。",
+    "新增内容以12月15日为首遍候选截止，16—18日以复习为主。每项预留+1与+7日两次短回忆；实际日期应从真正完成日算，+3日只给遗忘项追加，不重复要求整篇背诵。",
+    "周二、周六、周日安排闭卷书写，替代相应复习项；周日最多两题并保留半天休息。条件尚未满足则从已学题中换题，不书写未学内容。",
+    "已学部分按用户确认转复习。左联、文协不因旧错误归类视作已背；文论第二章状态未确认。丁玲按用户最新确认改为未学，先具体作品、后综合题；完成后才能启用条件复习。",
+    "复习标签保留准备题型，如【复习·简答题】。复习是学习状态，题型是验收方式；多种题型并列表示原卡确实含不同要求，不冒称它们都是历年原题题型。",
+    "本版合并已发布任务、130条修补动作和三科缺口补充；不是389条原始真题或整部教材逐点无遗漏的认证。旧暂缓条目尚未逐一批准删除，保留附录链接，不把它们算作已覆盖。",
+    "本校真题与笔记基础补充分开标来源；外国文学、文论、现汉现有本校样本主要为2022—2024，不从样本缺席推定无需学习。",
+    "已核出的较晚任务无法获得完整7日复习窗。完整首遍加两轮全量复习目前不能保证；红色负荷提示是需要实际进度校准的缺口，不用再次删掉知识点掩盖。"
+  ],
+  "progress": {
+    "confirmedOn": "2026-11-18",
+    "politics": {
+      "choice": "马原第四章《资本主义的本质及规律》单选、多选均已完成并订正",
+      "currentChapter": "第五章 资本主义的发展及其趋势",
+      "handbook": "专题一已背；专题二背了一半",
+      "papers": "肖八、肖四是否已持有未确认，不假设已拿到"
+    },
+    "english": {
+      "reading": "2018 text3",
+      "readingState": "当前做到的位置；未确认是否已订正收尾。起步先收尾当前篇，若已完成则从text4继续。",
+      "templates": "大小作文模板尚未整理好",
+      "otherSkills": "用户明确要求保留完形、翻译、新题型；最新具体年份未确认，暂沿用现有题单2018起点，可在发布前校正。"
+    }
+  }
+}
