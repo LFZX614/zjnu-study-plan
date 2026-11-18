@@ -1,6 +1,6 @@
 {
-  "revision": "approved-20261118-v2",
-  "approvedRevision": "20261118-v2",
+  "revision": "approved-20261119-v3",
+  "approvedRevision": "20261119-v3",
   "start": "2026-11-18",
   "end": "2026-12-18",
   "days": [
@@ -201201,7 +201201,7 @@
     ]
   },
   "approved": {
-    "revision": "approved-20261118-v2",
+    "revision": "approved-20261119-v3",
     "tasks": [
       {
         "id": "v4:C:learn:ba4a581167c2c07",

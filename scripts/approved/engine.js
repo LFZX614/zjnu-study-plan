@@ -16,18 +16,19 @@
   const done=t=>!!records[t.id]?.done,gone=t=>!!deleted[t.id]?.deleted||!!deleted[t.sourceTask]?.deleted||!!deleted[t.sourceTaskId]?.deleted;
   const flat=data.days.flatMap(d=>d.tasks.map(t=>edited({...t,plannedDate:d.date},state))),activeIds=new Set(flat.map(t=>t.id));
   const extras=[...(data.candidates||[]),...(data.legacyTasks||[])].filter(t=>!activeIds.has(t.id)&&(records[t.id]?.done||moves[t.id]||state.taskEdits?.[t.id]&&!state.taskEdits[t.id].reset));
-  const all=[...flat,...extras.map(t=>edited({...t,history:!(t.candidate||moves[t.id]||state.taskEdits?.[t.id]&&!state.taskEdits[t.id].reset),plannedDate:t.plannedDate||t.date||today},state)),...(state.custom||[]).map(t=>edited({...t,plannedDate:t.date||today,custom:true},state))];
+  const all=[...flat,...extras.map(t=>edited({...t,history:!(t.candidate||moves[t.id]?.date>=today||state.taskEdits?.[t.id]&&!state.taskEdits[t.id].reset),plannedDate:t.plannedDate||t.date||today},state)),...(state.custom||[]).map(t=>edited({...t,plannedDate:t.date||today,custom:true},state))];
   const unique=[...new Map(all.map(t=>[t.id,t])).values()],out=[],pending=[],reviews=[],warnings=[];
   const currentChoice=state.politics?.approvedChapterName||data.choiceDefault;
   for(const t of unique){
    if(gone(t))continue;
-   const rec=records[t.id],manual=!!moves[t.id];
+   const rec=records[t.id],manual=!!moves[t.id],expiredManual=manual&&moves[t.id].date<today&&!done(t)&&!t.history;
    if(t.reviewProposal&&!manual&&!done(t))continue;
    if(t.dailyHabit&&t.plannedDate<today&&!manual&&!done(t))continue;
    const item={...t,date:moves[t.id]?.date||(done(t)?rec.scheduledOn||rec.completedOn:t.plannedDate)||today,manual,blocked:(t.requiredTaskIds||[]).filter(id=>!records[id]?.done)};
    if(t.choiceSlot&&!done(t)&&!state.taskEdits?.[t.id]?.title){const material=state.politics?.approvedMaterial||'1000题';item.title=material==='1000题'?(state.politics?.approvedChoiceComplete?'1000题｜章节队列已完成，回看错题':currentChoice):material+'｜当前卷选择题';if(material!=='1000题')item.scope='在原来的半小时内完成'+material+'当前卷的选择题练习与订正，不另加1000题。卷次按实际位置；本次勾选不代表整卷已做完。';}
    if(done(t)&&rec.snapshot&&!state.taskEdits?.[t.id]?.title)item.title=rec.snapshot.title||item.title;
-   if(done(item)||manual||item.custom){out.push(item);continue;}
+   item.origin=manual?(expiredManual?'过期改期未完，继续接续':'手动改期加入'):'原计划';item.previousManualDate=expiredManual?moves[t.id].date:null;
+   if(done(item)||item.history||(manual&&!expiredManual)||item.custom){out.push(item);continue;}
    if(t.type==='复习')reviews.push(item);else pending.push(item);
   }
   // New learning advances in the reviewed daily blocks, never by fictitious
@@ -43,8 +44,20 @@
   // Undoing a source removes only its future reminders, never completed history.
   const knownIds=new Set([...out,...reviews].map(t=>t.id));for(const[id,r]of Object.entries(records))if(r.done&&id.startsWith('v3:auto:')&&!knownIds.has(id)&&r.snapshot&&!gone(r.snapshot))out.push({...r.snapshot,id,date:moves[id]?.date||r.scheduledOn||r.completedOn,history:true});
   const learning=pending.filter(t=>t.phase==='first'),others=pending.filter(t=>t.phase!=='first');
-  const blocks=new Map();for(const t of learning){const key=t.course+':'+(t.blockId||t.plannedDate);if(!blocks.has(key))blocks.set(key,[]);blocks.get(key).push(t);}
-  const floor=new Map();for(const group of [...blocks.values()].sort((a,b)=>a[0].plannedDate.localeCompare(b[0].plannedDate)||(a[0].order||0)-(b[0].order||0))){const first=group[0];let date=[first.plannedDate,today,floor.get(first.course)||''].sort().at(-1);let guard=0;while(guard++<370&&(professional(first.course)?!(data.rotationByDate?.[date]||rotation[weekday(date)]).includes(first.course):weekday(date)===0))date=plus(date,1);for(const t of group)out.push({...t,date,rescheduled:date!==t.plannedDate,originalDue:t.plannedDate});floor.set(first.course,plus(date,1));}
+  const byCourse=new Map();for(const t of learning){if(!byCourse.has(t.course))byCourse.set(t.course,[]);byCourse.get(t.course).push(t);}
+  const substantive=t=>t.type==='论述题'?'L':['简答题','分析题','评论题'].includes(t.type)?'S':null;
+  const fits=(items,t)=>{const L=items.filter(x=>substantive(x)==='L').length,S=items.filter(x=>substantive(x)==='S').length,k=substantive(t);if(k==='L')return L===0&&S<=1||L===1&&S===0;if(k==='S')return L===0&&S<3||L===1&&S===0;return items.filter(x=>!substantive(x)).length<4&&(t.type!=='课本梳理'||items.filter(x=>x.type==='课本梳理').length<2);};
+  for(const [course,queue]of byCourse){queue.sort((a,b)=>a.plannedDate.localeCompare(b.plannedDate)||(a.order||0)-(b.order||0));let date=today,guard=0;
+   while(queue.length&&guard++<730){const allowed=professional(course)?(data.rotationByDate?.[date]||rotation[weekday(date)]).includes(course):weekday(date)!==0;if(!allowed){date=plus(date,1);continue;}
+    const assigned=out.filter(t=>t.date===date&&t.course===course&&t.phase==='first');let n=0;
+    while(queue.length){const t=queue[0];const started=assigned.length>0;if(t.plannedDate>date&&(!started||assigned.some(x=>x.type==='论述题')&&assigned.filter(x=>substantive(x)).length>=2||assigned.filter(x=>substantive(x)==='S').length>=3))break;if(!fits(assigned,t))break;
+     const laterPrerequisite=(t.requiredTaskIds||[]).some(id=>!records[id]?.done&&out.some(x=>x.id===id&&x.date>date));if(laterPrerequisite)break;
+     queue.shift();const item={...t,date,rescheduled:date!==t.plannedDate,originalDue:t.plannedDate,origin:t.previousManualDate?'过期改期未完，继续接续':date<t.plannedDate?'按实际进度接续':date>t.plannedDate?'未完成顺延':'原计划'};out.push(item);assigned.push(item);n++;
+    }
+    date=plus(date,1);
+   }
+   for(const t of queue){out.push({...t,date,origin:'待接续'});warnings.push({id:t.id,date,kind:'deadline',text:'任务等待接续，请核对前置安排。'});}
+  }
   const lanes=new Map();for(const t of others){if(t.practiceLane){if(!lanes.has(t.practiceLane))lanes.set(t.practiceLane,[]);lanes.get(t.practiceLane).push(t);}else out.push({...t,date:t.plannedDate<today?today:t.plannedDate});}
   for(const lane of lanes.values()){let next=today;for(const t of lane.sort((a,b)=>a.plannedDate.localeCompare(b.plannedDate))){let date=[t.plannedDate,next,today].sort().at(-1);while(weekday(date)===0)date=plus(date,1);out.push({...t,date,rescheduled:date!==t.plannedDate,originalDue:t.plannedDate});next=plus(date,1);}}
   // Recall has its own finite daily slots. An overflow is visible as a deferred

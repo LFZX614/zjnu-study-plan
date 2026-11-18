@@ -16,10 +16,10 @@ engine=engine.replace('function build(data,state,today){','function build(data,s
 (DIST/'progress-engine.js').write_text(engine,encoding='utf8')
 html=(DIST/'index.html').read_text(encoding='utf8')
 if 'approved-engine.js' not in html:
-    html=html.replace('<script src="progress-engine.js','<script src="approved-engine.js?v=20261118-v2"></script><script src="progress-engine.js')
+    html=html.replace('<script src="progress-engine.js','<script src="approved-engine.js?v=20261119-v3"></script><script src="progress-engine.js')
 if 'approved-runtime.js' not in html:
-    html=html.replace('<script src="cloud-config.js','<script src="approved-runtime.js?v=20261118-v2"></script><script src="cloud-config.js')
-html=re.sub(r'((?:app-v2|progress-engine|progress-ui|task-revision)\.js)\?v=[^"\s]+',r'\1?v=approved-20261118-v2',html)
+    html=html.replace('<script src="cloud-config.js','<script src="approved-runtime.js?v=20261119-v3"></script><script src="cloud-config.js')
+html=re.sub(r'((?:app-v2|progress-engine|progress-ui|task-revision)\.js)\?v=[^"\s]+',r'\1?v=approved-20261119-v3',html)
 (DIST/'index.html').write_text(html,encoding='utf8')
 tasks=[t for day in approved['days'] for t in day['tasks']]
 assert len({t['id'] for t in tasks})==len(tasks)
